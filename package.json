@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maomao1996/vitepress-nav-template.git"
+    "url": "git+https://github.com/autumns-heartless/blog.git"
   },
-  "author": "maomao1996 <1714487678@qq.com>",
+  "author": "秋天没有心 <1127530756@qq.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maomao1996/vitepress-nav-template/issues"
+    "url": "https://github.com/autumns-heartless/blog/issues"
   },
-  "homepage": "https://github.com/maomao1996/vitepress-nav-template#readme",
+  "homepage": "https://github.com/autumns-heartless/blog#readme",
   "devDependencies": {
     "@femm/prettier": "^1.1.0",
     "@femm/tailwind-config": "^1.0.0",
@@ -51,5 +51,6 @@
     "patchedDependencies": {
       "vite-plugin-markdown-preview@1.1.1": "patches/vite-plugin-markdown-preview@1.1.1.patch"
     }
-  }
+  },
+  "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
 }
