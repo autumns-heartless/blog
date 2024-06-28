@@ -8,7 +8,8 @@ const APP_BASE_PATH = basename(process.env.GITHUB_REPOSITORY || '')
 
 export default defineConfig({
   outDir: '../dist',
-  base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
+  // base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
+  base: process.env.VITE_BASE_PATH || '/blog',
 
   lang: 'zh-CN',
   title: '茂茂物语',
@@ -66,11 +67,11 @@ export default defineConfig({
 
     /*** 自定义配置 ***/
     visitor: {
-      badgeId: 'maomao1996.vitepress-nav-template',
+      badgeId: 'qwx.blog',
     },
 
     comment: {
-      repo: 'maomao1996/vitepress-nav-template',
+      repo: 'qwx/blog',
       repoId: 'R_kgDOJC09Jg',
       category: 'Announcements',
       categoryId: 'DIC_kwDOJC09Js4Cekn0',

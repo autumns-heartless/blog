@@ -3,14 +3,14 @@ layout: home
 layoutClass: 'm-home-layout'
 
 hero:
-  name: 秋天没有心
-  text: 前端导航模板
-  tagline: 基于 VitePress 的个人前端导航页面模板
+  name: 秋天没有心的
+  text: 个人博客
+  tagline: 基于 VitePress 的个人博客
   image:
     src: /logo.png
-    alt: 茂茂物语
+    alt: 秋天没有心
   actions:
-    - text: 茂茂物语
+    - text: 秋天没有心
       link: https://notes.fe-mm.com
     - text: 前端导航
       link: /nav/
