@@ -66,14 +66,14 @@ export default defineConfig({
 
     /*** 自定义配置 ***/
     visitor: {
-      badgeId: 'qwx.blog',
+      badgeId: 'autumns-heartless/blog',
     },
 
     comment: {
-      repo: 'qwx/blog',
-      repoId: 'R_kgDOJC09Jg',
+      repo: 'autumns-heartless/blog',
+      repoId: 'R_kgDOMPIiKQ',
       category: 'Announcements',
-      categoryId: 'DIC_kwDOJC09Js4Cekn0',
+      categoryId: 'DIC_kwDOMPIiKc4Cgcet',
     },
   },
 
