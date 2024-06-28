@@ -3,7 +3,7 @@ layout: home
 layoutClass: 'm-home-layout'
 
 hero:
-  name: 茂茂的
+  name: 秋天没有心
   text: 前端导航模板
   tagline: 基于 VitePress 的个人前端导航页面模板
   image:
