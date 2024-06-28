@@ -5,7 +5,7 @@ layoutClass: 'm-home-layout'
 hero:
   name: 秋天没有心的
   text: 个人博客
-  tagline: 基于 VitePress 的个人博客
+  tagline: 所谓秋天没有心，希望所有的前端工程师没有忧愁
   image:
     src: /logo.png
     alt: 秋天没有心

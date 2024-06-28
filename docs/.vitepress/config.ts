@@ -41,8 +41,8 @@ export default defineConfig({
     socialLinks: [{ icon: 'github', link: 'https://github.com/autumns-heartless/blog' }],
 
     footer: {
-      message: '本站搭建特别鸣谢茂神大佬',
-      copyright: 'Copyright © 2019-present maomao',
+      message: '本站搭建特别鸣谢【茂神大佬】',
+      copyright: 'Copyright © 2024-present autumns-heartless',
     },
 
     lastUpdated: {
