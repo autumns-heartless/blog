@@ -10,15 +10,8 @@ hero:
     src: /logo.png
     alt: 秋天没有心
   actions:
-    - text: 秋天没有心
-      link: https://notes.fe-mm.com
     - text: 前端导航
       link: /nav/
-      theme: alt
-    - text: mmPlayer
-      link: https://netease-music.fe-mm.com
-    - text: 测试页
-      link: /test
       theme: alt
 features:
   - icon: 📖
