@@ -69,5 +69,12 @@ export const nav: DefaultTheme.Config['nav'] = [
       { text: '书签脚本', link: '/efficiency/bookmark-scripts' }
     ],
     activeMatch: '^/efficiency'
-  }
+  },
+  { text: '其他成员',
+    items: [
+      { text: '章家龙', link: '/other/zjl/index' },
+    ],
+    activeMatch: '^/other/'
+  },
+  { text: '关于我', link: '/me/', activeMatch: '^/me/' },
 ]
