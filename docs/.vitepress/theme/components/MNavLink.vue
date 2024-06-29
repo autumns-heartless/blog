@@ -9,6 +9,7 @@ const props = defineProps<{
   icon?: NavLink['icon']
   title?: NavLink['title']
   desc?: NavLink['desc']
+  badge?: NavLink['badge']
   link: NavLink['link']
 }>()
 
@@ -39,6 +40,7 @@ const svg = computed(() => {
         </div>
         <h5 v-if="title" :id="formatTitle" class="title">{{ title }}</h5>
       </div>
+      <span v-if="badge" class="VPBadge info badge">{{ badge }}</span>
       <p v-if="desc" class="desc">{{ desc }}</p>
     </article>
   </a>
@@ -67,6 +69,7 @@ const svg = computed(() => {
   .box {
     display: flex;
     flex-direction: column;
+    position: relative;
     padding: var(--m-nav-box-gap);
     height: 100%;
     color: var(--vp-c-text-1);
@@ -118,6 +121,31 @@ const svg = computed(() => {
     line-height: 1.5;
     font-size: 12px;
     color: var(--vp-c-text-2);
+  }
+
+  .badge {
+    position: absolute;
+    top: 6px;
+    right: 4px;
+    transform: scale(0.8);
+  }
+
+  .VPBadge.info {
+    border-color: var(--vp-badge-info-border);
+    color: var(--vp-badge-info-text);
+    background-color: var(--vp-badge-info-bg);
+  }
+
+  .VPBadge {
+    display: inline-block;
+    // margin-left: 2px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 0 10px;
+    line-height: 22px;
+    font-size: 12px;
+    font-weight: 500;
+    // transform: translateY(-2px);
   }
 }
 

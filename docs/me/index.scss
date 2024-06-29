@@ -1,0 +1,9 @@
+.languages,
+.frameworks,
+.tools {
+  display: flex;
+
+  & img {
+    margin-right: 8px;
+  }
+}

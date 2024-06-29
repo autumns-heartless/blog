@@ -53,7 +53,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://liubing.me/',
       },
       {
-        icon: '/前端老道.jpg',
+        icon: '/icons/前端老道.ico',
         title: '前端老道的CSDN博客',
         desc: '一个写代码有点嘚儿的程序猿~，希望和大家一起学习，一起进步',
         link: 'https://blog.csdn.net/weixin_44991965?type=blog',
@@ -143,7 +143,13 @@ export const NAV_DATA: NavData[] = [
         link: 'https://www.tudingyy.com/',
       },
       {
-        icon: '/icons/pngdirs.ico',
+        icon: '/logo.png',
+        title: '办公人导航',
+        desc: '办公人导航-实用的办公生活导航网站！',
+        link: 'https://www.bgrdh.com/',
+      },
+      {
+        icon: '/logo.png',
         title: '免抠PNG图片',
         desc: '空白透明背景免抠PNG图片素材免费下载网站',
         link: 'https://www.pngdirs.com/',
@@ -180,33 +186,39 @@ export const NAV_DATA: NavData[] = [
     items: [
       {
         icon: '/icons/chatgpt.png',
-        title: 'ChatGPT（最强）',
+        title: 'ChatGPT',
         link: 'https://chat.openai.com/chat',
+        badge: '对话'
       },
       {
         icon: 'https://www.notion.so/images/logo-ios.png',
-        title: 'Notion AI（笔记）',
+        title: 'Notion AI',
         link: 'https://www.notion.so',
+        badge: '笔记'
       },
       {
         icon: 'https://www.midjourney.com/apple-touch-icon.png',
-        title: 'Midjourney（绘画）',
+        title: 'Midjourney',
         link: 'https://www.midjourney.com',
+        badge: '绘画'
       },
       {
         icon: 'https://global-uploads.webflow.com/59deb588800ae30001ec19c9/5d4891e0e260e3c1bc37b100_beautiful%20ai%20favicon%20%20blue%20square.png',
-        title: 'Beautiful.ai（PPT）',
+        title: 'Beautiful.ai',
         link: 'https://www.beautiful.ai',
+        badge: 'PPT'
       },
       {
         icon: 'https://maomao1996.github.io/mm-notes/icons/kimi.ico',
         title: 'Kimi.ai',
-        link: 'https://kimi.moonshot.cn/'
+        link: 'https://kimi.moonshot.cn/',
+        badge: '超长文本对话'
       },
       {
         icon: 'https://maomao1996.github.io/mm-notes/icons/chatglm.png',
         title: '智谱清言',
-        link: 'https://chatglm.cn/'
+        link: 'https://chatglm.cn/',
+        badge: '超长文本对话'
       },
       {
         icon: 'https://maomao1996.github.io/mm-notes/icons/yiyan.png',
@@ -250,13 +262,13 @@ export const NAV_DATA: NavData[] = [
     title: '茂神的站点导航',
     items: [
       {
-        icon: '/logo.png',
+        icon: 'https://maomao1996.github.io/mm-notes/icons/femm.png',
         title: '前端日常笔记',
         desc: '日常笔记记录（零零散散啥都记系列）',
         link: 'https://github.com/maomao1996/daily-notes',
       },
       {
-        icon: '/logo.png',
+        icon: 'https://maomao1996.github.io/mm-notes/icons/femm.png',
         title: '前端思维导图',
         desc: '用思维导图的方式总结个人所学知识',
         link: 'https://mindmap.fe-mm.com',
@@ -268,7 +280,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://qwerty.fe-mm.com',
       },
       {
-        icon: '/logo.png',
+        icon: 'https://maomao1996.github.io/mm-notes/icons/femm.png',
         title: 'mmPlayer',
         desc: 'mmPlayer 在线音乐播放器',
         link: 'https://netease-music.fe-mm.com',
@@ -339,6 +351,12 @@ export const NAV_DATA: NavData[] = [
         desc: 'css效果网站',
         link: 'https://css-loaders.com/classic/',
       },
+      {
+        icon: 'https://www.transition.style/favicon.png',
+        title: 'Transition.css',
+        desc: 'Transition.css - easy transitions with clip-path',
+        link: 'https://www.transition.style/'
+      }
     ],
   },
    /* 可视化 */
@@ -539,7 +557,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://developer.mozilla.org/zh-CN',
       },
       {
-        icon: 'https://static.runoob.com/images/favicon.ico',
+        icon: '/icons/cainiao.ico',
         title: '菜鸟教程',
         desc: '学的不仅是技术，更是梦想！',
         link: 'https://www.runoob.com',

@@ -42,9 +42,10 @@ features:
     link: /pit/npm
     linkText: 踩坑记录
   - icon: 💯
-    title: 吾志所向，一往无前。
-    details: '<small class="bottom-small">一个想躺平的小开发</small>'
-    link: /mao
+    title: 秋天没有心，即没有忧愁
+    details: '<small class="bottom-small">永远会被技术所折服</small>'
+    link: /me/
+    linkText: 关于我
 ---
 
 <style>
