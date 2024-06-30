@@ -13,8 +13,11 @@ hero:
     - text: 前端导航
       link: /nav/
       theme: alt
+    - text: 待办清单
+      link: /todoList/
     - text: 前端物语
       link: /fe/es6/
+      theme: alt
 features:
   - icon: 📖
     title: 前端物语

@@ -2,6 +2,7 @@ import type { DefaultTheme } from 'vitepress'
 
 export const nav: DefaultTheme.Config['nav'] = [
   { text: '导航', link: '/nav/', activeMatch: '^/nav/' },
+  { text: '待办清单', link: '/todoList/', activeMatch: '^/todoList/' },
   {
     text: '前端物语',
     items: [
@@ -37,16 +38,22 @@ export const nav: DefaultTheme.Config['nav'] = [
         link: '/workflow/vue/'
       },
       { text: 'npm 常用命令', link: '/workflow/node/npm' },
-      // {
-      //   text: '终端相关',
-      //   items: [
-      { text: 'Zsh 配置', link: '/workflow/terminal/zsh' },
-      { text: '命令行工具', link: '/workflow/terminal/toolkit' },
-      { text: 'Shell 命令', link: '/workflow/terminal/shell' },
-      //   ]
-      // },
+      {
+        text: '终端相关',
+        items: [
+          { text: 'Zsh 配置', link: '/workflow/terminal/zsh' },
+          { text: '命令行工具', link: '/workflow/terminal/toolkit' },
+          { text: 'Shell 命令', link: '/workflow/terminal/shell' },
+        ]
+      },
       { text: 'Git 相关技巧', link: '/workflow/git/' },
-      { text: 'Git 命令清单', link: '/workflow/git/command' }
+      { text: 'Git 命令清单', link: '/workflow/git/command' },
+      {
+        text: '开源网站',
+        items: [
+          { text: 'v3后台', link: '/workflow/openSource/V3Admin' },
+        ]
+      },
     ],
     activeMatch: '^/workflow'
   },
