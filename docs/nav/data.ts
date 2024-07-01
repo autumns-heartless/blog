@@ -61,7 +61,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://blog.csdn.net/weixin_44991965?type=blog',
       },
       {
-        icon: 'https://cdn.chengpeiquan.com/img/avatar-60x60.jpg?x-oss-process=image/interlace,1',
+        icon: 'https://cdn.chengpeiquan.com/img/avatar-60x60.jpg',
         title: '程沛权的博客',
         desc: '养了3支🐱会做饭的广东人',
         link: 'https://chengpeiquan.com/category/tech',
@@ -321,7 +321,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://smartwritegpt.com/',
       },
       {
-        icon: '/天工AI.webp',
+        icon: '/icons/天工AI.webp',
         title: '天工AI',
         link: 'https://www.tiangong.cn/chat/universal/016',
       },
