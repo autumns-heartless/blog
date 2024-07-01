@@ -37,14 +37,16 @@ export const NAV_DATA: NavData[] = [
       {
         icon: 'https://mondaylab.github.io/mondaylab-blog/common/avatar.png',
         title: '周一同学的博客',
-        desc: 'Stay foolish, Stay hungry.',
+        desc: '大厂程序媛',
         link: 'https://mondaylab.github.io/mondaylab-blog/',
+        badge: '干货',
       },
       {
         icon: 'https://www.stucoding.com/3.jpg',
         title: '小明的学习圈子',
         desc: '接毕设、商单，不定期发布职位。专注项目、全栈分享',
         link: 'https://www.stucoding.com/',
+        badge: '全能',
       },
       {
         icon: 'https://liubing.me/logo.svg',
@@ -82,7 +84,69 @@ export const NAV_DATA: NavData[] = [
         desc: '90后程序媛，写代码，也写软文',
         link: 'https://maomao.ink/',
       },
-    ]
+      {
+        icon: 'https://loyer.wang/docs/favicon.ico',
+        title: '巨人之踵的博客',
+        desc: '记录了日常总结、面试总结等各种实用干货',
+        link: 'https://loyer.wang/docs/',
+      },
+      {
+        icon: 'https://example.zbwer.work/logo.svg',
+        title: '格温小姐的博客',
+        desc: '轻松构建你的个人博客',
+        link: 'https://example.zbwer.work/',
+      },
+      {
+        icon: 'https://www.appbeebee.com/favicon.ico',
+        title: 'APP比比',
+        desc: '能够播放音乐、创意十足的个人博客',
+        link: 'https://www.appbeebee.com/',
+      },
+      {
+        icon: 'https://theme.sugarat.top/logo.png',
+        title: '@sugarat/theme',
+        desc: '粥里有勺糖的博客主题',
+        link: 'https://theme.sugarat.top/',
+      },
+      {
+        icon: 'https://taozuidesongshu.github.io/LonelyCityHallucination/logo.jpg',
+        title: '陶醉的松鼠的博客',
+        desc: '记录了很多前端常用知识点以及浏览器的相关内容',
+        link: 'https://taozuidesongshu.github.io/LonelyCityHallucination/',
+      },
+      {
+        icon: 'https://www.liuzepeng.com/favicon.ico',
+        title: '刘泽鹏的博客',
+        desc: '采用Vue3 + element-plus、next.js做的个人博客',
+        link: 'https://www.liuzepeng.com/home',
+        badge: '推荐',
+      },
+      {
+        icon: 'https://blog.imsyy.top/favicon.ico',
+        title: '無名小栈',
+        desc: '个性化十足、配置高大上的博客网站',
+        link: 'https://blog.imsyy.top/',
+      },
+      {
+        icon: 'https://www.yuzaicn.com/logo.png',
+        title: 'Yuzai Blog',
+        desc: '记录了博客的搭建流程、提升办公效率的一些内容及开发干货知识',
+        link: 'https://www.yuzaicn.com/',
+      },
+      {
+        icon: 'https://oss.justin3go.com/justin3goAvatar.ico',
+        title: 'Justin3go Blog-🖊',
+        desc: '喜欢折腾一些效率工具，尝试各种工具软件和工具网站，热爱开源、分享、探索、用代码创造价值',
+        link: 'https://justin3go.com/',
+        badge: '开场炸裂',
+      },
+      {
+        icon: '',
+        title: '',
+        desc: '',
+        link: '',
+      },
+    ],
   },
   /* 开发工具 */
   {
@@ -129,6 +193,12 @@ export const NAV_DATA: NavData[] = [
         title: 'Shields.io',
         desc: '制作简洁、一致、易读的徽章',
         link: 'https://shields.io/',
+      },
+      {
+        icon: '/icons/quickReference.svg',
+        title: 'Quick Reference',
+        desc: '为开发人员分享快速参考备忘清单【速查表】',
+        link: 'https://wangchujiang.com/reference/',
       },
     ],
   },
@@ -178,7 +248,7 @@ export const NAV_DATA: NavData[] = [
         desc: 'Excel 函数公式、操作技巧、数据分析、图表模板、VBA、数据透视表教程',
         link: 'https://www.lanrenexcel.com/excel-shortcuts/',
       },
-    ]
+    ],
   },
   /* AI 导航 */
   {
@@ -188,72 +258,72 @@ export const NAV_DATA: NavData[] = [
         icon: '/icons/chatgpt.png',
         title: 'ChatGPT',
         link: 'https://chat.openai.com/chat',
-        badge: '对话'
+        badge: '对话',
       },
       {
         icon: 'https://www.notion.so/images/logo-ios.png',
         title: 'Notion AI',
         link: 'https://www.notion.so',
-        badge: '笔记'
+        badge: '笔记',
       },
       {
         icon: 'https://www.midjourney.com/apple-touch-icon.png',
         title: 'Midjourney',
         link: 'https://www.midjourney.com',
-        badge: '绘画'
+        badge: '绘画',
       },
       {
         icon: 'https://global-uploads.webflow.com/59deb588800ae30001ec19c9/5d4891e0e260e3c1bc37b100_beautiful%20ai%20favicon%20%20blue%20square.png',
         title: 'Beautiful.ai',
         link: 'https://www.beautiful.ai',
-        badge: 'PPT'
+        badge: 'PPT',
       },
       {
         icon: 'https://maomao1996.github.io/mm-notes/icons/kimi.ico',
         title: 'Kimi.ai',
         link: 'https://kimi.moonshot.cn/',
-        badge: '超长文本对话'
+        badge: '超长文本对话',
       },
       {
         icon: 'https://maomao1996.github.io/mm-notes/icons/chatglm.png',
         title: '智谱清言',
         link: 'https://chatglm.cn/',
-        badge: '超长文本对话'
+        badge: '超长文本对话',
       },
       {
         icon: 'https://maomao1996.github.io/mm-notes/icons/yiyan.png',
         title: '文心一言',
-        link: 'https://yiyan.baidu.com/'
+        link: 'https://yiyan.baidu.com/',
       },
       {
         icon: 'https://maomao1996.github.io/mm-notes/icons/doubao.png',
         title: '豆包',
-        link: 'https://www.doubao.com/'
+        link: 'https://www.doubao.com/',
       },
       {
         icon: 'https://maomao1996.github.io/mm-notes/icons/tongyi.png',
         title: '通义千问',
-        link: 'https://tongyi.aliyun.com/qianwen/'
+        link: 'https://tongyi.aliyun.com/qianwen/',
       },
       {
         icon: 'http://chat.taosha.club/favicon.svg',
         title: '淘沙智聊',
-        link: 'http://chat.taosha.club/#/chat/1719198456283'
+        link: 'http://chat.taosha.club/#/chat/1719198456283',
       },
       {
         icon: 'https://chat18.aichatos8.com/favicon.svg',
         title: 'AIchatOS',
-        link: 'https://chat18.aichatos8.com/#/chat/1719576837667'
+        link: 'https://chat18.aichatos8.com/#/chat/1719576837667',
       },
       {
         icon: 'https://hetao-1306534873.cos.ap-shanghai.myqcloud.com/uploads/images/20240103/2024010323342739c2b0683.png',
         title: '小核桃AI Plus',
-        link: 'https://smartwritegpt.com/'
+        link: 'https://smartwritegpt.com/',
       },
       {
         icon: '/天工AI.webp',
         title: '天工AI',
-        link: 'https://www.tiangong.cn/chat/universal/016'
+        link: 'https://www.tiangong.cn/chat/universal/016',
       },
     ],
   },
@@ -355,11 +425,11 @@ export const NAV_DATA: NavData[] = [
         icon: 'https://www.transition.style/favicon.png',
         title: 'Transition.css',
         desc: 'Transition.css - easy transitions with clip-path',
-        link: 'https://www.transition.style/'
-      }
+        link: 'https://www.transition.style/',
+      },
     ],
   },
-   /* 可视化 */
+  /* 可视化 */
   {
     title: '可视化',
     items: [
@@ -585,7 +655,7 @@ export const NAV_DATA: NavData[] = [
         title: '前端导航',
         desc: '专为前端开发、设计、产品、自媒体人员打造，最全面的网址导航',
         link: 'https://nav.poetries.top/',
-      }
+      },
     ],
   },
   /* Vue 生态 */
@@ -755,7 +825,7 @@ export const NAV_DATA: NavData[] = [
         desc: '增强型跨端小程序框架',
         link: 'https://mpxjs.cn/',
       },
-    ]
+    ],
   },
   /* Node 相关 */
   {
