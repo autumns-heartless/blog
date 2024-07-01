@@ -23,7 +23,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://github.com/mqyqingfeng/Blog',
       },
       {
-        icon: 'https://cdn.bitiful.sugarat.top/avatar/blog/zlyst-avatar.jpeg!style:avatar',
+        icon: 'https://theme.sugarat.top/logo.png',
         title: '粥里有勺糖的博客',
         desc: '你的指尖,拥有改变世界的力量',
         link: 'https://sugarat.top/',
@@ -61,7 +61,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://blog.csdn.net/weixin_44991965?type=blog',
       },
       {
-        icon: 'https://cdn.chengpeiquan.com/img/avatar-60x60.jpg',
+        icon: '/icons/chengpeiquan.jpg',
         title: '程沛权的博客',
         desc: '养了3支🐱会做饭的广东人',
         link: 'https://chengpeiquan.com/category/tech',
