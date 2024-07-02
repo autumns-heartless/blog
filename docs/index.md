@@ -15,20 +15,14 @@ hero:
       theme: alt
     - text: 待办清单
       link: /todoList/
-    - text: 前端物语
-      link: /fe/es6/
-      theme: alt
+    - text: 白酒找我
+      link: /wine/
 features:
   - icon: 📖
     title: 前端物语
     details: 整理前端常用知识点<small>（面试八股文）</small><br />如有异议按你的理解为主，不接受反驳
     link: /fe/javascript/types
     linkText: 前端常用知识
-  - icon: 📘
-    title: 源码阅读
-    details: 了解各种库的实现原理<br />学习其中的小技巧和冷知识
-    link: /analysis/utils/only-allow
-    linkText: 源码阅读
   - icon: 💡
     title: Workflow
     details: 在工作中学到的一切<small>（常用库/工具/奇淫技巧等）</small><br />配合 CV 大法来更好的摸鱼
@@ -44,6 +38,11 @@ features:
     details: 那些年我们踩过的坑<br />总有一些让你意想不到的问题
     link: /pit/npm
     linkText: 踩坑记录
+  - icon: 👬
+    title: 其他成员
+    details: <small class="bottom-small">一起努力成长</small>
+    link: /other/
+    linkText: 看看他们
   - icon: 💯
     title: 秋天没有心，即没有忧愁
     details: '<small class="bottom-small">永远会被技术所折服</small>'

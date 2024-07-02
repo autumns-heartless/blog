@@ -2,8 +2,17 @@
 
 > 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [maomao1996.github.io](https://maomao1996.github.io/mm-notes/mao)
 
-<div class="language-sh vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">sh</span><pre class="shiki shiki-themes github-light github-dark vp-code"><code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">秋天没有心，既没有忧愁</span></span>
-<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">                                --</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> 永远被技术所折服</span></span></code></pre></div>
+<div class="language-sh vp-adaptive-theme">
+<button title="Copy Code" class="copy"></button>
+<span class="lang">sh</span>
+<pre class="shiki shiki-themes github-light github-dark vp-code">
+<code><span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">秋天没有心，既没有忧愁</span></span>
+<span class="line">
+<span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">                                --</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> 永远被技术所折服</span>
+</span></code>
+<marquee><a href="" class="advertisement">买白酒，找南将，好便宜</a></marquee>
+</pre>
+</div>
 
 **About:**
 

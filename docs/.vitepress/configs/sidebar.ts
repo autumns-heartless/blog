@@ -51,16 +51,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       link: '/fe/coding/'
     }
   ],
-  '/analysis/': [
-    {
-      text: '工具库',
-      // collapsed: false,
-      items: [
-        { text: 'only-allow', link: '/analysis/utils/only-allow' },
-        { text: 'clsx', link: '/analysis/utils/clsx' }
-      ]
-    }
-  ],
   '/workflow/': [
     {
       text: '常用工具/方法',
