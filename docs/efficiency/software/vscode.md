@@ -203,6 +203,11 @@ description: '茂茂的 Visual Studio Code 配置，记录扩展插件、使用�
   - 在树视图中显示 TODO FIXME 等注释标记
   - [插件地址](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
 
+- `FnMap - 函数地图`
+
+  - 函数列表、位置标记、快速跳转、符号置顶、关键词搜索
+  - [插件地址](https://marketplace.visualstudio.com/items?itemName=chensuiyi.fn-map)
+
 ### 微信小程序相关
 
 - `WXML - Language Service`
