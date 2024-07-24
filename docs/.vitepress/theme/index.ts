@@ -51,7 +51,7 @@ export default {
       loadOml2d({
         sayHello: false, // 不在控制台打印项目信息
         dockedPosition: 'right', // 桌面位置
-        mobileDisplay: true, // 移动端是否展示
+        mobileDisplay: false, // 移动端是否展示
         // primaryColor: 'red', // 主题色
         tips: {
           messageLine: 3, // 超出 3 行 省略
