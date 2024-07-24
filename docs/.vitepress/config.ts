@@ -1,6 +1,7 @@
 import { basename } from 'node:path'
 import { defineConfig } from 'vitepress'
 import MarkdownPreview from 'vite-plugin-markdown-preview'
+import { codeInspectorPlugin } from 'code-inspector-plugin'
 
 import { head, nav, sidebar } from './configs'
 
@@ -78,6 +79,6 @@ export default defineConfig({
   },
 
   vite: {
-    plugins: [MarkdownPreview()],
+    plugins: [MarkdownPreview(), codeInspectorPlugin({ bundler: 'vite' })],
   },
 })
