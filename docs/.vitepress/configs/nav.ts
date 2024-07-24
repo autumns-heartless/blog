@@ -79,6 +79,12 @@ export const nav: DefaultTheme.Config['nav'] = [
     text: '其他成员',
     items: [
       {
+        text: '张鑫',
+        items: [
+          { text: 'Code Inspector', link: '/other/zx/codeInspector' },
+        ],
+      },
+      {
         text: '章家龙',
         items: [
           { text: '章家龙', link: '/other/zjl/index' },

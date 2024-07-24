@@ -1,7 +1,10 @@
 import tailwindConfig from '@femm/tailwind-config'
 
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
   presets: [tailwindConfig],
-  content: ['./docs/**/*.{js,ts,md,vue}'],
+  content: ['./docs/**/*.{html,vue,js,ts,jsx,tsx,md}'],
+  options: {
+    safelist: ['html', 'body'],
+  },
 }
