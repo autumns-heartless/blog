@@ -130,16 +130,24 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ]
     }
   ],
-  '/other/': [
+  '/other/codeInspector/': [
     {
-      text: 'JavaScript 基础知识',
+      text: 'Code Inspector',
       collapsed: false,
       items: [
-        { text: '数据类型', link: '/fe/javascript/types' },
-        { text: '引用类型的拷贝', link: '/fe/javascript/clone' },
-        { text: '类型转换', link: '/fe/javascript/conversions' },
-        { text: '原型和原型链', link: '/fe/javascript/prototype' },
-        { text: '继承', link: '/fe/javascript/inherit' }
+        { text: '介绍', link: '/other/codeInspector/introduced' },
+        { text: '使用', link: '/other/codeInspector/use' },
+        { text: '指定 IDE', link: '/other/codeInspector/ide' },
+        { text: 'API', link: '/other/codeInspector/api' },
+      ]
+    },
+  ],
+  '/other/tjq/': [
+    {
+      text: 'fnMap',
+      collapsed: false,
+      items: [
+        { text: '函数地图', link: '/other/tjq/fnMap' },
       ]
     },
   ]

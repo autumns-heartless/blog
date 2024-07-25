@@ -81,7 +81,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         text: '张鑫',
         items: [
-          { text: 'Code Inspector', link: '/other/zx/codeInspector' },
+          { text: 'Code Inspector', link: '/other/codeInspector/index' },
         ],
       },
       {

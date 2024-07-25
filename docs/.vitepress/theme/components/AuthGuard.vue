@@ -8,8 +8,7 @@
       <p class="text-xl font-semibold text-gray-700">Loading...</p>
     </div>
     <div v-else>
-      <slot v-if="authenticated"></slot>
-      <div v-else class="text-center">
+      <div v-if="!authenticated" class="text-center">
         <p class="text-lg font-semibold text-red-600 mb-4">你没有权限查看此页面</p>
         <button
           @click="handleLogin"
@@ -20,6 +19,7 @@
       </div>
     </div>
   </div>
+  <slot v-if="authenticated"></slot>
 </template>
 
 <script setup>
@@ -32,6 +32,7 @@ const authenticated = ref(false)
 onMounted(async () => {
   await initAuth0()
   authenticated.value = await isAuthenticated()
+  // localStorage.setItem('isAuth', authenticated.value)
   loading.value = false
 })
 
