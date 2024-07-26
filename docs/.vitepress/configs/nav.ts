@@ -79,16 +79,19 @@ export const nav: DefaultTheme.Config['nav'] = [
     text: '其他成员',
     items: [
       {
-        text: '章家龙',
+        text: '张鑫',
         items: [
-          { text: '章家龙', link: '/other/zjl/index' },
-        ]
+          { text: 'Code Inspector', link: '/other/codeInspector/index' },
+          { text: '打包部署', link: '/other/deploy/index' },
+        ],
+      },
+      {
+        text: '章家龙',
+        items: [{ text: '章家龙', link: '/other/zjl/index' }],
       },
       {
         text: '井文超',
-        items: [
-          { text: '井文超', link: '/other/jwc/index' },
-        ]
+        items: [{ text: '井文超', link: '/other/jwc/index' }],
       },
       {
         text: '唐佳琪',
