@@ -152,7 +152,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
   ],
   '/other/tjq/': [
     {
-      text: 'fnMap',
+      text: '效率神器',
       collapsed: false,
       items: [
         { text: '函数地图', link: '/other/tjq/fnMap' },
