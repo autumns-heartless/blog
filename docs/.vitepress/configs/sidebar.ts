@@ -154,7 +154,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
     {
       text: 'fnMap',
       collapsed: false,
-      items: [{ text: '函数地图', link: '/other/tjq/fnMap' }],
+      items: [
+        { text: '函数地图', link: '/other/tjq/fnMap' },
+        { text: 'utools', link: '/other/tjq/utools' },
+      ],
     },
   ],
 }
