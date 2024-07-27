@@ -157,4 +157,15 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       items: [{ text: '函数地图', link: '/other/tjq/fnMap' }],
     },
   ],
+  '/other/vue3/': [
+    {
+      text: 'Vue3',
+      collapsed: false,
+      items: [
+        { text: '组件注册', link: '/other/vue3/component-registration' },
+        { text: '透传 Attributes', link: '/other/vue3/fallthrough-attributes' },
+        { text: '组合式函数', link: '/other/vue3/composables' },
+      ],
+    },
+  ],
 }

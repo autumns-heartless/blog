@@ -86,12 +86,19 @@ export const nav: DefaultTheme.Config['nav'] = [
         ],
       },
       {
-        text: '章家龙',
-        items: [{ text: '章家龙', link: '/other/zjl/index' }],
+        text: '郭春艳',
+        items: [
+          { text: '组件注册', link: '/other/vue3/component-registration/' },
+          { text: '透传 Attributes', link: '/other/vue3/fallthrough-attributes/' },
+        ],
       },
       {
         text: '井文超',
-        items: [{ text: '井文超', link: '/other/jwc/index' }],
+        items: [{ text: '组合式函数', link: '/other/vue3/composables' }],
+      },
+      {
+        text: '章家龙',
+        items: [{ text: '章家龙', link: '/other/zjl/index' }],
       },
       {
         text: '唐佳琪',
