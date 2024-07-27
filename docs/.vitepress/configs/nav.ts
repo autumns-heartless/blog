@@ -102,8 +102,11 @@ export const nav: DefaultTheme.Config['nav'] = [
       },
       {
         text: '唐佳琪',
-        items: [{ text: '第1篇笔记', link: '/other/tjq/fnMap' }],
-      },
+        items: [
+          { text: 'FnMap', link: '/other/tjq/fnMap' },
+          { text: 'utools', link: '/other/tjq/utools' },
+        ],
+      }
     ],
     activeMatch: '^/other/',
   },
