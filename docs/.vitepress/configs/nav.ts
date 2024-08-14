@@ -88,8 +88,9 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         text: '郭春艳',
         items: [
-          { text: '组件注册', link: '/other/vue3/component-registration/' },
-          { text: '透传 Attributes', link: '/other/vue3/fallthrough-attributes/' },
+          { text: '组件注册', link: '/other/vue3/component-registration' },
+          { text: '透传 Attributes', link: '/other/vue3/fallthrough-attributes' },
+          { text: 'vben框架的使用', link: '/other/vben/vben-frame-use' },
         ],
       },
       {
@@ -106,7 +107,7 @@ export const nav: DefaultTheme.Config['nav'] = [
           { text: 'FnMap', link: '/other/tjq/fnMap' },
           { text: 'utools', link: '/other/tjq/utools' },
         ],
-      }
+      },
     ],
     activeMatch: '^/other/',
   },

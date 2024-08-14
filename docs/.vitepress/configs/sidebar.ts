@@ -171,4 +171,13 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ],
     },
   ],
+  '/other/vben/': [
+    {
+      text: 'vben',
+      collapsed: false,
+      items: [
+        { text: 'vben框架的使用', link: '/other/vben/vben-frame-use' },
+      ],
+    },
+  ],
 }
