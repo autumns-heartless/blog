@@ -83,6 +83,7 @@ export const nav: DefaultTheme.Config['nav'] = [
         items: [
           { text: 'Code Inspector', link: '/other/codeInspector/index' },
           { text: '打包部署', link: '/other/deploy/index' },
+          { text: 'vben框架的示例页面', link: '/other/vben/example' },
         ],
       },
       {
@@ -99,7 +100,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       },
       {
         text: '章家龙',
-        items: [{ text: '章家龙', link: '/other/zjl/index' }],
+        items: [{ text: 'vben框架中如何引入Modal', link: '/other/vben/import-modal' }],
       },
       {
         text: '唐佳琪',

@@ -176,8 +176,17 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       text: 'vben',
       collapsed: false,
       items: [
-        { text: 'vben框架的使用', link: '/other/vben/vben-frame-use' },
+        { text: 'vben框架的使用-郭春艳著', link: '/other/vben/vben-frame-use' },
+        { text: 'vben框架的使用-示例页面', link: '/other/vben/example' },
+        { text: 'vben框架的使用-章家龙著', link: '/other/vben/import-modal' },
       ],
+    },
+  ],
+  '/other/zjl/': [
+    {
+      text: 'vben框架的使用',
+      collapsed: false,
+      items: [{ text: 'vben框架中如何引入Modal', link: '/other/vben/import-modal' }],
     },
   ],
 }
