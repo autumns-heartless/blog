@@ -17,6 +17,18 @@ export const NAV_DATA: NavData[] = [
         link: 'https://maomao1996.github.io/mm-notes/',
       },
       {
+        icon: 'https://aiyo.space/my1.png',
+        title: '叁聖涅的博客',
+        desc: 'vitepress教程',
+        link: 'https://aiyo.space/',
+      },
+      {
+        icon: 'https://vitepress.yiov.top/logo.png',
+        title: 'vitepress快速上手',
+        desc: 'vitepress快速上手中文教程 ',
+        link: 'https://vitepress.yiov.top/',
+      },
+      {
         icon: 'https://maomao1996.github.io/mm-notes/icons/mqyqingfeng.jpeg',
         title: '冴羽的博客',
         desc: '四个系列：JavaScript深入系列、JavaScript专题系列、ES6系列、React系列',

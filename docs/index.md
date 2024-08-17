@@ -17,6 +17,8 @@ hero:
       link: /todoList/
     - text: 白酒找我
       link: /wine/
+    - text: 烟花许愿
+      link: /firework/
 features:
   - icon: 📖
     title: 前端物语
@@ -49,6 +51,9 @@ features:
     link: /me/
     linkText: 关于我
 ---
+
+<!-- 纸屑效果 -->
+<Confetti />
 
 <style>
 /*爱的魔力转圈圈*/

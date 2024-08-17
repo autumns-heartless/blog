@@ -1,0 +1,11 @@
+.fireworkwrap {
+  display: none;
+  position: relative;
+}
+
+@media (min-width: 960px) {
+  .fireworkwrap {
+    position: relative;
+    display: block;
+  }
+}

@@ -2,11 +2,17 @@ import { h, watch } from 'vue'
 import { useData, EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 
+import { createPinia } from 'pinia' //使用状态管理库。用于音乐播放器的状态监听
+const pinia = createPinia()
+
 import { createMediumZoomProvider } from './composables/useMediumZoom'
 
 import MLayout from './components/MLayout.vue'
 import MNavLinks from './components/MNavLinks.vue'
 import AuthGuard from './components/AuthGuard.vue'
+import Confetti from './components/Confetti.vue'
+import Video from './components/Video.vue'
+import Firework from './components/Firework.vue'
 
 import './styles/index.scss'
 
@@ -33,6 +39,11 @@ export default {
 
     app.component('MNavLinks', MNavLinks)
     app.component('AuthGuard', AuthGuard)
+    app.component('Confetti', Confetti)
+    app.component('Video', Video)
+    app.component('Firework', Firework)
+
+    app.use(pinia)
 
     if (typeof window !== 'undefined') {
       watch(

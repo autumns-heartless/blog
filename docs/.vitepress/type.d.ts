@@ -1,0 +1,5 @@
+declare module 'markdown-it-task-checkbox'
+declare module 'canvas-confetti'
+declare module 'pinia'
+declare module 'vue3-toastify'
+declare module '@vueuse/core'
