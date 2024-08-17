@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
+    "outDir": "docs/.vitepress/dist",
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",

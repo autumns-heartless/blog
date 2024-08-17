@@ -1,6 +1,6 @@
 <style src="./index.scss"></style>
 
-> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码， 原文地址 [maomao1996.github.io](https://maomao1996.github.io/mm-notes/mao)
+> 本文由 [简悦 SimpRead](http://ksria.com/simpread/) 转码
 
 <div class="language-sh vp-adaptive-theme">
 <button title="Copy Code" class="copy"></button>
