@@ -13,6 +13,8 @@ import AuthGuard from './components/AuthGuard.vue'
 import Confetti from './components/Confetti.vue'
 import Video from './components/Video.vue'
 import Firework from './components/Firework.vue'
+import BabyPulm from './components/Baby_pulm.vue'
+import AutoMusic from './components/Auto_playmusic.vue'
 
 import './styles/index.scss'
 
@@ -42,6 +44,8 @@ export default {
     app.component('Confetti', Confetti)
     app.component('Video', Video)
     app.component('Firework', Firework)
+    app.component('BabyPulm', BabyPulm)
+    app.component('AutoMusic', AutoMusic)
 
     app.use(pinia)
 
@@ -61,7 +65,7 @@ export default {
       const { loadOml2d } = await import('oh-my-live2d')
       loadOml2d({
         sayHello: false, // 不在控制台打印项目信息
-        dockedPosition: 'right', // 桌面位置
+        dockedPosition: 'left', // 桌面位置
         mobileDisplay: false, // 移动端是否展示
         // primaryColor: 'red', // 主题色
         tips: {
@@ -106,21 +110,21 @@ export default {
         models: [
           {
             path: 'https://model.oml2d.com/HK416-1-normal/model.json',
-            position: [0, 60],
-            scale: 0.08,
+            position: [-20, 120],
+            scale: 0.04,
             motionPreloadStrategy: 'ALL',
             stageStyle: {
-              width: 250,
-              height: 450,
+              width: 200,
+              height: 300,
             },
           },
           {
             path: 'https://model.oml2d.com/HK416-2-destroy/model.json',
-            scale: 0.15,
-            position: [-100, 0],
+            scale: 0.05,
+            position: [0, 100],
             stageStyle: {
-              width: 250,
-              height: 350,
+              width: 200,
+              height: 300,
             },
           },
         ],

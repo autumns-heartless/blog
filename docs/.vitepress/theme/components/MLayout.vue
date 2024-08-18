@@ -95,6 +95,11 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
       </ClientOnly>
     </template>
 
+    <template #home-hero-actions-after>
+      <!-- 梅林宝宝 -->
+      <BabyPulm />
+    </template>
+
     <template v-if="comment && frontmatter.comment !== false" #doc-footer-before>
       <!-- 评论 -->
       <div class="doc-comments">
@@ -115,6 +120,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
     </template>
 
     <template #doc-after>
+      <AutoMusic />
       <MDocFooter />
     </template>
   </Layout>

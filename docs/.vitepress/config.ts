@@ -55,14 +55,14 @@ export default defineConfig<ThemeConfig>({
       //     "pic": "https://enshimama.oss-cn-shanghai.aliyuncs.com/smartgallery/music/01.jpg",
       //     "lrc": ""
       // },
-      // {
-      //     "id": 2,
-      //     "title": "一个人想着一个人 ",
-      //     "author": "如懿",
-      //     "url": "https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE0ODA=",
-      //     "pic": "https://enshimama.oss-cn-shanghai.aliyuncs.com/smartgallery/music/02.jpg",
-      //     "lrc": ""
-      // },
+      {
+        id: 2,
+        title: '一个人想着一个人 ',
+        author: '如懿',
+        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE0ODA=',
+        pic: 'https://enshimama.oss-cn-shanghai.aliyuncs.com/smartgallery/music/02.jpg',
+        lrc: '',
+      },
       // {
       //     "id": 3,
       //     "title": "夜车（Cover 曾轶可）",
@@ -71,14 +71,14 @@ export default defineConfig<ThemeConfig>({
       //     "pic": "https://enshimama.oss-cn-shanghai.aliyuncs.com/smartgallery/music/03.jpg",
       //     "lrc": ""
       // },
-      {
-        id: 4,
-        title: '迎春花 / 財神到 / 祝福你 (廣東)',
-        author: '邓丽君 / 林子祥 / 甄妮',
-        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE4NTI=',
-        pic: '',
-        lrc: '',
-      },
+      // {
+      //   id: 4,
+      //   title: '迎春花 / 財神到 / 祝福你 (廣東)',
+      //   author: '邓丽君 / 林子祥 / 甄妮',
+      //   url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE4NTI=',
+      //   pic: '',
+      //   lrc: '',
+      // },
     ],
 
     website: {

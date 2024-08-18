@@ -4,18 +4,20 @@
 
 <Video
   :second="3"
-  src="./video/test.mp4"
+  src="../public/video/test.mp4"
   poster="https://fastly.jsdelivr.net/gh/autumns-heartless/DrawBoard@main/images/1723873301166%E6%88%AA%E5%9B%BE20231117135101.png"
 />
 
 <pre class="mt-10">
   ✅ 添加网站音乐播放
 
+  ✅ 目前为本地搜索，添加 Algolia 或 pagefind
+
   ⬜ 媳妇儿白酒销路打开第 1 步
 
-  ⬜ 待办清单 UI 优化
+  ⬜ 添加 RSS 源
 
-  ⬜ 目前为本地搜索，添加 Algolia 或 pagefind
+  ⬜ 待办清单 UI 优化
 
   ⬜ 其他成员模块和笔记编写规划
 
