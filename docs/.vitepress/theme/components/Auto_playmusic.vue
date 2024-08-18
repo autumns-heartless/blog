@@ -16,7 +16,7 @@ export default {
   name: 'MusicPlayer',
   data() {
     return {
-      audioSource: '../../public/audio/black.mp3', // 这里放你的音频文件路径
+      audioSource: '/audio/black.mp3', // 这里放你的音频文件路径
       isPlaying: false,
       lyrics: [],
       currentLyricIndex: 0,
@@ -25,7 +25,7 @@ export default {
   },
 
   mounted() {
-    this.loadLyrics('../../public/audio/black.lrc') // 这里放你的LRC歌词文件路径
+    this.loadLyrics('/audio/black.lrc') // 这里放你的LRC歌词文件路径
     // 注: 自动播放的部分已经移动到按钮的点击事件中
     this.togglePlayback()
   },

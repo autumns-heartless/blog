@@ -4,7 +4,7 @@
 
 <Video
   :second="3"
-  src="../public/video/test.mp4"
+  src="/video/test.mp4"
   poster="https://fastly.jsdelivr.net/gh/autumns-heartless/DrawBoard@main/images/1723873301166%E6%88%AA%E5%9B%BE20231117135101.png"
 />
 
