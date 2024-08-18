@@ -1,0 +1,22 @@
+import{_ as t,o as a,c as o,I as s,j as e,a as d,D as r}from"./chunks/framework.Bj0zGnDR.js";const B=JSON.parse('{"title":"待办事项 - 待开发","description":"","frontmatter":{},"headers":[],"relativePath":"todoList/index.md","filePath":"todoList/index.md","lastUpdated":1723971832000}'),i={name:"todoList/index.md"},c=e("h1",{id:"待办事项-待开发",tabindex:"-1"},[d("待办事项 - 待开发 "),e("a",{class:"header-anchor",href:"#待办事项-待开发","aria-label":'Permalink to "待办事项 - 待开发"'},"​")],-1),l=e("br",null,null,-1),p=e("pre",{class:"mt-10"},`  ✅ 添加网站音乐播放
+
+  ✅ 目前为本地搜索，添加 Algolia 或 pagefind
+
+  ⬜ 媳妇儿白酒销路打开第 1 步
+
+  ⬜ 添加 RSS 源
+
+  ⬜ 待办清单 UI 优化
+
+  ⬜ 其他成员模块和笔记编写规划
+
+  ⬜ 添加团队成员墙展示
+
+  ⬜ 笔记分类规划
+
+  ⬜ 博客添加分类标签和归档
+
+  ⬜ live2d 实现拖拽
+
+  ⬜ 导航实现置顶网站栏目展示
+`,-1);function _(m,h,f,u,x,g){const n=r("Video");return a(),o("div",{"data-pagefind-body":!0},[c,l,s(n,{second:3,src:"../public/video/test.mp4",poster:"https://fastly.jsdelivr.net/gh/autumns-heartless/DrawBoard@main/images/1723873301166%E6%88%AA%E5%9B%BE20231117135101.png"}),p])}const b=t(i,[["render",_]]);export{B as __pageData,b as default};
