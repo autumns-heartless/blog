@@ -2,7 +2,7 @@ import { basename } from 'node:path'
 import { defineConfig } from 'vitepress'
 import MarkdownPreview from 'vite-plugin-markdown-preview'
 import { codeInspectorPlugin } from 'code-inspector-plugin'
-// import { chineseSearchOptimize, pagefindPlugin } from 'vitepress-plugin-pagefind'
+import { chineseSearchOptimize, pagefindPlugin } from 'vitepress-plugin-pagefind'
 
 import taskLists from 'markdown-it-task-checkbox'
 
@@ -160,27 +160,27 @@ export default defineConfig<ThemeConfig>({
     },
 
     //本地搜索
-    search: {
-      provider: 'local',
-      options: {
-        translations: {
-          button: {
-            buttonText: '搜索文档',
-            buttonAriaLabel: '搜索文档',
-          },
-          modal: {
-            noResultsText: '无法找到相关结果',
-            resetButtonTitle: '清除查询条件',
-            displayDetails: '显示明细列表',
-            footer: {
-              selectText: '选择',
-              navigateText: '切换',
-              closeText: '关闭',
-            },
-          },
-        },
-      },
-    },
+    // search: {
+    //   provider: 'local',
+    //   options: {
+    //     translations: {
+    //       button: {
+    //         buttonText: '搜索文档',
+    //         buttonAriaLabel: '搜索文档',
+    //       },
+    //       modal: {
+    //         noResultsText: '无法找到相关结果',
+    //         resetButtonTitle: '清除查询条件',
+    //         displayDetails: '显示明细列表',
+    //         footer: {
+    //           selectText: '选择',
+    //           navigateText: '切换',
+    //           closeText: '关闭',
+    //         },
+    //       },
+    //     },
+    //   },
+    // },
 
     logo: '/logo.png',
 
@@ -236,15 +236,15 @@ export default defineConfig<ThemeConfig>({
     plugins: [
       MarkdownPreview(),
       codeInspectorPlugin({ bundler: 'vite' }),
-      // pagefindPlugin({
-      //   //使用 pagefind搜索插件 https://www.npmjs.com/package/vitepress-plugin-pagefind
-      //   customSearchQuery: chineseSearchOptimize,
-      //   resultOptimization: false,
-      //   btnPlaceholder: '搜索文档',
-      //   placeholder: '搜索文档',
-      //   emptyText: '没有内容',
-      //   heading: '共 {{searchResult}} 条结果',
-      // }),
+      pagefindPlugin({
+        //使用 pagefind搜索插件 https://www.npmjs.com/package/vitepress-plugin-pagefind
+        customSearchQuery: chineseSearchOptimize,
+        resultOptimization: false,
+        btnPlaceholder: '搜索文档',
+        placeholder: '搜索文档',
+        emptyText: '没有内容',
+        heading: '共 {{searchResult}} 条结果',
+      }),
     ],
   },
 })

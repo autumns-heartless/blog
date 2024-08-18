@@ -17,6 +17,12 @@ export const NAV_DATA: NavData[] = [
         link: 'https://maomao1996.github.io/mm-notes/',
       },
       {
+        icon: 'https://docs.ffffee.com/logo.png',
+        title: '李钟意讲前端',
+        desc: '关于前端技术的各种干货',
+        link: 'https://docs.ffffee.com/',
+      },
+      {
         icon: 'https://aiyo.space/my1.png',
         title: '叁聖涅的博客',
         desc: 'vitepress教程',
