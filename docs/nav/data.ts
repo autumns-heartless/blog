@@ -17,6 +17,12 @@ export const NAV_DATA: NavData[] = [
         link: 'https://maomao1996.github.io/mm-notes/',
       },
       {
+        icon: 'https://blog.code520.com.cn/medias/logo.png',
+        title: 'jokereven的博客',
+        desc: '酷炫的博客',
+        link: 'https://blog.code520.com.cn/',
+      },
+      {
         icon: 'https://docs.ffffee.com/logo.png',
         title: '李钟意讲前端',
         desc: '关于前端技术的各种干货',
@@ -27,6 +33,12 @@ export const NAV_DATA: NavData[] = [
         title: '叁聖涅的博客',
         desc: 'vitepress教程',
         link: 'https://aiyo.space/',
+      },
+      {
+        icon: 'https://images.bddxg.top/blog/logo.webp',
+        title: '冰冻大西瓜的博客',
+        desc: '前端的一些技术知识点',
+        link: 'https://bddxg.top/',
       },
       {
         icon: 'https://vitepress.yiov.top/logo.png',

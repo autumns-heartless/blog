@@ -18,8 +18,8 @@ const props = withDefaults(defineProps<Props>(), {
   src: '',
   poster: '',
   second: 0.5,
-  width: 800,
-  height: 450,
+  width: undefined,
+  height: undefined,
   /*
       参考 MDN 自动播放指南：https://developer.mozilla.org/zh-CN/docs/Web/Media/Autoplay_guide
       Autoplay 功能
@@ -113,7 +113,7 @@ onMounted(() => {
 </script>
 <template>
   <div
-    class="m-video"
+    class="m-video w-full"
     :class="{ 'u-video-hover': !hidden }"
     :style="`width: ${width}px; height: ${height}px;`"
   >
@@ -157,7 +157,6 @@ onMounted(() => {
 
   video {
     width: 100%;
-    height: 100%;
   }
 
   .m-icon-play {
