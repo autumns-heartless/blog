@@ -1,3 +1,5 @@
+<BackTop />
+
 # 透传 Attributes
 
 直接说透传 Attributes 我们可能是有点陌生，但在组件封装的时候我们常见到的\$attrs 肯定是熟悉的，所谓透传就是我们使用\$attrs 将父组件的未声明的 Props 直接传递给子组件内部的 HTML 标签或自定义组件。

@@ -1,3 +1,5 @@
+<BackTop />
+
 # API
 
 `codeInspectorPlugin` 的详细参数配置如下所示：

@@ -1,3 +1,5 @@
+<BackTop />
+
 # 介绍
 
 `code-inspector-plugin` 是一款基于 `webpack/vite/rspack/nextjs/nuxt/umijs plugin` 的提升开发效率的工具，点击页面上的 DOM，它能够自动打开你的 IDE 并将光标定位到 DOM 对应的源代码位置。

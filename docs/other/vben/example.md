@@ -1,3 +1,5 @@
+<BackTop />
+
 # vben 框架的示例页面
 
 ## 示例页面代码截图 => custom/example/index.vue
