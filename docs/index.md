@@ -19,6 +19,8 @@ hero:
       link: /wine/
     - text: 烟花许愿
       link: /firework/
+    - text: 涨薪申请
+      link: /me/money
 features:
   - icon: 📖
     title: 前端物语
