@@ -1,30 +1,3 @@
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-  var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-load"));
-  if ("IntersectionObserver" in window) {
-    let lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          let lazyVideo = entry.target;
-          for (var source in lazyVideo.children) {
-            var videoSource = lazyVideo.children[source];
-            if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-              videoSource.src = videoSource.dataset.src;
-            }
-          }
-          lazyVideo.load();
-          lazyVideo.classList.remove("lazy-load");
-          lazyVideoObserver.unobserve(lazyVideo);
-        }
-      });
-    });
-    lazyVideos.forEach(function(lazyVideo) {
-      lazyVideoObserver.observe(lazyVideo);
-    });
-  }
-});
-</script>
-
 # 涨薪申请
 
 ## 员工薪资调整表
@@ -54,14 +27,14 @@
 
 ::: details 本地观看：20240726\_依赖之 codeInspector
 
-<Video
+<!-- <Video
   v-lazy
   :second="3"
   width="100%"
   height="500px"
   src="/video/ruis/20240726_codeInspector.mp4"
   class="lazy-load"
-/>
+/> -->
 
 :::
 
@@ -126,3 +99,30 @@
 [📺 19. vue3 透传.mp4](https://v.youku.com/v_show/id_XNjQyNTkwODU0MA==.html)
 
 :::
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-load"));
+  if ("IntersectionObserver" in window) {
+    let lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyVideo = entry.target;
+          for (var source in lazyVideo.children) {
+            var videoSource = lazyVideo.children[source];
+            if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+              videoSource.src = videoSource.dataset.src;
+            }
+          }
+          lazyVideo.load();
+          lazyVideo.classList.remove("lazy-load");
+          lazyVideoObserver.unobserve(lazyVideo);
+        }
+      });
+    });
+    lazyVideos.forEach(function(lazyVideo) {
+      lazyVideoObserver.observe(lazyVideo);
+    });
+  }
+});
+</script>
