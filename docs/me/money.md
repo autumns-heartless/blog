@@ -31,209 +31,28 @@
 
 ![image](images/qrCode.png)
 
-## ⭐️ 职级变化
+## ⭐️ 职级变化（开发&nbsp;&nbsp;→&nbsp;&nbsp;主管）
 
-### 🚀 任职时间
-
-- 任职时间：2024/03/12 ~ 至今
+### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;⏰ 任职时间：2024/03/12 ~ 至今
 
 ## ⭐️ 所作贡献
 
-- 所作贡献：培训、组件库
+### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;🚀 组件库
 
-### 🚀 组件库
+<pre>
+  <div></div>
+  &nbsp; &nbsp; &nbsp;<b>·</b> 说明：为公司 Jeeplus 所搭建的 1 套前端组件库
+  &nbsp; &nbsp; &nbsp;<b>·</b> 作用：能够极大效率提升前端同学的开发效率
+  &nbsp; &nbsp; &nbsp;<b>·</b> 使用项目：《 公安厅 》、《 宣传部 》、《 社区矫正 》
+</pre>
 
-- 说明：为公司 Jeeplus 所搭建的 1 套前端组件库
-- 作用：能够极大效率提升前端同学的开发效率
-- 使用项目：《 公安厅 》、《 宣传部 》、《 社区矫正 》
+### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;🚀 培训
 
-### 🚀 培训
+#### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ⏰ 培训视频（**`优酷`** 在线观看）
 
-#### ⏰ 培训视频
+<br />
 
-::: details 20240322\_开发规范
-
-<Video
-  v-lazy
-  :second="3"
-  width="100%"
-  height="500px"
-  src="/video/ruis/20240322_开发规范.mp4"
-  class="lazy-load"
-/>
-
-:::
-
-::: details 20240322\_组件封装
-
-<Video
-  v-lazy
-  :second="3"
-  width="100%"
-  height="500px"
-  src="/video/ruis/20240322_组件封装.mp4"
-  class="lazy-load"
-/>
-
-:::
-
-::: details 20240324\_多选框联动
-
-<Video
-  v-lazy
-  :second="3"
-  width="100%"
-  height="500px"
-  src="/video/ruis/20240324_多选框联动.mp4"
-  class="lazy-load"
-/>
-
-:::
-
-::: details 20240427\_社区矫正演示视频
-
-<Video
-  v-lazy
-  :second="3"
-  width="100%"
-  height="500px"
-  src="/video/ruis/20240427_社区矫正演示视频.mp4"
-  class="lazy-load"
-/>
-
-:::
-
-::: details 20240528\_产品研发相关规划上
-
-<Video
-  v-lazy
-  :second="3"
-  width="100%"
-  height="500px"
-  src="/video/ruis/20240528_产品研发相关规划上.mp4"
-  class="lazy-load"
-/>
-
-:::
-
-::: details 20240528\_产品研发相关规划下
-
-<Video
-  v-lazy
-  :second="3"
-  width="100%"
-  height="500px"
-  src="/video/ruis/20240528_产品研发相关规划下.mp4"
-  class="lazy-load"
-/>
-
-:::
-
-::: details 20240528\_规范建设
-
-<Video
-  v-lazy
-  :second="3"
-  width="100%"
-  height="500px"
-  src="/video/ruis/20240528_规范建设.mp4"
-  class="lazy-load"
-/>
-
-:::
-
-::: details 20240528\_技术培训
-
-<Video
-  v-lazy
-  :second="3"
-  width="100%"
-  height="500px"
-  src="/video/ruis/20240528_技术培训.mp4"
-  class="lazy-load"
-/>
-
-:::
-
-::: details 20240528\_人员熟悉与配合
-
-<Video
-  v-lazy
-  :second="3"
-  width="100%"
-  height="500px"
-  src="/video/ruis/20240528_人员熟悉与配合.mp4"
-  class="lazy-load"
-/>
-
-:::
-
-::: details 20240528\_为知笔记运用与未来技术发展探讨
-
-<Video
-  v-lazy
-  :second="3"
-  width="100%"
-  height="500px"
-  src="/video/ruis/20240528_为知笔记运用与未来技术发展探讨.mp4"
-  class="lazy-load"
-/>
-
-:::
-
-::: details 20240528\_效率翻倍
-
-<Video
-  v-lazy
-  :second="3"
-  width="100%"
-  height="500px"
-  src="/video/ruis/20240528_效率翻倍.mp4"
-  class="lazy-load"
-/>
-
-:::
-
-::: details 20240528_VSCode 设置 json
-
-<Video
-  v-lazy
-  :second="3"
-  width="100%"
-  height="500px"
-  src="/video/ruis/20240528_VSCode设置json.mp4"
-  class="lazy-load"
-/>
-
-:::
-
-::: details 20240528_VSCode 小技巧
-
-<Video
-  v-lazy
-  :second="3"
-  width="100%"
-  height="500px"
-  src="/video/ruis/20240528_VSCode小技巧.mp4"
-  class="lazy-load"
-/>
-
-:::
-
-::: details 20240712_vben 新框架初步使用
-
-<Video
-  v-lazy
-  :second="3"
-  width="100%"
-  height="500px"
-  src="/video/ruis/20240712_vben新框架初步使用.mp4"
-  class="lazy-load"
-/>
-
-:::
-
-::: details 20240726_codeInspector
+::: details 本地观看：20240726\_依赖之 codeInspector
 
 <Video
   v-lazy
@@ -246,67 +65,64 @@
 
 :::
 
-::: details 20240726_fnMap
+::: details 2024 🉐 3🈷️22☀️
 
-<Video
-  v-lazy
-  :second="3"
-  width="100%"
-  height="500px"
-  src="/video/ruis/20240726_fnMap.mp4"
-  class="lazy-load"
-/>
+[📺 1. 开发规范.mp4](https://v.youku.com/v_show/id_XNjQxODUyNjY4MA==.html)
+
+[📺 2. 组件封装.mp4](https://v.youku.com/v_show/id_XNjQxODUyNTUxMg==.html)
 
 :::
 
-::: details 20240726_ssh2-sftp-client
+::: details 2024 🉐 3🈷️24☀️
 
-<Video
-  v-lazy
-  :second="3"
-  width="100%"
-  height="500px"
-  src="/video/ruis/20240726_ssh2-sftp-client.mp4"
-  class="lazy-load"
-/>
+[📺 3. 多选框联动.mp4](https://v.youku.com/v_show/id_XNjQyNTUwMDU5Mg==.html)
 
 :::
 
-::: details 20240726_VSCode 插件之 SFTP
+::: details 2024 🉐 4🈷️27☀️
 
-<Video
-  v-lazy
-  :second="3"
-  width="100%"
-  height="500px"
-  src="/video/ruis/20240726_VSCode插件之SFTP.mp4"
-  class="lazy-load"
-/>
+[📺 4. 社区矫正演示视频.mp4](https://v.youku.com/v_show/id_XNjQyNTUwMDY0NA==.html)
 
 :::
 
-::: details 20240726_vue3 组件注册
+::: details 2024 🉐 5🈷️28☀️
 
-<Video
-  v-lazy
-  :second="3"
-  width="100%"
-  height="500px"
-  src="/video/ruis/20240726_vue3 组件注册.mp4"
-  class="lazy-load"
-/>
+[📺 5. 产品研发相关规划上.mp4](https://v.youku.com/v_show/id_XNjQyNTUwNDg5Mg==.html)
+
+[📺 6. 产品研发相关规划下.mp4](https://v.youku.com/v_show/id_XNjQxODUzOTQxMg==.html)
+
+[📺 7. 规范建设.mp4](https://v.youku.com/v_show/id_XNjQyNTUwMjMwMA==.html)
+
+[📺 8. 技术培训.mp4](https://v.youku.com/v_show/id_XNjQyNTUwMjM0MA==.html)
+
+[📺 9. 人员熟悉与配合.mp4](https://v.youku.com/v_show/id_XNjQxODkyODU1Mg==.html)
+
+[📺 10. 为知笔记运用与未来技术发展探讨.mp4](https://v.youku.com/v_show/id_XNjQxODkyODU5Ng==.html)
+
+[📺 11. 效率翻倍.mp4](https://v.youku.com/v_show/id_XNjQyNTkwODEwOA==.html)
+
+[📺 12. VSCode 设置 json.mp4](https://v.youku.com/v_show/id_XNjQyNTUwMDY1Ng==.html)
+
+[📺 13. VSCode 小技巧.mp4](https://v.youku.com/v_show/id_XNjQxODUzMzQ2NA==.html)
 
 :::
 
-::: details 20240726_vue3 透传
+::: details 2024 🉐 7🈷️12☀️
 
-<Video
-  v-lazy
-  :second="3"
-  width="100%"
-  height="500px"
-  src="/video/ruis/20240726_vue3透传.mp4"
-  class="lazy-load"
-/>
+[📺 14. vben 新框架初步使用.mp4](https://v.youku.com/v_show/id_XNjQxODkzNjA3Mg==.html)
+
+:::
+
+::: details 2024 🉐 7🈷️26☀️
+
+[📺 15. VSCode 插件之 fnMap.mp4](https://v.youku.com/v_show/id_XNjQxODkzNjI5Ng==.html)
+
+[📺 16. VSCode 插件之 SFTP.mp4](https://v.youku.com/v_show/id_XNjQyNTkwNzA1Ng==.html)
+
+[📺 17. 依赖 ssh2-sftp-client.mp4](https://v.youku.com/v_show/id_XNjQyNTkwNzAxNg==.html)
+
+[📺 18. vue3 组件注册.mp4](https://v.youku.com/v_show/id_XNjQxODkzNjM5Mg==.html)
+
+[📺 19. vue3 透传.mp4](https://v.youku.com/v_show/id_XNjQyNTkwODU0MA==.html)
 
 :::
