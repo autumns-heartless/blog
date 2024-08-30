@@ -27,14 +27,14 @@
 
 ::: details 本地观看：20240726\_依赖之 codeInspector
 
-<!-- <Video
+<Video
   v-lazy
   :second="3"
   width="100%"
   height="500px"
   src="/video/ruis/20240726_codeInspector.mp4"
   class="lazy-load"
-/> -->
+/>
 
 :::
 
@@ -100,8 +100,8 @@
 
 :::
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
+<!-- <script>
+document.addEventListener("DOMContentLoaded", function() {
   var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-load"));
   if ("IntersectionObserver" in window) {
     let lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
@@ -125,4 +125,4 @@
     });
   }
 });
-</script>
+</script> -->
