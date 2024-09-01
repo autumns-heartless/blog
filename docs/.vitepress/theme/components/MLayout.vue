@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import NewFont from './NewFont.vue'
+import AnimateTitle from './AnimateTitle.vue'
+
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import { nextTick, provide, ref, toRefs } from 'vue'
@@ -98,6 +101,13 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
     <template #home-hero-actions-after>
       <!-- 梅林宝宝 -->
       <BabyPulm />
+    </template>
+
+    <template #home-hero-info>
+      <!-- 渐变色标题 -->
+      <!-- <AnimateTitle /> -->
+      <!-- 打字机效果 -->
+      <NewFont />
     </template>
 
     <template v-if="comment && frontmatter.comment !== false" #doc-footer-before>
