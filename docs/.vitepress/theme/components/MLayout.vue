@@ -75,7 +75,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
         <div class="snow" v-if="theme.website?.showSnow && isDark">
           <div v-for="index in 80" :key="index" class="dot"></div>
         </div>
-        <Lantern />
+        <!-- <Lantern /> -->
       </ClientOnly>
     </template>
 

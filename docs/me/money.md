@@ -1,4 +1,4 @@
-<!-- # 涨薪申请
+# 涨薪申请
 
 ## 员工薪资调整表
 
@@ -28,15 +28,15 @@
 ::: details 本地观看：20240726\_依赖之 codeInspector
 
 <Video
-  v-lazy
   :second="3"
-  width="100%"
-  height="500px"
   src="/video/ruis/20240726_codeInspector.mp4"
   class="lazy-load"
+  style="width: 100%; height: 100%;"
 />
 
 :::
+
+<Swiper />
 
 ::: details 2024 🉐 3🈷️22☀️
 
@@ -100,7 +100,9 @@
 
 :::
 
-<!-- <script>
+<script setup>
+import Swiper from './Swiper.vue';
+
 document.addEventListener("DOMContentLoaded", function() {
   var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-load"));
   if ("IntersectionObserver" in window) {
@@ -125,4 +127,4 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
-</script> --> -->
+</script>

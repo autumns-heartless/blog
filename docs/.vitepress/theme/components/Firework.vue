@@ -629,6 +629,13 @@ onMounted(() => {
   }
 }
 
+@media (max-width: 768px) {
+  /* 常见的手机屏幕宽度阈值 */
+  .message {
+    width: 200px;
+  }
+}
+
 .msgwrap {
   display: flex;
   flex-direction: row;
