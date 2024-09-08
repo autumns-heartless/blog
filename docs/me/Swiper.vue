@@ -2,8 +2,8 @@
   <div class="container">
     <div class="bigBox">
       <a :href="toHref" target="_blank">
-        <img :src="`/money/${bigImage}.png`" />
-        <img src="/money/playVideo.svg" />
+        <img :src="`/public/money/${bigImage}.png`" />
+        <img src="/public/money/playVideo.svg" />
       </a>
     </div>
     <div class="swiperList">
@@ -11,7 +11,7 @@
         <li v-for="(item, index) in imagesList" :key="index" @click="changeImage(item, index)">
           <a>
             <img
-              :src="`/money/${item.url}.png`"
+              :src="`/public/money/${item.url}.png`"
               :class="item.active ? 'active' : ''"
               class="medium-zoom-image"
             />
