@@ -38,6 +38,13 @@
   }
 }
 
+@media (max-width: 768px) {
+  /* 常见的手机屏幕宽度阈值 */
+  .text__box {
+    font-size: 14px;
+  }
+}
+
 .one {
   animation-delay: 0s;
 }

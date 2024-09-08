@@ -34,7 +34,7 @@
     <b>·</b> 作用：让大家有 1 个明确的提升路线和更加规范、更加效率的开发体系
   </p>
 </div>
-<img src="./images/前端规划.png" style="margin: 30px;" />
+<img src="./images/前端规划.png" style="margin: 30px 0px;" />
 
 ### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;🚀 前端所规划待办事项
 
