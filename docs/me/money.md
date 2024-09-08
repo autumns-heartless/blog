@@ -45,7 +45,12 @@
   </p>
 </div>
 
-<iframe src="./images/待办事项.pdf" style="width: 100%; height: 500px; margin: 30px;" />
+<img src="./images/待办事项1.png" style="width: 100%;" />
+<img src="./images/待办事项2.png" style="width: 100%;" />
+<img src="./images/待办事项3.png" style="width: 100%;" />
+<img src="./images/待办事项4.png" style="width: 100%;" />
+<img src="./images/待办事项5.png" style="width: 100%;" />
+<img src="./images/待办事项6.png" style="width: 100%;" />
 
 ### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;🚀 培训
 
@@ -64,7 +69,7 @@
 
 <br />
 
-::: details 本地观看：20240726\_依赖之 codeInspector
+<!-- ::: details 本地观看：20240726\_依赖之 codeInspector
 
 <Video
   :second="3"
@@ -73,7 +78,7 @@
   style="width: 100%; height: 100%;"
 />
 
-:::
+::: -->
 
 <Swiper />
 
