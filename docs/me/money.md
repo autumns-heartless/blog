@@ -45,7 +45,7 @@
   </p>
 </div>
 
-<iframe src="/money/待办事项.pdf" style="width: 100%; height: 500px; margin: 30px;" />
+<iframe src="/images/待办事项.pdf" style="width: 100%; height: 500px; margin: 30px;" />
 
 ### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;🚀 培训
 

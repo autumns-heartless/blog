@@ -2,8 +2,8 @@
   <div class="container">
     <div class="bigBox">
       <a :href="toHref" target="_blank">
-        <img :src="`/money/${bigImage}.png`" />
-        <img src="/money/playVideo.svg" />
+        <img :src="`/images/${bigImage}.png`" />
+        <img src="/images/playVideo.svg" />
       </a>
     </div>
     <div class="swiperList">
@@ -11,7 +11,7 @@
         <li v-for="(item, index) in imagesList" :key="index" @click="changeImage(item, index)">
           <a>
             <img
-              :src="`/money/${item.url}.png`"
+              :src="`/images/${item.url}.png`"
               :class="item.active ? 'active' : ''"
               class="medium-zoom-image"
             />
@@ -161,7 +161,7 @@ onMounted(async () => {
   width: 98%;
   height: 300px;
   margin: 10px auto;
-  background: url(/money/开发规范.png) no-repeat center / cover;
+  background: url(/images/开发规范.png) no-repeat center / cover;
   border-radius: 5px;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
   transition: all 1s;
