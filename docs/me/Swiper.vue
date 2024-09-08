@@ -2,7 +2,8 @@
   <div class="container">
     <div class="bigBox">
       <a :href="toHref" target="_blank">
-        <img :src="`./images/${bigImage}.png`" @click="playVideo" />
+        <img :src="`./images/${bigImage}.png`" />
+        <img src="./images/playVideo.svg" />
       </a>
     </div>
     <div class="swiperList">
@@ -30,35 +31,110 @@ const toHref = ref('https://v.youku.com/v_show/id_XNjQyNTkwODU0MA==.html')
 
 const imagesList = reactive([
   {
-    url: 'vue3_透传',
+    url: '开发规范',
     active: true,
-    href: 'https://v.youku.com/v_show/id_XNjQyNTkwODU0MA==.html',
+    href: 'XNjQxODUyNjY4MA',
+  },
+  {
+    url: '组件_组件封装',
+    active: false,
+    href: 'XNjQxODUyNTUxMg',
+  },
+  {
+    url: '组件_多选框联动',
+    active: false,
+    href: 'XNjQyNTUwMDU5Mg',
+  },
+  {
+    url: '社区矫正演示视频',
+    active: false,
+    href: 'XNjQyNTUwMDY0NA',
+  },
+  {
+    url: 'VSCode_setting.json文件',
+    active: false,
+    href: 'XNjQyNTUwMDY1Ng',
+  },
+  {
+    url: 'VSCode_小技巧',
+    active: false,
+    href: 'XNjQxODUzMzQ2NA',
+  },
+  {
+    url: '产品研发相关规划上',
+    active: false,
+    href: 'XNjQyNTUwNDg5Mg',
+  },
+  {
+    url: '产品研发相关规划下',
+    active: false,
+    href: 'XNjQxODUzOTQxMg',
+  },
+  {
+    url: '规范建设',
+    active: false,
+    href: 'XNjQyNTUwMjMwMA',
+  },
+  {
+    url: '技术培训',
+    active: false,
+    href: 'XNjQyNTUwMjM0MA',
+  },
+  {
+    url: '人员熟悉与配合',
+    active: false,
+    href: 'https://v.youku.com/v_show/id_XNjQxODkyODU1Mg==.html',
+  },
+  {
+    url: '为知笔记与未来技术发展探讨',
+    active: false,
+    href: 'https://v.youku.com/v_show/id_XNjQxODkyODU5Ng==.html',
+  },
+  {
+    url: '效率翻倍',
+    active: false,
+    href: 'https://v.youku.com/v_show/id_XNjQyNTkwODEwOA==.html',
+  },
+  {
+    url: 'vben框架_初步使用',
+    active: false,
+    href: 'XNjQxODkzNjA3Mg',
+  },
+  {
+    url: '依赖_CodeInspector使用',
+    active: false,
+    href: 'XNjQyNTkwNjk0OA',
+  },
+  {
+    url: 'VSCode插件_fnMap使用',
+    active: false,
+    href: 'XNjQxODkzNjI5Ng',
+  },
+  {
+    url: '依赖_ssh2-sftp-client使用',
+    active: false,
+    href: 'XNjQyNTkwNzAxNg',
+  },
+  {
+    url: 'VSCode插件_SFTP使用',
+    active: false,
+    href: 'XNjQyNTkwNzA1Ng',
   },
   {
     url: 'vue3_组件注册',
     active: false,
-    href: 'https://v.youku.com/v_show/id_XNjQxODkzNjM5Mg==.html',
+    href: 'XNjQxODkzNjM5Mg',
   },
-  // { url: './images/VSCode插件之fnMap使用.png', active: false },
-  // { url: './images/VSCode插件之SFTP使用.png', active: false },
-  // { url: './images/依赖之CodeInspector使用.png', active: false },
-  // { url: './images/依赖之ssh2-sftp-client使用.png', active: false },
-  // { url: './images', active: false },
-  // { url: './images', active: false },
-  // { url: './images', active: false },
-  // { url: './images', active: false },
-  // { url: './images', active: false },
-  // { url: './images', active: false },
-  // { url: './images', active: false },
-  // { url: './images', active: false },
-  // { url: './images', active: false },
-  // { url: './images', active: false },
-  // { url: './images', active: false },
+  {
+    url: 'vue3_透传',
+    active: false,
+    href: 'XNjQyNTkwODU0MA',
+  },
 ])
 
 function changeImage(item) {
   bigImage.value = item.url
-  toHref.value = item.href
+  toHref.value = `https://v.youku.com/v_show/id_${item.href}==.html`
   imagesList.forEach((item) => {
     item.active = false
   })
@@ -70,14 +146,7 @@ onMounted(async () => {
   imgs.forEach((image) => {
     image.classList.remove('medium-zoom-image')
   })
-  console.log(imgs, 'imgs')
 })
-
-function playVideo() {
-  // const bigImageValue = 'your_video_id' // 替换为实际的视频 ID
-  // const url = `https://v.youku.com/${bigImageValue}.html`
-  // window.location.href = url
-}
 </script>
 
 <style scoped lang="scss">
@@ -97,8 +166,29 @@ function playVideo() {
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
   transition: all 1s;
 
-  img {
+  img:nth-of-type(1) {
     height: 100%;
+  }
+
+  img:nth-of-type(2) {
+    display: none;
+  }
+
+  a {
+    position: relative;
+  }
+
+  a:hover img:nth-of-type(2) {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50px, -50px);
+    z-index: 999;
+    opacity: 0.5;
+    background: rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -116,9 +206,33 @@ function playVideo() {
   overflow: auto;
 }
 
+/* 滚动条样式 */
+.container ul::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.container ul::-webkit-scrollbar-track {
+  background: rgb(239, 239, 239);
+  border-radius: 2px;
+}
+
+.container ul::-webkit-scrollbar-thumb {
+  background: #bfbfbf;
+  border-radius: 10px;
+}
+
+.container ul::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+.container ul::-webkit-scrollbar-corner {
+  background: #179a16;
+}
+
 .container ul li {
   flex: 1;
-  min-width: 120px;
+  min-width: 300px;
   height: 120px;
   cursor: pointer;
 }

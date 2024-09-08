@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <div class="text__box one name">生活不止眼前的苟且，还有诗和远方</div>
-    <div class="text__box two text">这是最好的时代，也是最坏的时代</div>
-    <!-- <div class="text__box three"></div> -->
-    <!-- <div class="text__box four"></div> -->
+    <div class="text__box one name">这是最好的时代</div>
+    <div class="text__box two text">也是最坏的时代</div>
+    <!-- <div class="text__box three">生活不止眼前的苟且</div> -->
+    <!-- <div class="text__box four">还有诗和远方</div> -->
   </div>
 </template>
 
@@ -45,7 +45,7 @@
 }
 
 .two {
-  animation-delay: 4s;
+  animation-delay: 2s;
   &::after {
     animation-delay: 2s;
   }

@@ -1,8 +1,6 @@
 # 涨薪申请
 
-## 员工薪资调整表
-
-![image](images/qrCode.png)
+<Font />
 
 ## ⭐️ 职级变化（开发&nbsp;&nbsp;→&nbsp;&nbsp;主管）
 
@@ -12,16 +10,57 @@
 
 ### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;🚀 组件库
 
-<pre>
-  <div></div>
-  &nbsp; &nbsp; &nbsp;<b>·</b> 说明：为公司 Jeeplus 所搭建的 1 套前端组件库
-  &nbsp; &nbsp; &nbsp;<b>·</b> 作用：能够极大效率提升前端同学的开发效率
-  &nbsp; &nbsp; &nbsp;<b>·</b> 使用项目：《 公安厅 》、《 宣传部 》、《 社区矫正 》
-</pre>
+  <div style="text-indent: 4em">
+    <p>
+      <b>·</b> 说明：为公司 Jeeplus 所搭建的 1 套前端组件库
+    </p>
+    <p>
+      <b>·</b> 作用：能够极大效率提升前端同学的开发效率
+    </p>
+    <p>
+      <b>·</b> 使用项目：《 公安厅 》、《 宣传部 》、《 社区矫正 》、《 农事服务 》
+    </p>
+  </div>
+
+### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;🚀 前端规划
+
+<div style="text-indent: 4em">
+  <p>
+    <b>·</b> 说明：针对公司目前现状对前端同学所做的规划
+  </p>
+  <p>
+    <b>·</b> 作用：让大家有 1 个明确的提升路线和更加规范、更加效率的开发体系
+  </p>
+</div>
+<img src="./images/前端规划.png" style="margin: 30px;" />
+
+### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;🚀 前端所规划待办事项
+
+<div style="text-indent: 4em">
+  <p>
+    <b>·</b> 说明：针对前端团队未来发展所规划的一些前瞻工作
+  </p>
+  <p>
+    <b>·</b> 作用：将规划落地，让团队更加有规范和素养
+  </p>
+</div>
+
+<iframe src="/待办事项.pdf" style="width: 100%; height: 500px; margin: 30px;" />
 
 ### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;🚀 培训
 
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ⏰ 培训视频（**`优酷`** 在线观看）
+
+#### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ⏰ 培训文档（**`为知笔记`** 存放）<a href="https://qtmyx.netlify.app/other/vben/example">部分文档的在线地址</a>
+
+<div style="text-indent: 5em">
+  <p>
+    <b>·</b> 说明：每次培训的文档和视频都将记录在内
+  </p>
+  <p>
+    <b>·</b> 作用：提升团队整体水平
+  </p>
+</div>
 
 <br />
 
@@ -38,7 +77,7 @@
 
 <Swiper />
 
-::: details 2024 🉐 3🈷️22☀️
+<!-- ::: details 2024 🉐 3🈷️22☀️
 
 [📺 1. 开发规范.mp4](https://v.youku.com/v_show/id_XNjQxODUyNjY4MA==.html)
 
@@ -98,10 +137,11 @@
 
 [📺 19. vue3 透传.mp4](https://v.youku.com/v_show/id_XNjQyNTkwODU0MA==.html)
 
-:::
+::: -->
 
 <script setup>
 import Swiper from './Swiper.vue';
+import Font from './Font.vue';
 
 document.addEventListener("DOMContentLoaded", function() {
   var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-load"));
