@@ -1,3 +1,5 @@
+<BackTop />
+
 # 涨薪申请 <small>(建议在 PC 端观看)</small>
 
 <Font />
