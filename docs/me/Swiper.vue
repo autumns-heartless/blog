@@ -2,8 +2,8 @@
   <div class="container">
     <div class="bigBox">
       <a :href="toHref" target="_blank">
-        <img :src="`./images/${bigImage}.png`" />
-        <img src="./images/playVideo.svg" />
+        <img :src="`/money/${bigImage}.png`" />
+        <img src="/money/playVideo.svg" />
       </a>
     </div>
     <div class="swiperList">
@@ -11,7 +11,7 @@
         <li v-for="(item, index) in imagesList" :key="index" @click="changeImage(item, index)">
           <a>
             <img
-              :src="`./images/${item.url}.png`"
+              :src="`/money/${item.url}.png`"
               :class="item.active ? 'active' : ''"
               class="medium-zoom-image"
             />
@@ -25,7 +25,7 @@
 <script setup>
 import { ref, reactive, onMounted } from 'vue'
 
-const bigImage = ref('vue3_透传')
+const bigImage = ref('开发规范')
 
 const toHref = ref('https://v.youku.com/v_show/id_XNjQyNTkwODU0MA==.html')
 
