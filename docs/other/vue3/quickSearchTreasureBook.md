@@ -272,13 +272,46 @@ import { onMounted,onBeforeMount,onUpdated,unmounted } from 'vue';
 > 如果不写名字就是默认插槽
 
 ```script
-<!-- <template #ScopedSlot="{list}"></template> -->   <template>     <SlotComponent>       <!-- ScopedSlot是插槽名，params子组件传的是参数 -->       <template v-slot:ScopedSlot='params'>         <ul>           <li v-for='d in params.list' :key="d.id">           {{d.name}}           </li>         </ul>       </template>     </SlotComponent>   </template>      <script>   import SlotComponent from './SlotComponent.vue';      export default {     components: {       SlotComponent,     },   };   </script>
+<!-- <template #ScopedSlot="{list}"></template> -->
+<template>     
+  <SlotComponent>       
+      <!-- ScopedSlot是插槽名，params子组件传的是参数 -->       
+      <template v-slot:ScopedSlot='params'>         
+          <ul>           
+            <li v-for='d in params.list' :key="d.id">           
+              {{ d.name }}           
+            </li>         
+          </ul>       
+      </template>     
+  </SlotComponent>
+</template>
+
+<script>
+  import SlotComponent from './SlotComponent.vue';
+
+  export default {     
+      components: { SlotComponent },
+  };
+</script>
 ```
 
 子组件 SlotComponent：
 
-```
-<template>     <section>       <slot name="ScopedSlot" :list="list" />     </section>   </template>      <script setup>    import {reactive} from 'vue'     let list=reactive([       {id:'001',name:'test-01'},       {id:'002',name:'test-02'}     ])   </script>
+```script
+<template>     
+  <section>       
+    <slot name="ScopedSlot" :list="list" />     
+  </section>
+</template>
+
+<script setup>    
+import { reactive } from 'vue';
+    
+let list = reactive([       
+  { id: '001', name: 'test-01' },
+  { id: '002', name: 'test-02' }     
+])
+</script>
 ```
 
 ### 提高性能-浅层次响应
@@ -289,12 +322,20 @@ import { onMounted,onBeforeMount,onUpdated,unmounted } from 'vue';
 
 > shallowReactive 同理
 
-### 响应式对象-》原始对象
+### 响应式对象 => 原始对象
 
 `toRaw()` 是用于将响应式对象转换为原始对象。以便在需要时进行操作。转换后的对象不再具有响应性，对其进行的更改不会触发 Vue 的更新机制。
 
-```
-import { reactive, toRaw } from 'vue';      const obj = reactive({ name: 'John', age: 24 });      const rawObj = toRaw(obj);      console.log(rawObj);    // 输出：{ name: 'John', age: 24 }      rawObj.name = 'Alice';      console.log(obj.name);    // 输出：'John'
+```script
+import { reactive, toRaw } from 'vue';
+
+const obj = reactive({ name: 'John', age: 24 });
+
+const rawObj = toRaw(obj);
+console.log(rawObj);    // 输出：{ name: 'John', age: 24 }
+
+rawObj.name = 'Alice';
+console.log(obj.name); // 输出：'John'
 ```
 
 ### 创建自定义的 ref
@@ -303,8 +344,29 @@ import { reactive, toRaw } from 'vue';      const obj = reactive({ nam
 
 track 用于追踪数据，trigger 用于触发响应，更新视图。一般 track 方法放在 get 中，trigger 方法放在 set 中。
 
-```
- import { customRef } from 'vue';      const myCustomRef = customRef((track, trigger) => {     // 在这里编写自定义的逻辑     return{       get(){         track()//跟踪       },       set(value){         trigger()//触发       }     }   });      // 在组件中使用自定义的 ref   const myComponent = {     template: `<section ref="myCustomRef"></section>`,     setup() {       const myCustomRef = myCustomRef();          console.log(myCustomRef.value);        // 获取当前的引用值     }   };
+```script
+import { customRef } from 'vue';
+
+const myCustomRef = customRef((track, trigger) => {
+    // 在这里编写自定义的逻辑
+     return {
+        get() {    
+           track() // 跟踪    
+        },       
+        set(value) {         
+          trigger() // 触发       
+        }     
+    }
+});
+
+// 在组件中使用自定义的 ref
+const myComponent = {     
+    template: `<section ref="myCustomRef"></section>`,
+    setup() {       
+      const myCustomRef = myCustomRef();
+      console.log(myCustomRef.value); // 获取当前的引用值
+    }
+};
 ```
 
 ### 获取未在 props 中声明的属性
@@ -313,10 +375,16 @@ track 用于追踪数据，trigger 用于触发响应，更新视图。一般 tr
 
 注意：$attrs 中的属性是只读的，不能直接修改。如果需要在组件内部处理未在 props 中声明的属性，可以使用 v-bind 指令或动态组件来实现。
 
-```
-<!-- 传值给子组件 -->   <child-component :id="id" :style="style" some-other-attribute="value"></child-component>
+```script
+<!-- 传值给子组件 -->
+<child-component :id="id" :style="style" some-other-attribute="value"></child-component>
 
-export default {     props: ['id', 'style'],//props只接收了id跟style     created() {       console.log(this.$attrs); //$attrs能实现全部获取       // 输出：{ id: "id", style: "style", someOtherAttribute: "value" }     }   };
+export default {     
+  props: ['id', 'style'], // props只接收了id跟style     
+  created() {       
+    console.log(this.$attrs); // $attrs能实现全部获取，输出：{ id: "id", style: "style", someOtherAttribute: "value" }
+  }
+};
 ```
 
 ### 组件间通信
@@ -328,24 +396,93 @@ $parent 和 refs 是用于组件间通信和访问的属性。需要配合`defin
 
 父组件 $refs 示例代码：
 
-```
-<template>     <section>       <button @click="myButton($refs)">点击我</button>       <!-- 子组件 -->       <ChildComponent1 />       <ChildComponent2 />     </section>   </template>      <script setup>     import ChildComponent1 from '/ChildComponent1.vue'     import ChildComponent2 from '/ChildComponent2.vue'     import { ref,defineExpose } from 'vue';          let value=ref('666')    function myButton(refs){       // refs是子组件的集合       for(let key in refs){         refs[key].val=+1//操作每个子组件的val+1       }     }     defineExpose({value})   </script>
-```
+```script
+<template>     
+  <section>       
+    <button @click="myButton($refs)">点击我</button>       
+    <!-- 子组件 -->       
+    <ChildComponent1 />       
+    <ChildComponent2 />     
+  </section>
+</template>
+
+<script setup>     
+  import ChildComponent1 from '/ChildComponent1.vue';     
+  import ChildComponent2 from '/ChildComponent2.vue';
+  import { ref, defineExpose } from 'vue';
+          
+  let value=ref('666');
+   
+  function myButton(refs) {
+      // refs是子组件的集合       
+      for(let key in refs){         
+        refs[key].val += 1 // 操作每个子组件的 val + 1       
+      }     
+  }     
+  defineExpose({value})
+</script>
 
 子组件 $parent 示例代码：
 
-```
-<template>     <section>       <button @click="parentMethod($parent)">点击我</button>     </section>   </template>      <script>     import { ref } from 'vue';     let value=ref('888')     function myButton(parent){       parent.value-=1//子操作父的value     }     defineExpose({value})   </script>
+<template>     
+  <section>       
+    <button @click="parentMethod($parent)">点击我</button>
+  </section>
+</template>
+
+<script>     
+  import { ref } from 'vue';
+
+  let value=ref('888');
+  
+  function myButton(parent) {       
+    parent.value -= 1 // 子操作父的value     
+  }
+
+  defineExpose({value})
+</script>
 ```
 
 ### 隔代通信
 
 `provide` 是一个用于提供依赖注入的选项。可用于隔代通信；它允许父组件向其后代组件提供共享的数据或功能。在子组件中可以通过 inject 选项来接收父组件提供的属性。
 
-```
-<template>     <section>       <Child />     </section>   </template>      <script setup>     import Child from './Child.vue';     import { ref,provide } from 'vue';          let value=ref({       name:'sam',       age:18     })     //provide向后代提供数据     provide('val',value)   </script>
+```script
+<template>     
+  <section>       
+    <Child />     
+  </section>
+</template>
+
+<script setup>     
+  import Child from './Child.vue';     
+  import { ref, provide } from 'vue';
+           
+  let value = ref({ name:'sam', age:18 });
+
+  // provide向后代提供数据     
+  provide('val',value);
+</script>
 
 子组件 Child：
 
-<template>     <section>       <!-- sam -->       姓名:{{data.name}}       <!-- 18 -->       年龄:{{data.age}}     </section>   </template>      <script setup>     import { inject } from 'vue';     //inject接收数据     let data=inject('val',{//第二个参数是默认值       name:'未知',       age:0     })   </script>
+<template>     
+  <section>       
+    <!-- sam -->       
+    姓名:{{data.name}}       
+    <!-- 18 -->       
+    年龄:{{data.age}}     
+  </section>
+</template>
+
+<script setup>     
+  import { inject } from 'vue';
+     
+  // inject接收数据     
+  let data = inject('val', {
+    // 第二个参数是默认值       
+    name:'未知',       
+    age:0     
+  })
+</script>
 ```
