@@ -83,11 +83,11 @@ export const nav: DefaultTheme.Config['nav'] = [
         items: [
           { text: 'Code Inspector', link: '/other/codeInspector/index' },
           { text: '打包部署', link: '/other/deploy/index' },
-          { text: 'vben框架的示例页面', link: '/other/vben/example' },
+          { text: 'vben框架的示例页面', link: '/other/vben/example-index' },
           { text: '100个CSS优化技巧分享！', link: '/other/css/100CssSkills' },
-          { text: '写给懒人的Vue3速查宝典', link: '/other/vue3/quickSearchTreasureBook' },
-          { text: 'Vue3教程 - 1', link: '/other/vue3/tutorial-1' },
-          { text: 'Vue3教程 - 2', link: '/other/vue3/tutorial-2' },
+          { text: '写给懒人的Vue3速查宝典', link: '/other/vue3/quickSearchTreasureBook-index' },
+          { text: 'Vue3教程 - 1', link: '/other/vue3/tutorial-1-index' },
+          { text: 'Vue3教程 - 2', link: '/other/vue3/tutorial-2-index' },
         ],
       },
       {
