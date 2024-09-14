@@ -10,15 +10,15 @@ hero:
     src: /logo.png
     alt: 秋天没有心
   actions:
-    - text: 前端导航
-      link: /nav/
-      theme: alt
     - text: 待办清单
       link: /todoList/
+      theme: alt
     - text: 白酒找我
       link: /wine/
     - text: 烟花许愿
       link: /firework/
+    - text: 时间线
+      link: /timeline/
     - text: 涨薪申请
       link: /me/money
 features:

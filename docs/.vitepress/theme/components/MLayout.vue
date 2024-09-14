@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import NewFont from './NewFont.vue'
 import AnimateTitle from './AnimateTitle.vue'
+import Notice from './Notice.vue'
 
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
@@ -77,6 +78,7 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
         </div>
         <!-- <Lantern /> -->
       </ClientOnly>
+      <Notice />
     </template>
 
     <template #nav-bar-title-after>

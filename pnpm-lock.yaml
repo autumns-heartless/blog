@@ -101,6 +101,9 @@ importers:
       vitepress:
         specifier: ^1.0.1
         version: 1.3.1(@algolia/client-search@4.24.0)(@types/node@18.19.42)(fuse.js@6.6.2)(postcss@8.4.40)(sass@1.77.8)(search-insights@2.15.0)
+      vitepress-markdown-timeline:
+        specifier: ^1.2.1
+        version: 1.2.1
       vue:
         specifier: ^3.4.21
         version: 3.4.34
@@ -1845,6 +1848,9 @@ packages:
         optional: true
       terser:
         optional: true
+
+  vitepress-markdown-timeline@1.2.1:
+    resolution: {integrity: sha512-XPYl/btTcTzW+XF20ITB51L8jPjbS72tSKPcv/CHJgM+3LbBvW8Az/X7RcBTJSXDNOwCY5mGkjA7CXQtuxOKgw==}
 
   vitepress-plugin-pagefind@0.4.10:
     resolution: {integrity: sha512-z+zsB0FPiUPujVNWcCjMjNlXIaDdC7HSvMBVkv7Evm6aC7I/MI6QN6ff8ZuKfe34tNY3S54tLrqvHbD6TjZo5Q==}
@@ -3721,6 +3727,10 @@ snapshots:
       '@types/node': 18.19.42
       fsevents: 2.3.3
       sass: 1.77.8
+
+  vitepress-markdown-timeline@1.2.1:
+    dependencies:
+      dayjs: 1.11.12
 
   vitepress-plugin-pagefind@0.4.10(pagefind@1.1.0):
     dependencies:

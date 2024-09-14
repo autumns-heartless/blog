@@ -3,7 +3,9 @@ import { defineConfig } from 'vitepress'
 import MarkdownPreview from 'vite-plugin-markdown-preview'
 import { codeInspectorPlugin } from 'code-inspector-plugin'
 import { chineseSearchOptimize, pagefindPlugin } from 'vitepress-plugin-pagefind'
-
+/* 时间线 */
+import timeline from "vitepress-markdown-timeline";
+/* todo */
 import taskLists from 'markdown-it-task-checkbox'
 
 import type { ThemeConfig } from './theme/types'
@@ -23,6 +25,9 @@ export default defineConfig<ThemeConfig>({
   lastUpdated: true,
   cleanUrls: true,
 
+  // 启用深色模式
+  appearance: 'dark',
+
   /* markdown 配置 */
   markdown: {
     lineNumbers: true,
@@ -38,6 +43,7 @@ export default defineConfig<ThemeConfig>({
         ulClass: 'task-list',
         liClass: 'task-list-item',
       })
+      md.use(timeline as any)
     },
   },
 
@@ -159,6 +165,12 @@ export default defineConfig<ThemeConfig>({
       ], //烟花许愿关键词
     },
 
+    /* 广告 */
+    // carbonAds: {
+    //   code: 'your-carbon-code',
+    //   placement: 'your-carbon-placement',
+    // },
+
     //本地搜索
     // search: {
     //   provider: 'local',
@@ -193,7 +205,9 @@ export default defineConfig<ThemeConfig>({
       label: '目录',
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://github.com/autumns-heartless/blog' }],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/autumns-heartless/blog' },
+    ],
 
     footer: {
       message: '本站搭建特别鸣谢【茂神大佬】',
