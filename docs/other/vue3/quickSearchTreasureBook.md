@@ -120,20 +120,20 @@ watchEffect(() => {
 
 ```js
 <script setup>
-import { defineProps } from 'vue';
+  import { defineProps } from 'vue';
 
-// 子组件接收props    
-const props = defineProps({
-    language: {
-      type: Object,    
-       // 也可以使用withDefaults设置默认值     
-      default: () => ({}),    
-    },       
-    cookieCountry: {        
-       type: String,      
-       default: ''    
-    }    
-})
+  // 子组件接收props    
+  const props = defineProps({
+      language: {
+        type: Object,    
+         // 也可以使用withDefaults设置默认值     
+        default: () => ({}),    
+      },       
+      cookieCountry: {        
+         type: String,      
+         default: ''    
+      }    
+  })
 </script>
 ```
 
@@ -147,7 +147,7 @@ const props = defineProps({
 </template>
 
 <script>
-import { ref, onMounted } from 'vue';
+    import { ref, onMounted } from 'vue';
     export default {
         setup() {
             const myDiv = ref(null);
@@ -175,27 +175,25 @@ defineExpose 将组件中的属性或方法暴露给外部环境，以便在其�
 </template>
 
 <script setup>     
-import { ref } from 'vue';
- 
-const resetAllRefData = () => {       
-  console.log(cardNumRef.value.cardNo) // 获取子组件中的cardNo值     
-}
+  import { ref } from 'vue';
+   
+  const resetAllRefData = () => {       
+    console.log(cardNumRef.value.cardNo) // 获取子组件中的cardNo值     
+  }
 </script>
-```
 
-cardNum 组件：
+// cardNum 组件：
 
-```js
 <script setup>
-     import { defineExpose } from 'vue';
+  import { defineExpose } from 'vue';
 
      const resetData = () => {       
-        cardNo.value = ''       
-        cardNum.value = ''     
-     }     
+    cardNo.value = ''       
+    cardNum.value = ''     
+  }     
 
-     // 暴露     
-     defineExpose({ resetData })
+  // 暴露     
+  defineExpose({ resetData })
 </script>
 ```
 
@@ -210,28 +208,26 @@ cardNum 组件：
 </template>
 
 <script setup>     
-import Child from '/Child.vue';
-       
-const onUpdate = (value) => {       
-  console.log(value) // 666     
-}
+  import Child from '/Child.vue';
+         
+  const onUpdate = (value) => {       
+    console.log(value) // 666     
+  }
 </script>
-```
 
-Child 组件：
 
-```js
-<template>     
-  <!-- 点击button，将666传给父，emits 触发事件 -->    
-  <button @click="emits('update',666)"/>
+// Child 组件：
+
+<template>
+  <!-- 点击button，将666传给父，emits 触发事件 -->
+  <button @click="emits('update', 666)"/>
 </template>
 
-<script setup>     
-import { defineEmits,onMounted } from 'vue';
-         
-// 定义 emits     
-const emits = defineEmits(['update'])
-// 接收事件名update
+<script setup>
+  import { defineEmits, onMounted } from 'vue';
+
+  // 定义 emits
+  const emits = defineEmits(['update']) // 接收事件名update
 </script>
 ```
 
@@ -239,10 +235,9 @@ const emits = defineEmits(['update'])
 
 ```js
 <script setup>
-  {' '}
-     import {(onMounted, onBeforeMount, onUpdated, unmounted)} from 'vue';   // 挂载前   onBeforeMount(()=>
-  {})    // 挂载完毕    onMounted(()=>{})    // 更新完毕    onUpdated(()=>{})   // 卸载完毕   onUnmounted(()=>
-  {})
+    import {(onMounted, onBeforeMount, onUpdated, unmounted)} from 'vue';    // 挂载前   
+  onBeforeMount(() => {})    // 挂载完毕    onMounted(() => {})    // 更新完毕    onUpdated(() => {}
+  )   // 卸载完毕   onUnmounted(() => {})
 </script>
 ```
 
@@ -425,7 +420,7 @@ $parent 和 refs 是用于组件间通信和访问的属性。需要配合`defin
 <script>     
   import { ref } from 'vue';
 
-  let value=ref('888');
+  let value = ref('888');
   
   function myButton(parent) {       
     parent.value -= 1 // 子操作父的value     
@@ -450,10 +445,10 @@ $parent 和 refs 是用于组件间通信和访问的属性。需要配合`defin
   import Child from './Child.vue';     
   import { ref, provide } from 'vue';
            
-  let value = ref({ name:'sam', age:18 });
+  let value = ref({ name: 'sam', age: 18 });
 
   // provide向后代提供数据     
-  provide('val',value);
+  provide('val', value);
 </script>
 
 子组件 Child：
@@ -473,8 +468,8 @@ $parent 和 refs 是用于组件间通信和访问的属性。需要配合`defin
   // inject接收数据     
   let data = inject('val', {
     // 第二个参数是默认值       
-    name:'未知',       
-    age:0     
+    name: '未知',       
+    age: 0     
   })
 </script>
 ```
