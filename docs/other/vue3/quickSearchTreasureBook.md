@@ -14,7 +14,7 @@
 
 在 Vue 3 中，`setup` 是一个新的组件选项，用于定义组件的逻辑和状态。通过使用 setup，可以更清晰地组织组件的逻辑和状态，并使其更易于测试和维护。`也可以直接把setup写在script标签上哦`。
 
-```script
+```js
 <template>
   <section>     
     {{ count }}    
@@ -44,7 +44,7 @@
 
 > ref 也可以创建对象类型的响应数据。若层级较深，建议 reactive
 
-```script
+```js
 <script setup>     
   import { reactive, ref } from 'vue';     
   let obj = reactive({       
@@ -66,16 +66,16 @@
 
 `toRefs`可用来解构，该对象的每个属性都是独立的 ref 对象，并保持响应式
 
-```script
-import { reactive, toRefs } from 'vue';
+```js
+import { reactive, toRefs } from 'vue'
 
-let info = reactive({     
-  name: 'Echo',     
-  age: 26,     
-  gender: 'Male'
+let info = reactive({
+  name: 'Echo',
+  age: 26,
+  gender: 'Male',
 })
 
-let { name, age, gender } = toRefs(info); // 解构数据，并保持响应式
+let { name, age, gender } = toRefs(info) // 解构数据，并保持响应式
 ```
 
 ### 如何监听多个数据？
@@ -84,16 +84,16 @@ let { name, age, gender } = toRefs(info); // 解构数据，并保持响�
 
 开启 immediate ：上来就调用监听里的内容，类似 react 中的 useEffect(()=>{},\[\])
 
-```script
-import { watch } from 'vue';
+```js
+import { watch } from 'vue'
 
 // 监听active、type
 watch(
-  [() => props.active, ()=> props.type],
-  (nv, ov) => {
-    // nv代表最新数据，ov是老数据     console.log(nv)     //开启deep代表深度监听
+  [() => props.active, () => props.type],
+  (nv, ov) => {
+    // nv代表最新数据，ov是老数据     console.log(nv)     //开启deep代表深度监听
   },
-  { deep:true, immediate: true }
+  { deep: true, immediate: true },
 )
 ```
 
@@ -103,13 +103,13 @@ watch(
 
 与传统的 watch 不同，watchEffect 会在属性变化时自动执行副作用函数，并且可以返回一个清理函数，用于在组件卸载时清理副作用。
 
-```script
-import { watchEffect } from 'vue';
+```js
+import { watchEffect } from 'vue'
 
 // 只要temp.val跟json.val发生变更，就会自动执行watchEffect内的副作用函数
-watchEffect(() => {     
-  if(temp.val > 60 || json.val > 60){
-    console.log('发送请求')     
+watchEffect(() => {
+  if (temp.val > 60 || json.val > 60) {
+    console.log('发送请求')
   }
 })
 ```
@@ -118,11 +118,11 @@ watchEffect(() => {     
 
 父子组件传值，需要使用`defineProps`接收 props，案例如下：
 
-```script
+```js
 <script setup>
 import { defineProps } from 'vue';
 
-//子组件接收props    
+// 子组件接收props    
 const props = defineProps({
     language: {
       type: Object,    
@@ -141,7 +141,7 @@ const props = defineProps({
 
 通过 `Ref 属性`，可以从父组件中访问子组件的属性和方法，或者直接操作 DOM 元素。
 
-```script
+```js
 <template>
     <section ref="myDiv">Hello, World!</section>
 </template>
@@ -169,7 +169,7 @@ import { ref, onMounted } from 'vue';
 
 defineExpose 将组件中的属性或方法暴露给外部环境，以便在其他组件或模板中使用。
 
-```script
+```js
 <template>      
   <card-num ref="cardNumRef" />
 </template>
@@ -185,7 +185,7 @@ const resetAllRefData = () => {       
 
 cardNum 组件：
 
-```script
+```js
 <script setup>
      import { defineExpose } from 'vue';
 
@@ -203,7 +203,7 @@ cardNum 组件：
 
 `defineEmits` 是 Vue 3 中的一个新特性，它允许你在组件中自定义事件。在父组件中，可以使用 v-on 指令来监听自定义事件。
 
-```script
+```js
 <template>    
 <!-- 自定义一个叫update的事件 -->     
   <Child @update="onUpdate"/>
@@ -220,7 +220,7 @@ const onUpdate = (value) => {       
 
 Child 组件：
 
-```script
+```js
 <template>     
   <!-- 点击button，将666传给父，emits 触发事件 -->    
   <button @click="emits('update',666)"/>
@@ -237,21 +237,12 @@ const emits = defineEmits(['update'])
 
 ### vue3 生命周期
 
-```script
-<script setup>     
-import { onMounted,onBeforeMount,onUpdated,unmounted } from 'vue';
-
-  // 挂载前
-  onBeforeMount(()=>{})
-    
-  // 挂载完毕     
-  onMounted(()=>{})
-      
-  // 更新完毕     
-  onUpdated(()=>{})
-
-  // 卸载完毕
-  onUnmounted(()=>{})
+```js
+<script setup>
+  {' '}
+     import {(onMounted, onBeforeMount, onUpdated, unmounted)} from 'vue';   // 挂载前   onBeforeMount(()=>
+  {})    // 挂载完毕    onMounted(()=>{})    // 更新完毕    onUpdated(()=>{})   // 卸载完毕   onUnmounted(()=>
+  {})
 </script>
 ```
 
@@ -273,7 +264,7 @@ import { onMounted,onBeforeMount,onUpdated,unmounted } from 'vue';
 
 > 如果不写名字就是默认插槽
 
-```script
+```js
 <!-- <template #ScopedSlot="{list}"></template> -->
 <template>     
   <SlotComponent>       
@@ -299,7 +290,7 @@ import { onMounted,onBeforeMount,onUpdated,unmounted } from 'vue';
 
 子组件 SlotComponent：
 
-```script
+```js
 <template>     
   <section>       
     <slot name="ScopedSlot" :list="list" />     
@@ -328,16 +319,15 @@ let list = reactive([       
 
 `toRaw()` 是用于将响应式对象转换为原始对象。以便在需要时进行操作。转换后的对象不再具有响应性，对其进行的更改不会触发 Vue 的更新机制。
 
-```script
-import { reactive, toRaw } from 'vue';
+```js
+import { reactive, toRaw } from 'vue'
 
-const obj = reactive({ name: 'John', age: 24 });
+const obj = reactive({ name: 'John', age: 24 })
 
-const rawObj = toRaw(obj);
-console.log(rawObj);    // 输出：{ name: 'John', age: 24 }
-
-rawObj.name = 'Alice';
-console.log(obj.name); // 输出：'John'
+const rawObj = toRaw(obj)
+console.log(rawObj) // 输出：{ name: 'John', age: 24 }
+rawObj.name = 'Alice'
+console.log(obj.name) // 输出：'John'
 ```
 
 ### 创建自定义的 ref
@@ -346,29 +336,29 @@ console.log(obj.name); // 输出：'John'
 
 track 用于追踪数据，trigger 用于触发响应，更新视图。一般 track 方法放在 get 中，trigger 方法放在 set 中。
 
-```script
-import { customRef } from 'vue';
+```js
+import { customRef } from 'vue'
 
-const myCustomRef = customRef((track, trigger) => {
-    // 在这里编写自定义的逻辑
-     return {
-        get() {    
-           track() // 跟踪    
-        },       
-        set(value) {         
-          trigger() // 触发       
-        }     
-    }
-});
+const myCustomRef = customRef((track, trigger) => {
+  // 在这里编写自定义的逻辑
+  return {
+    get() {
+      track() // 跟踪
+    },
+    set(value) {
+      trigger() // 触发
+    },
+  }
+})
 
 // 在组件中使用自定义的 ref
-const myComponent = {     
-    template: `<section ref="myCustomRef"></section>`,
-    setup() {       
-      const myCustomRef = myCustomRef();
-      console.log(myCustomRef.value); // 获取当前的引用值
-    }
-};
+const myComponent = {
+  template: `<section ref="myCustomRef"></section>`,
+  setup() {
+    const myCustomRef = myCustomRef()
+    console.log(myCustomRef.value) // 获取当前的引用值
+  },
+}
 ```
 
 ### 获取未在 props 中声明的属性
@@ -377,7 +367,7 @@ const myComponent = {     
 
 注意：$attrs 中的属性是只读的，不能直接修改。如果需要在组件内部处理未在 props 中声明的属性，可以使用 v-bind 指令或动态组件来实现。
 
-```script
+```js
 <!-- 传值给子组件 -->
 <child-component :id="id" :style="style" some-other-attribute="value"></child-component>
 
@@ -398,7 +388,7 @@ $parent 和 refs 是用于组件间通信和访问的属性。需要配合`defin
 
 父组件 $refs 示例代码：
 
-```script
+```js
 <template>     
   <section>       
     <button @click="myButton($refs)">点击我</button>       
@@ -449,7 +439,7 @@ $parent 和 refs 是用于组件间通信和访问的属性。需要配合`defin
 
 `provide` 是一个用于提供依赖注入的选项。可用于隔代通信；它允许父组件向其后代组件提供共享的数据或功能。在子组件中可以通过 inject 选项来接收父组件提供的属性。
 
-```script
+```js
 <template>     
   <section>       
     <Child />     

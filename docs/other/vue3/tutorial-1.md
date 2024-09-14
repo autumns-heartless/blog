@@ -29,15 +29,20 @@ const global = appContext.config.globalProperties
 
 Vue2 中我们要往全局上挂载东西通常就是如下，然后在所有组件里都可以通过 `this.xxx` 获取到了
 
-```vue
+```js
 Vue.prototype.xxx = xxx
 ```
 
 而 Vue3 中不能这么写了，换成了一个能被所有组件访问到的全局对象，就是上面说的全局实例的那个对象，比如在 `main.js` 中做全局注册
 
-```vue
-// main.js import { createApp } from 'vue' import App from './App.vue' const app = createApp(App) //
-添加全局属性 app.config.globalProperties.name = '沐华'
+```js
+// main.js
+import { createApp } from 'vue'
+import App from './App.vue'
+const app = createApp(App)
+
+// 添加全局属性
+app.config.globalProperties.name = '沐华'
 ```
 
 在其他组件中调用
@@ -74,6 +79,7 @@ Vue3 中获取 DOM 如下
   <el-form ref="formRef"></el-form>
   <child-component />
 </template>
+
 <script setup lang="ts">
 import ChildComponent from './child.vue'
 import { getCurrentInstance } from 'vue'
@@ -108,11 +114,11 @@ import { onMounted } from 'vue'
 
 // 请求接口函数
 const getData = () => {
-    xxxApi.then(() => { ... })
+  xxxApi.then(() => { ... })
 }
 
 onMounted(() => {
-    getData()
+  getData()
 })
 </script>
 ```
@@ -215,9 +221,21 @@ name.value = '沐沐华华'
 
 `watch` 就是用来监听一个已有属性，发生变化的时候做某些操作，Vue2 中常用有如下三种写法
 
-```vue
-watch: { userId: 'getData', userName (newName, oldName) { this.getData() }, userInfo: { handler
-(newVal, newVal) { this.getData() }, immediate: true, deep: true } }
+```js
+watch: {
+  userId: 'getData',
+
+  userName (newName, oldName) {
+    this.getData()
+  },
+
+  userInfo: {
+    handler (newVal, newVal) {
+      this.getData()
+    },
+    immediate: true, deep: true
+  }
+}
 ```
 
 而 Vue3 中监听的写法就丰富得多了
@@ -267,17 +285,22 @@ watch(data.children, (newList, oldList) => { ... }, {
 
 就是说**默认**它的执行机制在更新之前调用，比如如下代码，当 `key` 触发更新时会先打印 `222` 再打印 `沐华`，如果需要在更新之后调用，可以在 `watch` 第三个配置项中添加 `flush: post`，
 
-```vue
-// 回调函数接收一个参数，为清除副作用的函数 watch(key, (newKey, oldKey, onInvalidate) => {
-console.log('沐华') // 获取DOM默认获取到的是更新前的dom，如果是flush: post，可以获取到更新后的dom
-console.log('DOM节点：', dom.innterHTML) onInvalidate(() => { console.log(2222) }) })
+```js
+// 回调函数接收一个参数，为清除副作用的函数
+watch(key, (newKey, oldKey, onInvalidate) => {
+  console.log('沐华')
+
+  // 获取DOM默认获取到的是更新前的dom，如果是flush: post，可以获取到更新后的dom
+  console.log('DOM节点：', dom.innerHTML)
+  onInvalidate(() => {
+    console.log(2222)
+  })
+})
 ```
 
 `onInvalidate` 的使用场景就是：比如监听的回调函数 (handler) 里有一些异步操作，当再次触发 `watch` 的时候可以用它来对前面未完成的异步任务执行取消 / 忽略 / 重置 / 初始化某些操作，比如取消上一次触发 `watch` 时未完成的请求
 
 监听还没完呢
-
-![][img-0]
 
 ### watchEffect
 
@@ -288,8 +311,12 @@ Vue3 中除了 `watch` 还增加了一个 `watchEffect`。区别是：
 - 清除副作用和副作用的刷新时机是一样的，区别是 `watch` 中会作为回调的第三个参数传入，`watchEffect` 中是回调函数的第一个参数
 - 正常情况下组件销毁 / 卸载后这两都会自动停止监听，但也有例外，比如异步的方式，在 `setTimeout` 里创建的监听就都需要手动停止监听，停止方式如下
 
-```vue
-// 监听方法赋值 const unwatch = watch('key', callback) const unwatchEffect = watchEffect(() => {})
+```js
+// 监听方法赋值
+const unwatch = watch('key', callback)
+
+const unwatchEffect = watchEffect(() => {})
+
 // 需要停止监听的时候，手动调用停止监听 unwatch() unwatchEffect()
 ```
 
@@ -326,9 +353,18 @@ watchEffect(onInvalidate => {
 
 `watchEffect` 如果需要修改配置项 `flush` 为 `post` 或 `sync` 时，可以直接使用别名，如下
 
-```vue
-watchEffect(() => {...}, { flush: 'post', }) // 和下面这个是一样的 watchPostEffect(() => {})
------------------------------ watchEffect(() => {...}, { flush: 'sync', }) // 和下面这个是一样的
+```js
+watchEffect(() => {...},
+  { flush: 'post' }
+)
+
+// 和下面这个是一样的 watchPostEffect(() => {})
+-----------------------------
+watchEffect(() => {...},
+  { flush: 'sync' }
+)
+
+// 和下面这个是一样的
 watchSyncEffect(() => {})
 ```
 
@@ -397,10 +433,21 @@ Vue2 中逻辑的抽离复用一般用 `mixins`，缺点有三：
 
 Vue3 中逻辑抽离复用的 `hooks` 语法，其实就是一个函数，可以传参，拿返回值来用。或者可以这样理解：平时要封装公用的方法是怎么写的？Vue3 里就可以怎么写
 
-```vue
-// xxx.js expport const getData = () => {} export default function unInstance () { ... return {...}
-} // xxx.vue import unInstance, { getData } from 'xx.js' const { ... } = unInstance() onMounted(()
-=> { getData() })
+```js
+// xxx.js
+export const getData = () => {}
+
+export default function unInstance () {
+  ... return {...}
+}
+
+// xxx.vue
+import unInstance, { getData } from 'xx.js'
+const { ... } = unInstance()
+
+onMounted(() => {
+  getData()
+})
 ```
 
 关于 `hooks` 如何写出更优雅的代码，还个需要多写，多实践，这不是几句话几行代码就能熟练运用的
@@ -432,8 +479,10 @@ Vue3 中每个组件每个组件上支持写多个 `v-model`，没有了 `.sync`
 <template>
   <child v-model: />
 </template>
+
 <script setup>
 import { ref } from 'vue'
+
 const name = ref('沐华')
 const age = ref(18)
 </script>
@@ -457,15 +506,41 @@ Vuex 用法和 Vue2 基本一样，从 0 开始的话建议直接用 `Pinia` 吧
 
 Vuex 4 用法如下
 
-```vue
-// main.js import { createApp } from 'vue' import App from './App.vue' import Store from './store'
-const app = createApp(App) app.use(Store) ... // 模块：store/user/index.js export default { state:
-{}, getters: {}, actions: {}, mutations: {} } // store/index.js import { createStore } from 'vuex'
-import user from './user' const store = createStore({ state: {}, getters: {}, actions: {},
-mutations: {}, modules: { user } }) export default store // 需要用到状态管理的 .vue 文件里
+```js
+// main.js
+import { createApp } from 'vue'
+import App from './App.vue'
+import Store from './store'
+
+const app = createApp(App)
+app.use(Store) ...
+
+// 模块：store/user/index.js
+export default {
+  state: {},
+  getters: {},
+  actions: {},
+  mutations: {}
+}
+
+// store/index.js
+import { createStore } from 'vuex'
+import user from './user'
+const store = createStore({
+  state: {},
+  getters: {},
+  actions: {},
+  mutations: {},
+  modules: { user }
+})
+
+export default store // 需要用到状态管理的 .vue 文件里
+
 <script setup>
 import { useStore } from 'vuex'
+
 const store = useStore()
+
 // 打这个 store 打印出来看下，相当于 Vue2 里的 this.$store，用法基本一样
 console.log(store)
 </script>
@@ -475,7 +550,7 @@ console.log(store)
 
 Vue-Router 4 使用如下，主要是 `route` 和 `router` 打印出来看一下就知道了
 
-```vue
+```js
 // main.js
 import { createApp } from 'vue'
 import App from './App.vue'
@@ -486,21 +561,26 @@ app.use(Router)
 
 // router/index.js
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+
 // 这个 routes 数组里面就和 vue2 一样写
 const routes = [  // ts版这行就是 const routes: Array<RouteRecordRaw> = [
   { path: '/', redirect: { name: 'login' } }
 ]
+
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL), // 项目没用这个就不传
   routes
 })
+
 export default router
 
 // 需要用到路由的 .vue 文件里
 <script setup>
 import { useRoute, useRouter } from "vue-router"
+
 // route 对应 Vue2 里的 this.$route
 const route = useRoute()
+
 // router 对应 Vue2 里的 this.$router
 const router = useRouter()
 </script>
@@ -529,7 +609,7 @@ Vue2 中在 `scoped` 中修改子组件或者组件库中的组件样式，改�
 // 别再一看没生效，就这样加一个没有 scoped 的 style 标签了，一鼓脑全都加到全局上去了 //
 除非是全局都要改的 //
 还有些需要加到全局的场景，但只改当前页的，比如有些ui组件是挂在全局上的，可以加个当前页独有的类名就是了
-//
+
 <style lang="scss">
 //  .el-form {
 //     .el-form-item { ... }
@@ -546,10 +626,12 @@ Vue2 中在 `scoped` 中修改子组件或者组件库中的组件样式，改�
 <template>
   <div class="name">沐华</div>
 </template>
+
 <script setup>
 import { ref } from 'vue'
 const str = ref('#f00') // 红色
 </script>
+
 <style scoped lang="scss">
 .name {
   background-color: v-bind(str); // JS 中的色值变量 #f00 就赋值到这来了
