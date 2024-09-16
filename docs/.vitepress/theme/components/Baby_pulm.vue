@@ -23,8 +23,8 @@ export default {
       mainDivStyles: {
         zIndex: 1000,
         position: 'absolute',
-        left: '0px',
-        top: '0px',
+        left: '240px',
+        top: '-100px',
         transform: 'translate(100.484px, 200.938px)',
         transition: 'transform 2s', // 定义动画效果
       },

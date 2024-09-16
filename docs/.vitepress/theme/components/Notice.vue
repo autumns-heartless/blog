@@ -13,23 +13,16 @@ function closeBulletin() {
       <div class="bulletin-title">
         <span class="bulletin-icon left">
           <svg
-            class="bulletin-icon"
+            data-v-7192b94d=""
+            width="20"
+            height="20"
+            viewBox="0 0 1024 1024"
             xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 0 32 32"
-            style="width: 20px; height: 20px; font-size: 20px; color: rgb(255, 255, 255)"
           >
             <path
-              d="M27.16 8.08l-1.53 1.29a10 10 0 0 1-.29 13.23l1.47 1.4a12 12 0 0 0 .35-15.88z"
+              data-v-7192b94d=""
               fill="currentColor"
-            ></path>
-            <path
-              d="M21.58 12a6 6 0 0 1-.18 7.94l1.47 1.36a8 8 0 0 0 .23-10.59z"
-              fill="currentColor"
-            ></path>
-            <path
-              d="M18 30a1 1 0 0 1-.71-.3L9.67 22H3a1 1 0 0 1-1-1V11a1 1 0 0 1 1-1h6.67l7.62-7.7a1 1 0 0 1 1.41 0a1 1 0 0 1 .3.7v26a1 1 0 0 1-1 1zM4 20h6.08a1 1 0 0 1 .71.3L17 26.57V5.43l-6.21 6.27a1 1 0 0 1-.71.3H4z"
-              fill="currentColor"
+              d="M880 112c-3.8 0-7.7.7-11.6 2.3L292 345.9H128c-8.8 0-16 7.4-16 16.6v299c0 9.2 7.2 16.6 16 16.6h101.6c-3.7 11.6-5.6 23.9-5.6 36.4c0 65.9 53.8 119.5 120 119.5c55.4 0 102.1-37.6 115.9-88.4l408.6 164.2c3.9 1.5 7.8 2.3 11.6 2.3c16.9 0 32-14.2 32-33.2V145.2C912 126.2 897 112 880 112M344 762.3c-26.5 0-48-21.4-48-47.8c0-11.2 3.9-21.9 11-30.4l84.9 34.1c-2 24.6-22.7 44.1-47.9 44.1"
             ></path>
           </svg>
           <span style="margin-left: 4px; font-size: 18px">广告</span>
@@ -58,6 +51,22 @@ function closeBulletin() {
       </div>
     </div>
   </div>
+  <!-- 展示/隐藏 -->
+  <div class="switch" v-else @click="visible = true">
+    <svg
+      data-v-7192b94d=""
+      width="16"
+      height="16"
+      viewBox="0 0 1024 1024"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        data-v-7192b94d=""
+        fill="currentColor"
+        d="M880 112c-3.8 0-7.7.7-11.6 2.3L292 345.9H128c-8.8 0-16 7.4-16 16.6v299c0 9.2 7.2 16.6 16 16.6h101.6c-3.7 11.6-5.6 23.9-5.6 36.4c0 65.9 53.8 119.5 120 119.5c55.4 0 102.1-37.6 115.9-88.4l408.6 164.2c3.9 1.5 7.8 2.3 11.6 2.3c16.9 0 32-14.2 32-33.2V145.2C912 126.2 897 112 880 112M344 762.3c-26.5 0-48-21.4-48-47.8c0-11.2 3.9-21.9 11-30.4l84.9 34.1c-2 24.6-22.7 44.1-47.9 44.1"
+      ></path>
+    </svg>
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -65,6 +74,28 @@ function closeBulletin() {
   syntax: '<angle>';
   initial-value: 132deg;
   inherits: false;
+}
+
+.switch {
+  --color: inherit;
+  height: 1em;
+  width: 1em;
+  line-height: 1em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  fill: currentColor;
+  color: var(--color);
+  font-size: inherit;
+  position: fixed;
+  top: 42%;
+  right: 2%;
+  z-index: 99;
+
+  svg {
+    cursor: pointer;
+  }
 }
 
 /* 当屏幕宽度 ≤ 500px，不展示 */
@@ -106,6 +137,7 @@ function closeBulletin() {
     font-size: 24px;
     color: rgb(88 199 250 / 100%);
     transition: color 1s;
+    fill: #fff;
   }
 
   img {
