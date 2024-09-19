@@ -18,6 +18,7 @@ import BabyPulm from './components/Baby_pulm.vue'
 import AutoMusic from './components/Auto_playmusic.vue'
 import BackTop from './components/BackTop.vue'
 import ArticleMetadata from "./components/ArticleMetadata.vue" // 字数阅读时间
+import Friends from '../../other/friends/index.vue'
 
 import './styles/index.scss'
 
@@ -51,6 +52,7 @@ export default {
     app.component('AutoMusic', AutoMusic)
     app.component('BackTop', BackTop)
     app.component('ArticleMetadata', ArticleMetadata)
+    app.component('Friends', Friends)
 
     app.use(pinia)
 
