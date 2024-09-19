@@ -237,6 +237,12 @@ export const NAV_DATA: NavData[] = [
     title: '其他工具',
     items: [
       {
+        icon: 'https://www.h-ui.net/favicon.ico',
+        title: 'IT网址导航',
+        desc: '收集最有价值的网站(排名不分先后，部分国外站需要翻墙查看)',
+        link: 'https://www.h-ui.net/site.shtml',
+      },
+      {
         icon: 'https://www.tudingyy.com/wp-content/uploads/2023/02/tudinglogo80.png',
         title: '图钉办公',
         desc: '天选打工人必备网站',
@@ -354,6 +360,11 @@ export const NAV_DATA: NavData[] = [
         icon: '/icons/天工AI.webp',
         title: '天工AI',
         link: 'https://www.tiangong.cn/chat/universal/016',
+      },
+      {
+        icon: 'https://yuewen.cn/svg/favicon.svg',
+        title: '跃问',
+        link: 'https://yuewen.cn/chats',
       },
     ],
   },
