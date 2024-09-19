@@ -71,17 +71,6 @@
 
 <br />
 
-<!-- ::: details 本地观看：20240726\_依赖之 codeInspector
-
-<Video
-  :second="3"
-  src="/video/ruis/20240726_codeInspector.mp4"
-  class="lazy-load"
-  style="width: 100%; height: 100%;"
-/>
-
-::: -->
-
 <Swiper />
 
 <!-- ::: details 2024 🉐 3🈷️22☀️

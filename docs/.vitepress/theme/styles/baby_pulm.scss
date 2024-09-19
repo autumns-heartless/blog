@@ -1382,7 +1382,7 @@ a.mw-ui-button:focus {
   width: 64px;
   height: 64px;
   /* background-image: url(https://huiji-public.huijistatic.com/isaac/uploads/d/d0/BabyPlumSprite.png); */
-  background-image: url(/baby_pulm.png);
+  background-image: url(/images/baby_pulm.png);
   /* 此处直接改成使用网站源目录就可以, 必须使用外部的才可以,不然会报错, 没意思, 不然就是把文件放到对应的nginx的文件夹下 */
   image-rendering: pixelated;
 }

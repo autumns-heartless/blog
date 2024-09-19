@@ -1,7 +1,7 @@
 # vitepress-nav-template
 
 <p align="center">
-  <img src="./docs/public/index.webp" alt="home" />
+  <img src="./docs/public/images/index.png" alt="home" />
 </p>
 <p align="center"> 基于 <b>VitePress</b> 的个人博客 </p>
 <p align='center'><a href="/guide.md">基础教程</a> | <a href="https://autumns-heartless.github.io/blog/">作者博客</a></p>

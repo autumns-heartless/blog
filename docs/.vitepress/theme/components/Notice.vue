@@ -47,7 +47,7 @@ function closeBulletin() {
 
       <div class="bulletin-content">
         <h3 class="bulletin-h3 title">买白酒，找南将</h3>
-        <img class="bulletin-img" src="/qrCode.jpg" />
+        <img class="bulletin-img" src="/images/qrCode.jpg" />
       </div>
     </div>
   </div>

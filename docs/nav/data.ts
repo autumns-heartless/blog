@@ -72,9 +72,9 @@ export const NAV_DATA: NavData[] = [
         badge: '干货',
       },
       {
-        icon: 'https://www.stucoding.com/3.jpg',
-        title: '小明的学习圈子',
-        desc: '接毕设、商单，不定期发布职位。专注项目、全栈分享',
+        icon: 'https://www.stucoding.com/wp-content/uploads/2024/09/千城资源网logonew.png',
+        title: '千城资源网',
+        desc: '全网高质量资源整合首发站',
         link: 'https://www.stucoding.com/',
         badge: '全能',
       },
@@ -85,13 +85,13 @@ export const NAV_DATA: NavData[] = [
         link: 'https://liubing.me/',
       },
       {
-        icon: '/icons/前端老道.ico',
+        icon: 'https://fastly.jsdelivr.net/gh/autumns-heartless/DrawBoard@main/money/1726724566892%E5%89%8D%E7%AB%AF%E8%80%81%E9%81%93.ico',
         title: '前端老道的CSDN博客',
         desc: '一个写代码有点嘚儿的程序猿~，希望和大家一起学习，一起进步',
         link: 'https://blog.csdn.net/weixin_44991965?type=blog',
       },
       {
-        icon: '/icons/chengpeiquan.jpg',
+        icon: 'https://fastly.jsdelivr.net/gh/autumns-heartless/DrawBoard@main/money/1726724800557chengpeiquan.jpg',
         title: '程沛权的博客',
         desc: '养了3支🐱会做饭的广东人',
         link: 'https://chengpeiquan.com/category/tech',
@@ -170,12 +170,6 @@ export const NAV_DATA: NavData[] = [
         link: 'https://justin3go.com/',
         badge: '开场炸裂',
       },
-      {
-        icon: '',
-        title: '',
-        desc: '',
-        link: '',
-      },
     ],
   },
   /* 开发工具 */
@@ -207,7 +201,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://indiehackertools.net/',
       },
       {
-        icon: '/icons/json-cn.ico',
+        icon: 'https://fastly.jsdelivr.net/gh/autumns-heartless/DrawBoard@main/money/1726725202558json-cn.ico',
         title: 'Json 中文网',
         desc: 'JSON 在线解析及格式化验证',
         link: 'https://www.json.cn',
@@ -225,7 +219,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://shields.io/',
       },
       {
-        icon: '/icons/quickReference.svg',
+        icon: 'https://fastly.jsdelivr.net/gh/autumns-heartless/DrawBoard@main/money/1726725231558quickReference.svg',
         title: 'Quick Reference',
         desc: '为开发人员分享快速参考备忘清单【速查表】',
         link: 'https://wangchujiang.com/reference/',
@@ -291,7 +285,7 @@ export const NAV_DATA: NavData[] = [
     title: 'AI 导航',
     items: [
       {
-        icon: '/icons/chatgpt.png',
+        icon: 'https://fastly.jsdelivr.net/gh/autumns-heartless/DrawBoard@main/money/1726725273557chatgpt.png',
         title: 'ChatGPT',
         link: 'https://chat.openai.com/chat',
         badge: '对话',
@@ -357,7 +351,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://smartwritegpt.com/',
       },
       {
-        icon: '/icons/天工AI.webp',
+        icon: 'https://fastly.jsdelivr.net/gh/autumns-heartless/DrawBoard@main/money/1726725303558%E5%A4%A9%E5%B7%A5AI.webp',
         title: '天工AI',
         link: 'https://www.tiangong.cn/chat/universal/016',
       },
@@ -668,13 +662,13 @@ export const NAV_DATA: NavData[] = [
         link: 'https://developer.mozilla.org/zh-CN',
       },
       {
-        icon: '/icons/cainiao.ico',
+        icon: 'https://fastly.jsdelivr.net/gh/autumns-heartless/DrawBoard@main/money/1726725331556cainiao.ico',
         title: '菜鸟教程',
         desc: '学的不仅是技术，更是梦想！',
         link: 'https://www.runoob.com',
       },
       {
-        icon: '/icons/es6.svg',
+        icon: 'https://fastly.jsdelivr.net/gh/autumns-heartless/DrawBoard@main/money/1726725348556es6.svg',
         title: 'ES6 入门教程',
         desc: '阮一峰的网络日志',
         link: 'http://es6.ruanyifeng.com',
@@ -782,8 +776,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://svelte.dev',
       },
       {
-        // icon: 'https://simpleicons.org/icons/jquery.svg',
-        icon: '/icons/jquery.svg',
+        icon: 'https://fastly.jsdelivr.net/gh/autumns-heartless/DrawBoard@main/money/1726725370556jquery.svg',
         title: 'jQuery API 中文文档',
         desc: '一个兼容多浏览器的 JavaScript 框架',
         link: 'https://jquery.cuishifeng.cn',
@@ -807,7 +800,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://opendoc.alipay.com/mini/',
       },
       {
-        icon: '/icons/taro.svg',
+        icon: 'https://fastly.jsdelivr.net/gh/autumns-heartless/DrawBoard@main/money/1726725396556taro.svg',
         title: 'Taro',
         desc: '多端统一开发解决方案',
         link: 'https://taro.jd.com',
@@ -873,7 +866,7 @@ export const NAV_DATA: NavData[] = [
     title: 'Node 相关',
     items: [
       {
-        icon: '/icons/nodejs.svg',
+        icon: 'https://fastly.jsdelivr.net/gh/autumns-heartless/DrawBoard@main/money/1726725417557nodejs.svg',
         title: 'Node.js',
         desc: 'Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境',
         link: 'https://nodejs.org/zh-cn',
@@ -897,7 +890,7 @@ export const NAV_DATA: NavData[] = [
         link: 'https://expressjs.com',
       },
       {
-        icon: '/icons/koa.svg',
+        icon: 'https://fastly.jsdelivr.net/gh/autumns-heartless/DrawBoard@main/money/1726725434556koa.svg',
         title: 'Koa',
         desc: '基于 Node.js 平台的下一代 web 开发框架',
         link: 'https://koajs.com',
@@ -1044,8 +1037,7 @@ export const NAV_DATA: NavData[] = [
       },
       {
         title: '博客园',
-        // icon: 'https://common.cnblogs.com/favicon.ico',
-        icon: '/icons/cnblogs.svg',
+        icon: 'https://fastly.jsdelivr.net/gh/autumns-heartless/DrawBoard@main/money/1726725461556cnblogs.svg',
         desc: '博客园是一个面向开发者的知识分享社区',
         link: 'https://www.cnblogs.com',
       },
@@ -1086,13 +1078,13 @@ export const NAV_DATA: NavData[] = [
         link: 'https://www.youtube.com',
       },
       {
-        icon: '/icons/twitter.svg',
+        icon: 'https://fastly.jsdelivr.net/gh/autumns-heartless/DrawBoard@main/money/1726725487558twitter.svg',
         title: 'Twitter',
         // desc: '',
         link: 'https://twitter.com',
       },
       {
-        icon: '/icons/pixiv.png',
+        icon: 'https://fastly.jsdelivr.net/gh/autumns-heartless/DrawBoard@main/money/1726725501557pixiv.png',
         title: 'Pixiv',
         // desc: '',
         link: 'https://www.pixiv.net',

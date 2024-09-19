@@ -4,18 +4,6 @@
 
 <br/>
 
-::: details 播放个视频
-
-<Video
-  :second="3"
-  width="100%"
-  height="500px"
-  src="/video/test.mp4"
-  poster="https://fastly.jsdelivr.net/gh/autumns-heartless/DrawBoard@main/images/1723873301166%E6%88%AA%E5%9B%BE20231117135101.png"
-/>
-
-:::
-
 ::: details 待办事项选用
 
 - [ ] &nbsp;&nbsp;markdown-it-task-checkbox
