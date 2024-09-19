@@ -1,6 +1,6 @@
 <template>
   <div>
-    <audio ref="musicPlayer" loop autoplay>
+    <audio ref="musicPlayer" loop>
       <source :src="audioSource" type="audio/mp3" />
       Your browser does not support the audio element.
     </audio>
@@ -27,7 +27,7 @@ export default {
   mounted() {
     this.loadLyrics('/audio/black.lrc') // 这里放你的LRC歌词文件路径
     // 注: 自动播放的部分已经移动到按钮的点击事件中
-    this.togglePlayback()
+    // this.togglePlayback()
   },
 
   methods: {

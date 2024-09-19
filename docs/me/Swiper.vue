@@ -22,6 +22,30 @@
       </ul>
     </div>
   </div>
+  <div class="container">
+    <div class="bigBox">
+      <iframe
+        style="width: 100%; height: 100%; aspect-ratio: 16/9; margin-top: 2em"
+        :src="`https://www.youtube.com/embed/${tubeId}`"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="swiperList">
+      <ul>
+        <li v-for="(item, index) in imagesList" :key="index" @click="changeImage(item, index)">
+          <a>
+            <img
+              :src="`https://fastly.jsdelivr.net/gh/autumns-heartless/DrawBoard@main/money/${item.url}.png`"
+              :class="item.active ? 'active' : ''"
+              class="medium-zoom-image"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </template>
 
 <script setup>
@@ -31,54 +55,66 @@ const bigImage = ref('1725800021288%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83')
 
 const toHref = ref('https://v.youku.com/v_show/id_XNjQyNTkwODU0MA==.html')
 
+const tubeBaseUrl = 'https://www.youtube.com/embed/'
+
+const tubeId = ref('UCxUMx-3orM')
+
 const imagesList = reactive([
   /* 开发规范 */
   {
     url: '1725800021288%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83',
     active: true,
     href: 'XNjQxODUyNjY4MA',
+    tubeId: 'UCxUMx-3orM',
   },
   /* 组件_组件封装 */
   {
     url: '1725800412288%E7%BB%84%E4%BB%B6_%E7%BB%84%E4%BB%B6%E5%B0%81%E8%A3%85',
     active: false,
     href: 'XNjQxODUyNTUxMg',
+    tubeId: 'hsUiX8JLplI',
   },
   /* 组件_多选框联动 */
   {
     url: '1725800411288%E7%BB%84%E4%BB%B6_%E5%A4%9A%E9%80%89%E6%A1%86%E8%81%94%E5%8A%A8',
     active: false,
     href: 'XNjQyNTUwMDU5Mg',
+    tubeId: '_vsGT3qLEL8',
   },
   /* 社区矫正演示视频 */
   {
     url: '1725800397288%E7%A4%BE%E5%8C%BA%E7%9F%AB%E6%AD%A3%E6%BC%94%E7%A4%BA%E8%A7%86%E9%A2%91',
     active: false,
     href: 'XNjQyNTUwMDY0NA',
+    tubeId: '0Nlg0nf6jk8',
   },
   /* VSCode_setting.json文件 */
   {
     url: '1725800715854VSCode_setting.json%E6%96%87%E4%BB%B6',
     active: false,
     href: 'XNjQyNTUwMDY1Ng',
+    tubeId: 'JJ22QNlKFPY',
   },
   /* VSCode_小技巧 */
   {
     url: '1725800376288VSCode_%E5%B0%8F%E6%8A%80%E5%B7%A7',
     active: false,
     href: 'XNjQxODUzMzQ2NA',
+    tubeId: 'v1INnskoFFQ',
   },
   /* 产品研发相关规划上 */
   {
     url: '1725800386288%E4%BA%A7%E5%93%81%E7%A0%94%E5%8F%91%E7%9B%B8%E5%85%B3%E8%A7%84%E5%88%92%E4%B8%8A',
     active: false,
     href: 'XNjQyNTUwNDg5Mg',
+    tubeId: 'X3lqY0q7d6U',
   },
   /* 产品研发相关规划下 */
   {
     url: '1725800387288%E4%BA%A7%E5%93%81%E7%A0%94%E5%8F%91%E7%9B%B8%E5%85%B3%E8%A7%84%E5%88%92%E4%B8%8B',
     active: false,
     href: 'XNjQxODUzOTQxMg',
+    tubeId: 'jqZRtol-q1g',
   },
   /* 规范建设 */
   {
@@ -97,6 +133,7 @@ const imagesList = reactive([
     url: '1725800396288%E4%BA%BA%E5%91%98%E7%86%9F%E6%82%89%E4%B8%8E%E9%85%8D%E5%90%88',
     active: false,
     href: 'https://v.youku.com/v_show/id_XNjQxODkyODU1Mg==.html',
+    tubeId: 'EH_kVtCC5WM',
   },
   /* 为知笔记与未来技术发展探讨 */
   {
@@ -156,6 +193,7 @@ const imagesList = reactive([
 
 function changeImage(item) {
   bigImage.value = `${item.url}`
+  tubeId.value = item.tubeId
   toHref.value = `https://v.youku.com/v_show/id_${item.href}==.html`
   imagesList.forEach((item) => {
     item.active = false

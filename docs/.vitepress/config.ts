@@ -44,6 +44,11 @@ export default defineConfig<ThemeConfig>({
         liClass: 'task-list-item',
       })
       md.use(timeline as any)
+      md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
+          let htmlResult = slf.renderToken(tokens, idx, options);
+          if (tokens[idx].tag === 'h1') htmlResult += `<ArticleMetadata />`;
+          return htmlResult;
+      }
     },
   },
 
@@ -63,9 +68,9 @@ export default defineConfig<ThemeConfig>({
       // },
       {
         id: 2,
-        title: '一个人想着一个人 ',
-        author: '如懿',
-        url: 'https://res.wx.qq.com/voice/getvoice?mediaid=MzUzMDUzMjQyMl8xMDAwMDE0ODA=',
+        title: '金玉良缘',
+        author: '贾青',
+        url: 'https://ting8.yymp3.com/new26/jinyulangyuan/2.mp3',
         pic: 'https://enshimama.oss-cn-shanghai.aliyuncs.com/smartgallery/music/02.jpg',
         lrc: '',
       },

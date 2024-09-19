@@ -17,6 +17,7 @@ import Firework from './components/Firework.vue'
 import BabyPulm from './components/Baby_pulm.vue'
 import AutoMusic from './components/Auto_playmusic.vue'
 import BackTop from './components/BackTop.vue'
+import ArticleMetadata from "./components/ArticleMetadata.vue" // 字数阅读时间
 
 import './styles/index.scss'
 
@@ -49,6 +50,7 @@ export default {
     app.component('BabyPulm', BabyPulm)
     app.component('AutoMusic', AutoMusic)
     app.component('BackTop', BackTop)
+    app.component('ArticleMetadata', ArticleMetadata)
 
     app.use(pinia)
 

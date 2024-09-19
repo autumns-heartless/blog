@@ -113,7 +113,6 @@ function closeBulletin() {
 }
 
 .card {
-  background: #191c29 !important;
   position: absolute;
   right: 1%;
   top: 40%;
@@ -122,9 +121,14 @@ function closeBulletin() {
   padding: 3px;
   border-radius: 6px;
   font-size: 1.5em;
-  // color: rgb(88 199 250 / 0%);
+  background: #191c29 !important;
   cursor: pointer;
   font-family: cursive;
+
+  span,
+  h3 {
+    color: white;
+  }
 
   svg {
     display: inline-block !important;
