@@ -2,6 +2,8 @@
 outline: 2
 ---
 
+<BackTop />
+
 # PC 踩坑记录
 
 ## `transform` 导致字体不清晰

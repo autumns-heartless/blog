@@ -4,6 +4,8 @@ layoutClass: m-nav-layout
 outline: [2, 3, 4]
 ---
 
+<BackTop />
+
 <script setup>
 import { NAV_DATA } from './data'
 </script>

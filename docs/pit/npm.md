@@ -2,6 +2,8 @@
 outline: 2
 ---
 
+<BackTop />
+
 # npm 踩坑记录
 
 > 记录 `npm` `yarn` `pnpm` 相关踩坑

@@ -2,6 +2,8 @@
 description: 收集个人使用过或遇到的JavaScript工具库
 ---
 
+<BackTop />
+
 # 常用工具库整理
 
 > 收集个人使用过或遇到的类库

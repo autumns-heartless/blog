@@ -1,3 +1,5 @@
+<BackTop />
+
 # ES6 常用知识
 
 `ECMAScript 6` (简称 `ES6`) 是 `JavaScript` 语言的下一代标准

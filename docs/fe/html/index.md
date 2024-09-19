@@ -1,3 +1,5 @@
+<BackTop />
+
 # HTML 理论知识点
 
 ## HTML 语义化
