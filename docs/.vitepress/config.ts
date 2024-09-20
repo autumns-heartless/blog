@@ -4,7 +4,7 @@ import MarkdownPreview from 'vite-plugin-markdown-preview'
 import { codeInspectorPlugin } from 'code-inspector-plugin'
 import { chineseSearchOptimize, pagefindPlugin } from 'vitepress-plugin-pagefind'
 /* 时间线 */
-import timeline from "vitepress-markdown-timeline";
+// import timeline from "vitepress-markdown-timeline";
 /* todo */
 import taskLists from 'markdown-it-task-checkbox'
 
@@ -43,7 +43,7 @@ export default defineConfig<ThemeConfig>({
         ulClass: 'task-list',
         liClass: 'task-list-item',
       })
-      md.use(timeline as any)
+      // md.use(timeline as any)
       md.renderer.rules.heading_close = (tokens, idx, options, env, slf) => {
           let htmlResult = slf.renderToken(tokens, idx, options);
           if (tokens[idx].tag === 'h1') htmlResult += `<ArticleMetadata />`;
