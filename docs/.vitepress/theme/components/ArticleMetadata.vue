@@ -64,10 +64,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="word" v-bind="$attrs">
+  <div class="word" v-bind="$attrs" v-if="author || props.article?.author">
     <div>
       <!-- 原创 -->
-      <div class="original" v-if="!isReprinted && !props.article.reprinted">
+      <div class="original" v-if="!isReprinted && !props.article?.reprinted">
         <svg
           viewBox="0 0 48 48"
           fill="none"
