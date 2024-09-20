@@ -3,6 +3,20 @@ import { useData } from 'vitepress'
 import { computed, ref, onMounted } from 'vue'
 import { countWord } from '../utils/functions'
 
+interface articleIF {
+  reprinted?: boolean
+  author?: string
+  title?: string
+  date?: string
+  categories?: string
+  tags?: string
+  path?: string
+}
+
+const props = defineProps<{
+  article: articleIF
+}>()
+
 const { page } = useData()
 const date = computed(() => new Date(page.value.lastUpdated!))
 
@@ -10,15 +24,8 @@ function isValidDate(date: any) {
   return date instanceof Date && !isNaN(date.valueOf())
 }
 
-console.log(
-  typeof date.value,
-  '[ date ] 🌸>',
-  date.value,
-  isValidDate(date.value),
-  isValidDate('2024-10-31'),
-)
-const author = computed(() => page.value.frontmatter.author)
-const isReprinted = computed(() => page.value.frontmatter.reprinted)
+const author = computed(() => page.value.frontmatter?.author)
+const isReprinted = computed(() => page.value.frontmatter?.reprinted)
 
 const wordCount = ref(0)
 const imageCount = ref(0)
@@ -57,10 +64,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="word" v-if="author">
+  <div class="word" v-bind="$attrs">
     <div>
       <!-- 原创 -->
-      <div class="original" v-if="!isReprinted">
+      <div class="original" v-if="!isReprinted && !props.article.reprinted">
         <svg
           viewBox="0 0 48 48"
           fill="none"
@@ -100,7 +107,7 @@ onMounted(() => {
         <span>转载</span>
       </div>
       <!-- 作者 -->
-      <span>作者：{{ author }}</span>
+      <span>作者：{{ author ? author : props.article?.author }}</span>
       <!-- 更新 -->
       <div v-if="date">
         <svg
@@ -121,7 +128,7 @@ onMounted(() => {
         </svg>
         <span>
           更新:
-          {{ isValidDate(date) ? date.toLocaleDateString() : new Date().toLocaleDateString() }}
+          {{ isValidDate(date) ? date.toLocaleDateString() : props.article.date }}
         </span>
       </div>
       <!-- 字数 -->

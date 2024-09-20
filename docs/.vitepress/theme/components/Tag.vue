@@ -71,7 +71,7 @@
               </h3>
               <p class="result-item-description"></p>
               <!-- 文章元数据信息 -->
-              <ArticleMetadata />
+              <ArticleMetadata :article="article" />
             </div>
           </li>
         </ul>
