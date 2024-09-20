@@ -81,13 +81,14 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         text: '张鑫',
         items: [
-          { text: 'Code Inspector', link: '/other/codeInspector/index' },
           { text: '打包部署', link: '/other/deploy/index' },
+          { text: 'Code Inspector', link: '/other/codeInspector/index' },
           { text: 'vben框架的示例页面', link: '/other/vben/example-index' },
           { text: '100个CSS优化技巧分享！', link: '/other/css/100CssSkills' },
-          { text: '写给懒人的Vue3速查宝典', link: '/other/vue3/quickSearchTreasureBook-index' },
+          { text: 'Vue3 Api盘点', link: '/other/vue3/api-index' },
           { text: 'Vue3教程 - 1', link: '/other/vue3/tutorial-1-index' },
           { text: 'Vue3教程 - 2', link: '/other/vue3/tutorial-2-index' },
+          { text: '写给懒人的Vue3速查宝典', link: '/other/vue3/quickSearchTreasureBook-index' },
         ],
       },
       {

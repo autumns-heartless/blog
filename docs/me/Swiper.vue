@@ -121,12 +121,14 @@ const imagesList = reactive([
     url: '1725800391287%E8%A7%84%E8%8C%83%E5%BB%BA%E8%AE%BE',
     active: false,
     href: 'XNjQyNTUwMjMwMA',
+    tubeId: 'jgqOovXBjJA',
   },
   /* 技术培训 */
   {
     url: '1725800392288%E6%8A%80%E6%9C%AF%E5%9F%B9%E8%AE%AD',
     active: false,
     href: 'XNjQyNTUwMjM0MA',
+    tubeId: 'F5-DO27iT_c',
   },
   /* 人员熟悉与配合 */
   {
@@ -140,54 +142,63 @@ const imagesList = reactive([
     url: '1725800404288%E4%B8%BA%E7%9F%A5%E7%AC%94%E8%AE%B0%E4%B8%8E%E6%9C%AA%E6%9D%A5%E6%8A%80%E6%9C%AF%E5%8F%91%E5%B1%95%E6%8E%A2%E8%AE%A8',
     active: false,
     href: 'https://v.youku.com/v_show/id_XNjQxODkyODU5Ng==.html',
+    tubeId: 'vmkS1KmrG0Y',
   },
   /* 效率翻倍 */
   {
     url: '1725800405288%E6%95%88%E7%8E%87%E7%BF%BB%E5%80%8D',
     active: false,
     href: 'https://v.youku.com/v_show/id_XNjQyNTkwODEwOA==.html',
+    tubeId: 'Jrhjiquvg7o',
   },
   /* vben框架_初步使用 */
   {
     url: '1725799975290vben%E6%A1%86%E6%9E%B6_%E5%88%9D%E6%AD%A5%E4%BD%BF%E7%94%A8',
     active: false,
     href: 'XNjQxODkzNjA3Mg',
+    tubeId: 'jJqIVmOPYZU',
   },
   /* 依赖_CodeInspector使用 */
   {
     url: '1725800407288%E4%BE%9D%E8%B5%96_CodeInspector%E4%BD%BF%E7%94%A8',
     active: false,
     href: 'XNjQyNTkwNjk0OA',
+    tubeId: '_5M77Dw4KRQ',
   },
   /* VSCode插件_fnMap使用 */
   {
     url: '1725800379288VSCode%E6%8F%92%E4%BB%B6_fnMap%E4%BD%BF%E7%94%A8',
     active: false,
     href: 'XNjQxODkzNjI5Ng',
+    tubeId: '',
   },
   /* 依赖_ssh2-sftp-client使用 */
   {
     url: '1725800409288%E4%BE%9D%E8%B5%96_ssh2-sftp-client%E4%BD%BF%E7%94%A8',
     active: false,
     href: 'XNjQyNTkwNzAxNg',
+    tubeId: 'FcwuDMCcSAE',
   },
   /* VSCode插件_SFTP使用 */
   {
     url: '1725800381288VSCode%E6%8F%92%E4%BB%B6_SFTP%E4%BD%BF%E7%94%A8',
     active: false,
     href: 'XNjQyNTkwNzA1Ng',
+    tubeId: 'lXJTotU784Y',
   },
   /* vue3_组件注册 */
   {
     url: '1725800385289vue3_%E7%BB%84%E4%BB%B6%E6%B3%A8%E5%86%8C',
     active: false,
     href: 'XNjQxODkzNjM5Mg',
+    tubeId: 'c1VbMmgAVA8',
   },
   /* vue3_透传 */
   {
     url: '1725800383287vue3_%E9%80%8F%E4%BC%A0',
     active: false,
     href: 'XNjQyNTkwODU0MA',
+    tubeId: '',
   },
 ])
 
