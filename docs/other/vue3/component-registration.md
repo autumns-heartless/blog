@@ -1,5 +1,12 @@
 ---
-author: 郭春艳
+  author: 郭春艳
+
+  title: Vue3 组件注册
+  date: 2020/10/02 21:29
+  categories:
+    - vue3
+  tags:
+    - vue3
 ---
 
 <BackTop />

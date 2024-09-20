@@ -1,6 +1,12 @@
 ---
   author: '沐华'
   reprinted: true
+  title: 保姆级 Vue3 开发文档
+  date: 2020/10/02 21:29
+  categories:
+    - vue3
+  tags:
+    - vue3
 ---
 
 <BackTop />

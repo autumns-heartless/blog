@@ -10,5 +10,5 @@
     "strict": true,
     "jsx": "preserve"
   },
-  "include": ["env.d.ts", "**/.vitepress/**/*"]
+  "include": ["env.d.ts", "**/.vitepress/**/*", "article.data.js", "article.data.js"]
 }

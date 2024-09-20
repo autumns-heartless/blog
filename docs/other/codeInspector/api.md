@@ -1,6 +1,12 @@
 ---
   author: '周立翔'
   reprinted: true
+  title: code-inspector 之 API
+  date: 2020/10/02 21:29
+  categories:
+    - 项目依赖
+  tags:
+    - 项目依赖
 ---
 
 <BackTop />

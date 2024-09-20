@@ -1,6 +1,12 @@
 ---
   author: '陈随易'
   reprinted: true
+  title: 函数地图（fnMap）
+  date: 2020/10/02 21:29
+  categories:
+    - VSCode
+  tags:
+    - VSCode插件
 ---
 
 <BackTop />

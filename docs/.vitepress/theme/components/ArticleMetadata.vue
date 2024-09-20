@@ -5,6 +5,18 @@ import { countWord } from '../utils/functions'
 
 const { page } = useData()
 const date = computed(() => new Date(page.value.lastUpdated!))
+
+function isValidDate(date: any) {
+  return date instanceof Date && !isNaN(date.valueOf())
+}
+
+console.log(
+  typeof date.value,
+  '[ date ] 🌸>',
+  date.value,
+  isValidDate(date.value),
+  isValidDate('2024-10-31'),
+)
 const author = computed(() => page.value.frontmatter.author)
 const isReprinted = computed(() => page.value.frontmatter.reprinted)
 
@@ -90,7 +102,7 @@ onMounted(() => {
       <!-- 作者 -->
       <span>作者：{{ author }}</span>
       <!-- 更新 -->
-      <div>
+      <div v-if="date">
         <svg
           t="1724572866572"
           class="icon"
@@ -107,7 +119,10 @@ onMounted(() => {
             p-id="18132"
           ></path>
         </svg>
-        <span>更新: {{ date.toLocaleDateString() }}</span>
+        <span>
+          更新:
+          {{ isValidDate(date) ? date.toLocaleDateString() : new Date().toLocaleDateString() }}
+        </span>
       </div>
       <!-- 字数 -->
       <div>

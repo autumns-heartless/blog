@@ -1,5 +1,11 @@
 ---
 author: '郭春艳'
+title: vben 框架的使用
+date: 2020/10/02 21:29
+categories:
+  - vben
+tags:
+  - vben
 ---
 
 <BackTop />

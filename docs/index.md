@@ -13,12 +13,12 @@ hero:
     - text: 待办清单
       link: /todoList/
       theme: alt
+    - text: 我的标签
+      link: /tag/
     - text: 白酒找我
       link: /wine/
     - text: 烟花许愿
       link: /firework/
-    - text: 时间线
-      link: /timeline/
     - text: 涨薪申请
       link: /me/money
 features:

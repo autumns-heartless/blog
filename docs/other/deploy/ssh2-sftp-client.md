@@ -1,6 +1,12 @@
 ---
   author: '摸鱼的春哥'
   reprinted: true
+  title: ssh2-sftp-client
+  date: 2020/10/02 21:29
+  categories:
+    - 打包部署
+  tags:
+    - 打包部署
 ---
 
 <BackTop />

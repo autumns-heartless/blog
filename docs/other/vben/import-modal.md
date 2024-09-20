@@ -1,5 +1,11 @@
 ---
 author: '章家龙'
+title: vben 框架中引入 Modal 组件
+date: 2020/10/02 21:29
+categories:
+  - vben
+tags:
+  - vben
 ---
 
 <BackTop />

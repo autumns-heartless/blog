@@ -1,6 +1,13 @@
 ---
   author: '周一同学'
   reprinted: true
+
+  title: Vue3 API 盘点
+  date: 2020/10/02 21:29
+  categories:
+    - vue3
+  tags:
+    - vue3
 ---
 
 # Vue3 - Api

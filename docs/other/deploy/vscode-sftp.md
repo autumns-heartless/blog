@@ -1,5 +1,13 @@
 ---
 author: 张开朗呀
+title: VSCode-SFTP
+date: 2020/10/02 21:29
+categories:
+  - 打包部署
+  - VSCode插件
+tags:
+  - 打包部署
+  - VSCode插件
 ---
 
 <BackTop />

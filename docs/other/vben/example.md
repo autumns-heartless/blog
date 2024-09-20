@@ -1,5 +1,11 @@
 ---
 author: '张开朗呀'
+title: vben 框架的示例页面
+date: 2020/10/02 21:29
+categories:
+  - vben
+tags:
+  - vben
 ---
 
 <BackTop />
