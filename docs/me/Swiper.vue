@@ -232,7 +232,7 @@ onMounted(async () => {
   width: 98%;
   height: 300px;
   margin: 10px auto;
-  background: url(./images/开发规范.png) no-repeat center / cover;
+  background: url(./images/前端规划.png) no-repeat center / cover;
   border-radius: 5px;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
   transition: all 1s;
