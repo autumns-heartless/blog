@@ -1,3 +1,8 @@
+---
+  author: '陈随易'
+  reprinted: true
+---
+
 <BackTop />
 
 # 函数地图（fnMap）

@@ -1,5 +1,6 @@
 ---
-author: '周一同学'
+  author: '周一同学'
+  reprinted: true
 ---
 
 # Vue3 - Api

@@ -1,3 +1,8 @@
+---
+  author: 'radawn'
+  reprinted: true
+---
+
 <BackTop />
 
 # 写给懒人的 Vue3 速查宝典
@@ -236,8 +241,8 @@ defineExpose 将组件中的属性或方法暴露给外部环境，以便在其�
 ```js
 <script setup>
     import {(onMounted, onBeforeMount, onUpdated, unmounted)} from 'vue';    // 挂载前   
-  onBeforeMount(() => {})    // 挂载完毕    onMounted(() => {})    // 更新完毕    onUpdated(() => {}
-  )   // 卸载完毕   onUnmounted(() => {})
+  onBeforeMount(() => {})    // 挂载完毕    onMounted(() => {})    // 更新完毕    onUpdated(() => {})
+    // 卸载完毕   onUnmounted(() => {})
 </script>
 ```
 

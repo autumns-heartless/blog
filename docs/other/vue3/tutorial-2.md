@@ -1,3 +1,8 @@
+---
+  author: '迷鹿鱼'
+  reprinted: true
+---
+
 <BackTop />
 
 # 初学 vue3
