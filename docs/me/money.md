@@ -1,5 +1,12 @@
 <BackTop />
 
+<style lang="scss" scoped>
+  :deep(.vue-office-pdf-wrapper) {
+    background-color: transparent !important;
+    mix-blend-mode: difference;
+  }
+</style>
+
 # 涨薪申请 <small>(建议在 PC 端观看)</small>
 
 <Font />
@@ -36,24 +43,6 @@
 </div>
 <img src="./images/前端规划.png" style="margin: 30px 0px;" />
 
-### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;🚀 前端所规划待办事项
-
-<div style="text-indent: 4em">
-  <p>
-    <b>·</b> 说明：针对前端团队未来发展所规划的一些前瞻工作
-  </p>
-  <p>
-    <b>·</b> 作用：将规划落地，让团队更加有规范和素养
-  </p>
-</div>
-
-<img src="./images/待办事项1.png" style="width: 100%;" />
-<img src="./images/待办事项2.png" style="width: 100%;" />
-<img src="./images/待办事项3.png" style="width: 100%;" />
-<img src="./images/待办事项4.png" style="width: 100%;" />
-<img src="./images/待办事项5.png" style="width: 100%;" />
-<img src="./images/待办事项6.png" style="width: 100%;" />
-
 ### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;🚀 培训
 
 #### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ⏰ 培训视频（**`优酷`** 在线观看）
@@ -73,71 +62,23 @@
 
 <Swiper />
 
-<!-- ::: details 2024 🉐 3🈷️22☀️
+### &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;🚀 前端所规划待办事项
 
-[📺 1. 开发规范.mp4](https://v.youku.com/v_show/id_XNjQxODUyNjY4MA==.html)
+<div style="text-indent: 4em">
+  <p>
+    <b>·</b> 说明：针对前端团队未来发展所规划的一些前瞻工作
+  </p>
+  <p>
+    <b>·</b> 作用：将规划落地，让团队更加有规范和素养
+  </p>
+</div>
 
-[📺 2. 组件封装.mp4](https://v.youku.com/v_show/id_XNjQxODUyNTUxMg==.html)
-
-:::
-
-::: details 2024 🉐 3🈷️24☀️
-
-[📺 3. 多选框联动.mp4](https://v.youku.com/v_show/id_XNjQyNTUwMDU5Mg==.html)
-
-:::
-
-::: details 2024 🉐 4🈷️27☀️
-
-[📺 4. 社区矫正演示视频.mp4](https://v.youku.com/v_show/id_XNjQyNTUwMDY0NA==.html)
-
-:::
-
-::: details 2024 🉐 5🈷️28☀️
-
-[📺 5. 产品研发相关规划上.mp4](https://v.youku.com/v_show/id_XNjQyNTUwNDg5Mg==.html)
-
-[📺 6. 产品研发相关规划下.mp4](https://v.youku.com/v_show/id_XNjQxODUzOTQxMg==.html)
-
-[📺 7. 规范建设.mp4](https://v.youku.com/v_show/id_XNjQyNTUwMjMwMA==.html)
-
-[📺 8. 技术培训.mp4](https://v.youku.com/v_show/id_XNjQyNTUwMjM0MA==.html)
-
-[📺 9. 人员熟悉与配合.mp4](https://v.youku.com/v_show/id_XNjQxODkyODU1Mg==.html)
-
-[📺 10. 为知笔记运用与未来技术发展探讨.mp4](https://v.youku.com/v_show/id_XNjQxODkyODU5Ng==.html)
-
-[📺 11. 效率翻倍.mp4](https://v.youku.com/v_show/id_XNjQyNTkwODEwOA==.html)
-
-[📺 12. VSCode 设置 json.mp4](https://v.youku.com/v_show/id_XNjQyNTUwMDY1Ng==.html)
-
-[📺 13. VSCode 小技巧.mp4](https://v.youku.com/v_show/id_XNjQxODUzMzQ2NA==.html)
-
-:::
-
-::: details 2024 🉐 7🈷️12☀️
-
-[📺 14. vben 新框架初步使用.mp4](https://v.youku.com/v_show/id_XNjQxODkzNjA3Mg==.html)
-
-:::
-
-::: details 2024 🉐 7🈷️26☀️
-
-[📺 15. VSCode 插件之 fnMap.mp4](https://v.youku.com/v_show/id_XNjQxODkzNjI5Ng==.html)
-
-[📺 16. VSCode 插件之 SFTP.mp4](https://v.youku.com/v_show/id_XNjQyNTkwNzA1Ng==.html)
-
-[📺 17. 依赖 ssh2-sftp-client.mp4](https://v.youku.com/v_show/id_XNjQyNTkwNzAxNg==.html)
-
-[📺 18. vue3 组件注册.mp4](https://v.youku.com/v_show/id_XNjQxODkzNjM5Mg==.html)
-
-[📺 19. vue3 透传.mp4](https://v.youku.com/v_show/id_XNjQyNTkwODU0MA==.html)
-
-::: -->
+<VueOfficePdf src="/待办事项.pdf" />
 
 <script setup>
 import Swiper from './Swiper.vue';
 import Font from './Font.vue';
+import VueOfficePdf from "@vue-office/pdf";
 
 document.addEventListener("DOMContentLoaded", function() {
   var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy-load"));

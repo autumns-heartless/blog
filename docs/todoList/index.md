@@ -18,28 +18,24 @@
 
   ✅ 目前为本地搜索，添加 Algolia 或 ✅ pagefind
 
+  ✅ 博客添加分类标签
+
+  ✅ 团队成员墙 UI 优化 v1.0
+
   ✅ 媳妇儿白酒销路打开第 1 步：广告
 
   ⬜ 媳妇儿白酒销路打开第 2 步：外部网站
 
   ⬜ 添加 RSS 源
 
+
   ⬜ 其他成员模块和笔记编写规划
 
-  ⬜ 团队成员墙 UI 优化
-
   ⬜ 笔记分类规划
-
-  ⬜ 博客添加分类标签和归档
 
   ⬜ live2d 实现拖拽
 
   ⬜ 导航实现置顶网站栏目展示
-</pre>
 
-<style scoped>
-  :deep(video) {
-    width: 100% !important;
-    height: 500px !important;
-  }
-</style>
+  ⬜ 实现个人炫酷简历
+</pre>
