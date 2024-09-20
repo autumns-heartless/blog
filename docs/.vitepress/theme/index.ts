@@ -2,7 +2,7 @@ import { h, watch } from 'vue'
 import { useData, EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 // 只需添加以下一行代码，引入时间线样式
-import "vitepress-markdown-timeline/dist/theme/index.css";
+// import "vitepress-markdown-timeline/dist/theme/index.css";
 import { createPinia } from 'pinia' //使用状态管理库。用于音乐播放器的状态监听
 const pinia = createPinia()
 
