@@ -2,7 +2,9 @@
   author: '周立翔'
   reprinted: true
   title: code-inspector 之 快速开始
-  date: 2020/10/02 21:29
+  date: 2024/09/20
+  words: 908
+  duration: 5
   categories:
     - 项目依赖
   tags:

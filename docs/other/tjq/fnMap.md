@@ -2,7 +2,9 @@
   author: '陈随易'
   reprinted: true
   title: 函数地图（fnMap）
-  date: 2020/10/02 21:29
+  date: 2024/09/20
+  words: 1042
+  duration: 8
   categories:
     - VSCode
   tags:

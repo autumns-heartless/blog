@@ -2,7 +2,9 @@
   author: '沐华'
   reprinted: true
   title: 保姆级 Vue3 开发文档
-  date: 2020/10/02 21:29
+  date: 2024/09/20
+  words: 4079
+  duration: 15
   categories:
     - vue3
   tags:

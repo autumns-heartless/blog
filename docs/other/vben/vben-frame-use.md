@@ -1,7 +1,9 @@
 ---
 author: '郭春艳'
 title: vben 框架的使用
-date: 2020/10/02 21:29
+date: 2024/09/20
+words: 2344
+duration: 10
 categories:
   - vben
 tags:

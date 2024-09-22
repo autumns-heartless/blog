@@ -2,7 +2,9 @@
   author: '周立翔'
   reprinted: true
   title: code-inspector 之 指定IDE
-  date: 2020/10/02 21:29
+  date: 2024/09/20
+  words: 557
+  duration: 3
   categories:
     - 项目依赖
   tags:

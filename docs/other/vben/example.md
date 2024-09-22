@@ -1,7 +1,9 @@
 ---
 author: '张开朗呀'
 title: vben 框架的示例页面
-date: 2020/10/02 21:29
+date: 2024/09/20
+words: 84
+duration: 2
 categories:
   - vben
 tags:

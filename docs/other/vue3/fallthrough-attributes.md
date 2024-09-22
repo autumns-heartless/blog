@@ -1,7 +1,9 @@
 ---
 author: '郭春艳'
 title: Vue3 透传 Attributes
-date: 2020/10/02 21:29
+date: 2024/09/20
+words: 1382
+duration: 8
 categories:
   - vue3
 tags:

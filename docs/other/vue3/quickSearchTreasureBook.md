@@ -2,7 +2,9 @@
   author: 'radawn'
   reprinted: true
   title: 写给懒人的 Vue3 速查宝典
-  date: 2020/10/02 21:29
+  date: 2024/09/20
+  words: 2426
+  duration: 9
   categories:
     - vue3
   tags:
@@ -247,8 +249,8 @@ defineExpose 将组件中的属性或方法暴露给外部环境，以便在其�
 ```js
 <script setup>
     import {(onMounted, onBeforeMount, onUpdated, unmounted)} from 'vue';    // 挂载前   
-  onBeforeMount(() => {})    // 挂载完毕    onMounted(() => {})    // 更新完毕    onUpdated(() => {}
-  )   // 卸载完毕   onUnmounted(() => {})
+  onBeforeMount(() => {})    // 挂载完毕    onMounted(() => {})    // 更新完毕    onUpdated(() => {})
+    // 卸载完毕   onUnmounted(() => {})
 </script>
 ```
 

@@ -1,7 +1,9 @@
 ---
 author: 张开朗呀
 title: VSCode-SFTP
-date: 2020/10/02 21:29
+date: 2024/09/20
+words: 639
+duration: 3
 categories:
   - 打包部署
   - VSCode插件

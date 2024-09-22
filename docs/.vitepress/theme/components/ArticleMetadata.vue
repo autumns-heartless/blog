@@ -11,6 +11,8 @@ interface articleIF {
   categories?: string
   tags?: string
   path?: string
+  words?: string | number
+  duration?: string | number
 }
 
 const props = defineProps<{
@@ -155,7 +157,7 @@ onMounted(() => {
             p-id="6127"
           ></path>
         </svg>
-        <span>字数: {{ wordCount }} 字</span>
+        <span>字数: {{ props.article?.words ?? wordCount }} 字</span>
       </div>
       <!-- 时长 -->
       <div>
@@ -175,7 +177,7 @@ onMounted(() => {
             p-id="15032"
           ></path>
         </svg>
-        <span>时长: {{ readTime }} 分钟</span>
+        <span>时长: {{ props.article?.duration ?? readTime }} 分钟</span>
       </div>
     </div>
   </div>

@@ -1,7 +1,9 @@
 ---
 author: '章家龙'
 title: vben 框架中引入 Modal 组件
-date: 2020/10/02 21:29
+date: 2024/09/20
+words: 1247
+duration: 5
 categories:
   - vben
 tags:

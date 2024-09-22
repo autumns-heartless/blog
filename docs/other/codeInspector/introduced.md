@@ -2,7 +2,9 @@
   author: '周立翔'
   reprinted: true
   title: code-inspector 之 介绍
-  date: 2020/10/02 21:29
+  date: 2024/09/20
+  words: 410
+  duration: 2
   categories:
     - 项目依赖
   tags:

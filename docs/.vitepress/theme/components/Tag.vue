@@ -53,21 +53,18 @@
         <ul
           v-if="selectTag"
           :style="{ width: '100%', listStyle: 'none', maxHeight: '400px', overflowY: 'auto' }"
-          class="scrollBar"
+          class="scrollBar tagList"
         >
           <li
             v-for="(article, index) in tags[selectTag]"
-            :style="{ border: 'solid 1px #000', padding: '12px' }"
+            :style="{ border: 'solid 1px #000', padding: '12px', cursor: 'pointer' }"
+            @click="toNewHref(`https://qtmyx.netlify.app/${article.path}`)"
           >
             <div class="result-item">
               <h3 class="result-item-title">
-                <a
-                  :href="`https://qtmyx.netlify.app/${article.path}`"
-                  class="title"
-                  target="_blank"
-                >
+                <span class="title">
                   {{ article.title }}
-                </a>
+                </span>
               </h3>
               <p class="result-item-description"></p>
               <!-- 文章元数据信息 -->
@@ -324,6 +321,11 @@ function initWordCloud(tags: any) {
   }
   return dataList
 }
+
+/* 跳转新的地址 */
+function toNewHref(href: string) {
+  window.open(href, '_blank')
+}
 </script>
 
 <style scoped>
@@ -436,6 +438,12 @@ svg:not(:root) {
 }
 
 /** 文章列表样式 */
+.tagList {
+  li:hover {
+    border: solid 1px red !important;
+  }
+}
+
 /* 滚动条样式 */
 .scrollBar::-webkit-scrollbar {
   width: 10px;

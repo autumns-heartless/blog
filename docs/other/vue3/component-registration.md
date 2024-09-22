@@ -2,7 +2,9 @@
   author: 郭春艳
 
   title: Vue3 组件注册
-  date: 2020/10/02 21:29
+  date: 2024/09/20
+  words: 1023
+  duration: 4
   categories:
     - vue3
   tags:

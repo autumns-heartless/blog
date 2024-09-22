@@ -2,7 +2,9 @@
   author: '迷鹿鱼'
   reprinted: true
   title: 初学 vue3
-  date: 2020/10/02 21:29
+  date: 2024/09/20
+  words: 7278
+  duration: 30
   categories:
     - vue3
   tags:
