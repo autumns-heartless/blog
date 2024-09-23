@@ -180,9 +180,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       text: 'vben',
       collapsed: false,
       items: [
-        { text: 'vben框架的使用-郭春艳著', link: '/other/vben/vben-frame-use' },
+        { text: 'vben框架的使用', link: '/other/vben/vben-frame-use' },
         { text: 'vben框架的使用-示例页面', link: '/other/vben/example-index' },
-        { text: 'vben框架的使用-章家龙著', link: '/other/vben/import-modal' },
+        { text: 'vben框架的使用', link: '/other/vben/import-modal' },
+        { text: 'vben框架多表单的展示', link: '/other/vben/vben-forms' },
       ],
     },
   ],
