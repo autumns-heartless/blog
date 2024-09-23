@@ -76,5 +76,5 @@ export default {
 </script>
 
 <style scoped>
-@import '../styles/baby_pulm.scss';
+@import '../styles/baby-pulm.scss';
 </style>

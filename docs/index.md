@@ -21,6 +21,8 @@ hero:
       link: /firework/
     - text: 涨薪申请
       link: /me/money
+    - text: 测试
+      link: /test
 features:
   - icon: 📖
     title: 前端物语
