@@ -1,15 +1,13 @@
 ---
   footer: false
   aside: false
+  comment: false
+  lastUpdated: false
 ---
 
 <Friends />
 
 <style>
-  .gsc-comments, .doc-comments {
-    display: none;
-  }
-
   .VPDoc:not(.has-sidebar) .content {
     max-width: 100% !important;
   }

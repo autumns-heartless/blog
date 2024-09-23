@@ -1,5 +1,9 @@
 # 功能测试页
 
+# 鼠标检测高亮
+
+<BorderHover />
+
 ## medium-zoom
 
 ![medium-zoom](/logo.png)

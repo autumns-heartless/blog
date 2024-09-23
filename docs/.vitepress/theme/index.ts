@@ -12,12 +12,13 @@ import AuthGuard from './components/AuthGuard.vue'
 import Confetti from './components/Confetti.vue'
 import Video from './components/Video.vue'
 import Firework from './components/Firework.vue'
-import BabyPulm from './components/Baby_pulm.vue'
-import AutoMusic from './components/Auto_playmusic.vue'
+import BabyPulm from './components/BabyPulm.vue'
+import AutoMusic from './components/AutoPlaymusic.vue'
 import BackTop from './components/BackTop.vue'
 import ArticleMetadata from "./components/ArticleMetadata.vue" // 字数阅读时间
 import Tag from "./components/Tag.vue" // 标签分类
 import Friends from '../../other/friends/index.vue'
+import BorderHover from './components/BorderHover.vue' // 边框检测鼠标高亮
 
 import './styles/index.scss'
 
@@ -53,6 +54,8 @@ export default {
     app.component('ArticleMetadata', ArticleMetadata)
     app.component('Friends', Friends)
     app.component('Tag', Tag)
+    app.component('BorderHover', BorderHover)
+
 
     app.use(pinia)
 
