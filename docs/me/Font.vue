@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="text__box one">本次调薪申请以职级变化 和 所作贡献 为主要出发点</div>
+    <div class="text__box one">本次调薪申请以 职级变化 和 所作贡献 为主要出发点</div>
   </div>
 </template>
 
