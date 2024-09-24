@@ -11,3 +11,7 @@
   <div class="flex-row-center rounded-lg w-full h-40 bg-blue-500">vue 组件预览测试</div>
 </template>
 ```
+
+## 瀑布流
+
+<WaterFallFlow />

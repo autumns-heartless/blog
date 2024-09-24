@@ -19,6 +19,7 @@ import ArticleMetadata from "./components/ArticleMetadata.vue" // 字数阅读�
 import Tag from "./components/Tag.vue" // 标签分类
 import Friends from '../../other/friends/index.vue'
 import BorderHover from './components/BorderHover.vue' // 边框检测鼠标高亮
+import WaterFallFlow from './components/WaterFallFlow/index.vue' // 瀑布流
 
 import './styles/index.scss'
 
@@ -55,7 +56,7 @@ export default {
     app.component('Friends', Friends)
     app.component('Tag', Tag)
     app.component('BorderHover', BorderHover)
-
+    app.component('WaterFallFlow', WaterFallFlow)
 
     app.use(pinia)
 
