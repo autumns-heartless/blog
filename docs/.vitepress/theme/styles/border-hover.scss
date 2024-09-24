@@ -5,11 +5,11 @@ body {
 p {
   margin: 0;
   line-height: 2;
+  font-size: 12px;
 }
 
-.container {
+.test-container {
   display: grid;
-  width: 90%;
   margin: 2rem auto 0;
   color: #f0f0f0;
   grid-template-columns: repeat(3, 1fr);

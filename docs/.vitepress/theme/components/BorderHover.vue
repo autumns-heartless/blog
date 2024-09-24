@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="test-container">
     <div class="card">
       <div class="inner">
         <p>黄鹤楼送孟浩然之广陵</p>
@@ -55,7 +55,7 @@
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  const container = document.querySelector('.container')
+  const container = document.querySelector('.test-container')
   const cards = document.querySelectorAll('.card')
 
   container.onmousemove = (e) => {
