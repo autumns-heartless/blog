@@ -48,9 +48,6 @@ importers:
       vitepress-plugin-pagefind:
         specifier: ^0.4.10
         version: 0.4.10(pagefind@1.1.1)
-      vue-waterfall-plugin-next:
-        specifier: ^2.6.0
-        version: 2.6.0
       vue3-toastify:
         specifier: ^0.2.1
         version: 0.2.3(vue@3.5.8)
@@ -2515,9 +2512,6 @@ packages:
     peerDependenciesMeta:
       '@vue/composition-api':
         optional: true
-
-  vue-waterfall-plugin-next@2.6.0:
-    resolution: {integrity: sha512-GgovHXWkEP0flI/60GPeTC9vQAnYXLfhohAe8BudIljlcpBS+UCFXOS+S7FCsoujhvdcUY1heKxZglf13KGl9g==}
 
   vue3-toastify@0.2.3:
     resolution: {integrity: sha512-Gsv/wWFYsAzhXFE+JCoL7KAUYvzl9AaGPykkDtT073RWiz1vqtdDFcHENU26ga0tbY42Q51yJr4en/ymQD0OGg==}
@@ -5293,8 +5287,6 @@ snapshots:
   vue-demi@0.14.10(vue@3.5.8):
     dependencies:
       vue: 3.5.8
-
-  vue-waterfall-plugin-next@2.6.0: {}
 
   vue3-toastify@0.2.3(vue@3.5.8):
     optionalDependencies:

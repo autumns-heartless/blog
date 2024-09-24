@@ -40,7 +40,8 @@
 
 <script setup lang="ts">
 import { onMounted, reactive, ref } from 'vue'
-import { LazyImg, Waterfall } from 'vue-waterfall-plugin-next'
+// import { LazyImg, Waterfall } from 'vue-waterfall-plugin-next'
+import { LazyImg, Waterfall } from './lib/index.ts'
 import 'vue-waterfall-plugin-next/dist/style.css'
 import { getList } from './api'
 import loading from '/images/loading.png'
