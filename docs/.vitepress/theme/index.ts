@@ -156,6 +156,14 @@ if (typeof window !== 'undefined') {
   }
 }
 
+if (typeof document !== 'undefined') {
+  // 在客户端代码中访问 document 对象
+  console.log(document.title);
+} else {
+  // 在服务器端代码中执行其他操作
+  console.log('This is server-side code');
+}
+
 // Speed up the rainbow animation on home page
 function updateHomePageStyle(value: boolean) {
   if (value) {
