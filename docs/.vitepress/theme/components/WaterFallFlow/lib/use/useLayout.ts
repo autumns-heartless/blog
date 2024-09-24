@@ -1,14 +1,14 @@
 import type { Ref } from 'vue'
 import { ref } from 'vue'
-import { addClass, hasClass, prefixStyle } from '../utils/dom'
+import { addClass, hasClass } from '../utils/dom'
 import type { WaterfallProps } from '../types/waterfall'
 import type { CssStyleObject, Nullable } from '../types/utils'
 
-const transform = prefixStyle('transform')
-const duration = prefixStyle('animation-duration')
-const delay = prefixStyle('animation-delay')
-const transition = prefixStyle('transition')
-const fillMode = prefixStyle('animation-fill-mode')
+const transform = ('transform')
+const duration = ('animation-duration')
+const delay = ('animation-delay')
+const transition = ('transition')
+const fillMode = ('animation-fill-mode')
 
 export function useLayout(props: WaterfallProps, colWidth: Ref<number>, cols: Ref<number>, offsetX: Ref<number>, waterfallWrapper: Ref<Nullable<HTMLElement>>) {
   const posY = ref<number[]>([])

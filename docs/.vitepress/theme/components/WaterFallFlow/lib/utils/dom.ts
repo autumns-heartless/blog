@@ -1,4 +1,3 @@
-import { nextTick } from 'vue'
 import type { CssStyleObject } from '../types/utils'
 
 export function hasClass(el: HTMLElement, className: string) {
@@ -22,32 +21,32 @@ export function removeClass(el: HTMLElement, className: string) {
   }
 }
 
-const vendor = (() => {
-  const transformNames: Record<string, string> = {
-    standard: 'transform',
-    webkit: 'webkitTransform',
-    Moz: 'MozTransform',
-    O: 'OTransform',
-    ms: 'msTransform',
-  }
+// const vendor = (() => {
+//   const transformNames: Record<string, string> = {
+//     standard: 'transform',
+//     webkit: 'webkitTransform',
+//     Moz: 'MozTransform',
+//     O: 'OTransform',
+//     ms: 'msTransform',
+//   }
 
-  const elementStyle = document.createElement('div').style as CssStyleObject
+//   const elementStyle = document.createElement('div').style as CssStyleObject
 
-  for (const key in transformNames) {
-    const val = transformNames[key]
-    if (elementStyle && elementStyle[val] !== undefined)
-      return key
-  }
+//   for (const key in transformNames) {
+//     const val = transformNames[key]
+//     if (elementStyle && elementStyle[val] !== undefined)
+//       return key
+//   }
 
-  return false
-})()
+//   return false
+// })()
 
-export function prefixStyle(style: string) {
-  if (vendor === false)
-    return false
+// export function prefixStyle(style: string) {
+//   if (vendor === false)
+//     return false
 
-  if (vendor === 'standard')
-    return style
+//   if (vendor === 'standard')
+//     return style
 
-  return vendor + style.charAt(0).toUpperCase() + style.substr(1)
-}
+//   return vendor + style.charAt(0).toUpperCase() + style.substr(1)
+// }
