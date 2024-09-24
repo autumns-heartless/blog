@@ -1,4 +1,4 @@
-import type Lazy from '../utils/Lazy'
+import type Lazy from '../utils/lazy'
 
 export type CallbackFunction = (value: boolean) => void
 

@@ -12,11 +12,11 @@
 import type { PropType } from 'vue'
 import { defineComponent, provide, ref, watch } from 'vue'
 import { useDebounceFn } from '@vueuse/core'
-import { useCalculateCols, useLayout } from '../use'
-import Lazy from '../utils/Lazy'
-import type { LazyType } from '../types/lazy'
-import { getValue } from '../utils/util'
-import type { ViewCard } from '../types/waterfall'
+import { useCalculateCols, useLayout } from '../use/index.ts'
+import Lazy from '../utils/lazy.ts'
+import type { LazyType } from '../types/lazy.ts'
+import { getValue } from '../utils/util.ts'
+import type { ViewCard } from '../types/waterfall.ts'
 
 export default defineComponent({
   props: {

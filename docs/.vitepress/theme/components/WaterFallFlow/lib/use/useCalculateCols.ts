@@ -2,7 +2,7 @@ import { computed, ref } from 'vue'
 import { useResizeObserver } from '@vueuse/core'
 import { getItemWidth } from '../utils/itemWidth'
 import type { WaterfallProps } from '../types/waterfall'
-import type { Nullable } from '../types/util'
+import type { Nullable } from '../types/utils'
 
 export function useCalculateCols(props: WaterfallProps) {
   const wrapperWidth = ref<number>(0)

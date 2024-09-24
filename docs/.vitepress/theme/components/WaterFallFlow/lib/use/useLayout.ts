@@ -2,7 +2,7 @@ import type { Ref } from 'vue'
 import { ref } from 'vue'
 import { addClass, hasClass, prefixStyle } from '../utils/dom'
 import type { WaterfallProps } from '../types/waterfall'
-import type { CssStyleObject, Nullable } from '../types/util'
+import type { CssStyleObject, Nullable } from '../types/utils'
 
 const transform = prefixStyle('transform')
 const duration = prefixStyle('animation-duration')

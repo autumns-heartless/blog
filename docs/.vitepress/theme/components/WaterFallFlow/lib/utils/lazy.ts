@@ -1,5 +1,5 @@
 import type { CallbackFunction, LazyOptions, ValueFormatterObject } from '../types/lazy'
-import type { CssStyleObject } from '../types/util'
+import type { CssStyleObject } from '../types/utils'
 import { assign, hasIntersectionObserver, isObject } from './util'
 import { loadImage } from './loader'
 

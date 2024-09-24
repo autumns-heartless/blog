@@ -1,4 +1,4 @@
-import type { CssStyleObject } from '../types/util'
+import type { CssStyleObject } from '../types/utils'
 
 export function hasClass(el: HTMLElement, className: string) {
   const reg = new RegExp(`(^|\\s)${className}(\\s|$)`)

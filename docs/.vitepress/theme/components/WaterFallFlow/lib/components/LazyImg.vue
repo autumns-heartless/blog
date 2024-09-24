@@ -8,8 +8,8 @@
 
 <script lang="ts">
 import { defineComponent, inject, onMounted, onUnmounted, ref } from 'vue'
-import type { LazyType } from '../types/lazy'
-import type { Nullable } from '../types/util'
+import type { LazyType } from '../types/lazy.ts'
+import type { Nullable } from '../types/utils.ts'
 
 export default defineComponent({
   props: {
