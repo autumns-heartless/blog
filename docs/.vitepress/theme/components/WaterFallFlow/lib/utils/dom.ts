@@ -1,3 +1,4 @@
+import { nextTick } from 'vue'
 import type { CssStyleObject } from '../types/utils'
 
 export function hasClass(el: HTMLElement, className: string) {
@@ -21,8 +22,6 @@ export function removeClass(el: HTMLElement, className: string) {
   }
 }
 
-const elementStyle = document.createElement('div').style as CssStyleObject
-
 const vendor = (() => {
   const transformNames: Record<string, string> = {
     standard: 'transform',
@@ -32,9 +31,11 @@ const vendor = (() => {
     ms: 'msTransform',
   }
 
+  const elementStyle = document.createElement('div').style as CssStyleObject
+
   for (const key in transformNames) {
     const val = transformNames[key]
-    if (elementStyle[val] !== undefined)
+    if (elementStyle && elementStyle[val] !== undefined)
       return key
   }
 
