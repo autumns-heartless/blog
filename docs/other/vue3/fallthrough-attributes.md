@@ -1,5 +1,5 @@
 ---
-author: '郭春艳'
+author: 'ejll'
 title: Vue3 透传 Attributes
 date: 2024/09/20
 words: 1382

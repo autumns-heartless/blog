@@ -92,7 +92,7 @@ export const nav: DefaultTheme.Config['nav'] = [
         ],
       },
       {
-        text: '郭春艳',
+        text: 'ejll',
         items: [
           { text: '组件注册', link: '/other/vue3/component-registration' },
           { text: '透传 Attributes', link: '/other/vue3/fallthrough-attributes' },

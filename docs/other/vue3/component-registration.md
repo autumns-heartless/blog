@@ -1,5 +1,5 @@
 ---
-  author: 郭春艳
+  author: ejll
 
   title: Vue3 组件注册
   date: 2024/09/20
