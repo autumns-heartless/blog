@@ -43,3 +43,17 @@ p {
   align-items: center;
   justify-content: center;
 }
+
+/* 移动端样式 */
+@media (max-width: 640px) {
+  .test-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+
+    p {
+      margin: 0;
+      line-height: 2;
+      font-size: 0.5rem;
+    }
+  }
+}
