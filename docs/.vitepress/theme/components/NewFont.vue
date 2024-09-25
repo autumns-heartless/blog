@@ -10,6 +10,10 @@
 <style lang="scss" scoped>
 .container {
   position: relative;
+
+  & > div {
+    max-width: 100%;
+  }
 }
 
 .text__box {

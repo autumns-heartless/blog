@@ -16,6 +16,20 @@
       padding-right: 10px;
     }
   }
+
+  .VPNav {
+    max-width: 100%;
+    overflow: auto;
+
+    .VPNavBar {
+      max-width: 100%;
+      overflow: auto;
+    }
+  }
+
+  .VPDocFooter .doc-comments {
+    display: none;
+  }
 }
 
 /* 首页样式修改 */

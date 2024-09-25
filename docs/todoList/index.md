@@ -16,7 +16,7 @@
 
   ✅ 待办事项 UI 优化
 
-  ✅ 目前为本地搜索，添加 Algolia 或 ✅ pagefind
+  ✅ 目前为搜索为 pagefind
 
   ✅ 博客添加分类标签
 
