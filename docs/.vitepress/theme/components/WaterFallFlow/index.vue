@@ -41,11 +41,11 @@
 <script setup lang="ts">
 import { onMounted, reactive, ref } from 'vue'
 // import { LazyImg, Waterfall } from 'vue-waterfall-plugin-next'
-import { LazyImg, Waterfall } from './lib/index.ts'
+import { LazyImg, Waterfall } from './lib/index'
 // import 'vue-waterfall-plugin-next/dist/style.css'
 import { getList } from './api'
-import loading from '/images/loading.png'
-import error from '/images/error.png'
+import loading from '/images/image-loading.png'
+import error from '/images/image-error.png'
 import BScrollBox from './BScrollBox.vue'
 
 type ViewCard = Record<string, any>
