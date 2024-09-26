@@ -1,12 +1,3 @@
-/*
- * @Description:
- * @Version: 2.0
- * @Author: Yaowen Liu
- * @Date: 2021-10-14 13:34:56
- * @LastEditors: Yaowen Liu
- * @LastEditTime: 2023-09-21 09:23:25
- */
-
 /**
  * 获取随机ID
  * @param {*} length
@@ -30,7 +21,9 @@ const website = 'https://wanderprints.com'
 // const website = 'https://www.getphotoblanket.com';
 
 export const getList = ({ page = 1, pageSize = 20 }) => {
-  const url = `${website}/products.json?page=${page}&limit=${pageSize}`
+  // const url = `${website}/products.json?page=${page}&limit=${pageSize}`
+  const url = '/baby.json'; // 修改为本地 JSON 文件的路径
+
   return fetch(url)
     .then(res => res.json())
     .then(res => res.products).then((res) => {
@@ -38,9 +31,9 @@ export const getList = ({ page = 1, pageSize = 20 }) => {
         return {
           id: randomID(),
           star: false,
-          price: item.variants[0].price,
+          price: item?.variants[0].price,
           src: {
-            original: Math.random() > 0.1 ? item.images[0].src : 'https://www.example.com/non-existent-image.jpg',
+            original: Math.random() > 0.1 ? item.images[0].src : 'https://zx-picture-bed.oss-cn-beijing.aliyuncs.com/images/411526.jpg',
             // original: 'https://tq-alg-public.s3.us-west-2.amazonaws.com/kol/Seraphina_1702987997_0.png',
           },
           backgroundColor: randomColor(),

@@ -19,12 +19,14 @@
           >
             <div class="overflow-hidden">
               <LazyImg
+                v-if="localFlag"
                 :url="url"
                 class="cursor-pointer transition-all duration-300 ease-linear group-hover:scale-105"
                 @load="imageLoad"
                 @error="imageError"
                 @success="imageSuccess"
               />
+              <img v-else :src="url" />
             </div>
             <div class="px-4 pt-2 pb-4 border-t border-t-gray-800">
               <p class="pb-4 text-gray-50 group-hover:text-yellow-300">
@@ -143,11 +145,14 @@ function imageLoad(url: string) {
   // console.log(`${url}: 加载完成`)
 }
 
+const localFlag = ref(false)
 function imageError(url: string) {
+  localFlag.value = false
   console.error(`${url}: 加载失败`)
 }
 
 function imageSuccess(url: string) {
+  localFlag.value = true
   // console.log(`${url}: 加载成功`)
 }
 </script>
