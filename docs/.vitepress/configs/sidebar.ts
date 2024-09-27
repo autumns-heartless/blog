@@ -194,4 +194,17 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       items: [{ text: 'vben框架中如何引入Modal', link: '/other/vben/import-modal' }],
     },
   ],
+  '/other/vue2/componentPackage': [
+    {
+      text: '📦 组件分封装',
+      collapsed: false,
+      items: [
+        { text: '（零）之 前言', link: '/other/vue2/componentPackage/componentPackage0' },
+        { text: '（一）之 \$attrs、\$listeners', link: '/other/vue2/componentPackage/componentPackage1' },
+        { text: '（二）之 slot', link: '/other/vue2/componentPackage/componentPackage2' },
+        { text: '（三）之 组件传值方式', link: '/other/vue2/componentPackage/componentPackage3' },
+        { text: '（四）之 自定义组件的 v-model', link: '/other/vue2/componentPackage/componentPackage4' },
+      ],
+    },
+  ],
 }

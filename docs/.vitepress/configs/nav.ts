@@ -89,6 +89,11 @@ export const nav: DefaultTheme.Config['nav'] = [
           { text: 'Vue3教程 - 1', link: '/other/vue3/tutorial-1-index' },
           { text: 'Vue3教程 - 2', link: '/other/vue3/tutorial-2-index' },
           { text: '写给懒人的Vue3速查宝典', link: '/other/vue3/quickSearchTreasureBook-index' },
+          { text: '软件分享', link: '/other/soft/SoftwareSharing-index' },
+          { text: '谷歌分享', link: '/other/soft/GoogleSharing-index' },
+          { text: 'VSCode小技巧', link: '/other/vscode/VSCode-Tips-index' },
+          { text: 'VSCode插件分享', link: '/other/vscode/VSCode-PluginSharing-index' },
+          { text: 'Vue2 组件封装', link: '/other/vue2/componentPackage/index' },
         ],
       },
       {
