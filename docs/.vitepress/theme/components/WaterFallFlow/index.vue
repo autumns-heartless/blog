@@ -41,7 +41,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, reactive, ref } from 'vue'
+import { onMounted, reactive, ref, toRefs, defineProps } from 'vue'
 // import { LazyImg, Waterfall } from 'vue-waterfall-plugin-next'
 import { LazyImg, Waterfall } from './lib/index'
 // import 'vue-waterfall-plugin-next/dist/style.css'
@@ -49,6 +49,17 @@ import { getBabyList } from './api'
 import loading from '/images/image-loading.png'
 import error from '/images/image-error.png'
 import BScrollBox from './BScrollBox.vue'
+
+const props = defineProps({
+  // 子组件接收父组件传递过来的值
+  dataName: {
+    type: String,
+    default: 'baby',
+  },
+})
+
+//使用父组件传递过来的值
+const { dataName } = toRefs(props)
 
 type ViewCard = Record<string, any>
 
@@ -66,7 +77,7 @@ const useList = function () {
   function handleLoadMore() {
     return new Promise((resolve, reject) => {
       getBabyList({
-        dataName: 'baby',
+        dataName: dataName.value,
         page: page.value,
         pageSize: 20,
       }).then((res) => {
@@ -135,7 +146,7 @@ onMounted(() => {
   handleLoadMore()
 })
 
-const bs = ref(null)
+const bs: any = ref(null)
 async function pullingUp() {
   page.value += 1
   await handleChangePage(page.value)
