@@ -111,7 +111,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       {
         text: '章家龙',
         items: [
-          { text: '安宝', link: '/other/zjl/PhotoWall-index' },
+          { text: '安宝', link: '/other/zjl/PhotoWall' },
           { text: 'vben框架中如何引入Modal', link: '/other/vben/import-modal' },
           { text: 'vben框架多表单的展示', link: '/other/vben/vben-forms' },
         ],
