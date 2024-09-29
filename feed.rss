@@ -2,16 +2,16 @@
 <rss version="2.0">
     <channel>
         <title>The Vue Point</title>
-        <link>https://blog.vuejs.org</link>
+        <link>https://qtmyx.netlify.app</link>
         <description>The official blog for the Vue.js project</description>
-        <lastBuildDate>Sun, 29 Sep 2024 08:50:14 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 29 Sep 2024 09:22:06 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <image>
             <title>The Vue Point</title>
             <url>https://vuejs.org/images/logo.png</url>
-            <link>https://blog.vuejs.org</link>
+            <link>https://qtmyx.netlify.app</link>
         </image>
         <copyright>Copyright (c) 2021-present, Yuxi (Evan) You and blog contributors</copyright>
     </channel>
