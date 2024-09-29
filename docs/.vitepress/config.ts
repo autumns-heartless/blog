@@ -8,7 +8,7 @@ import taskLists from 'markdown-it-task-checkbox'
 
 import type { ThemeConfig } from './theme/types'
 import { head, nav, sidebar } from './configs'
-import { genFeed } from './genFeed.js'
+import { genFeed, RSSSVG } from './genFeed.js'
 
 const APP_BASE_PATH = basename(process.env.GITHUB_REPOSITORY || '')
 
@@ -210,7 +210,9 @@ export default defineConfig<ThemeConfig>({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/autumns-heartless/blog' },
+      { icon: { svg: RSSSVG }, link: 'https://qtmyx.netlify.app/feed.rss'}
     ],
+
 
     footer: {
       message: '本站搭建特别鸣谢【茂神大佬】',
