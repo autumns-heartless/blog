@@ -50,7 +50,8 @@
     "tailwindcss": "^3.4.6",
     "vite-plugin-markdown-preview": "^1.1.1",
     "vitepress": "^1.0.1",
-    "vue": "^3.4.21"
+    "vue": "^3.4.21",
+    "feed": "^4.2.2"
   },
   "prettier": "@femm/prettier",
   "lint-staged": {
@@ -80,7 +81,6 @@
     "pagefind": "^1.0.4",
     "pinia": "^2.1.7",
     "vitepress-plugin-pagefind": "^0.4.10",
-    "vitepress-plugin-rss": "^0.2.10",
     "vue3-toastify": "^0.2.1"
   },
   "volta": {

@@ -8,13 +8,7 @@ import taskLists from 'markdown-it-task-checkbox'
 
 import type { ThemeConfig } from './theme/types'
 import { head, nav, sidebar } from './configs'
-
-import { RssPlugin, RSSOptions } from 'vitepress-plugin-rss'
-const RSS: RSSOptions = {
-  title: '秋天没有心',
-  baseUrl: 'https://qtmyx.netlify.app',
-  copyright: 'Copyright (c) 2024-present, 秋天没有心',
-}
+import { genFeed } from './genFeed.js'
 
 const APP_BASE_PATH = basename(process.env.GITHUB_REPOSITORY || '')
 
@@ -261,7 +255,6 @@ export default defineConfig<ThemeConfig>({
       drop: ["debugger"], // 删除 debugger
     },
     plugins: [
-      RssPlugin(RSS),
       MarkdownPreview(),
       codeInspectorPlugin({ bundler: 'vite' }),
       pagefindPlugin({
@@ -275,4 +268,6 @@ export default defineConfig<ThemeConfig>({
       }),
     ],
   },
+
+  buildEnd: genFeed
 })
