@@ -17,6 +17,12 @@ export const NAV_DATA: NavData[] = [
         link: 'https://maomao1996.github.io/mm-notes/',
       },
       {
+        icon: 'https://blog.goalonez.site/logo.ico',
+        title: 'Goalonez 的博客',
+        desc: '万变不离其宗',
+        link: 'https://blog.goalonez.site'
+      },
+      {
         icon: 'https://blog.code520.com.cn/medias/logo.png',
         title: 'jokereven的博客',
         desc: '酷炫的博客',

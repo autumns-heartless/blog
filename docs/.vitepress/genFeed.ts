@@ -12,7 +12,7 @@ export async function genFeed(config: SiteConfig) {
     id: baseUrl,
     link: baseUrl,
     language: 'en',
-    image: 'https://vuejs.org/images/logo.png',
+    image: 'https://qtmyx.netlify.app/logo.png',
     favicon: `${baseUrl}/favicon.ico`,
     copyright:
       'Copyright (c) 2021-present, Yuxi (Evan) You and blog contributors'
