@@ -45,7 +45,7 @@ import { onMounted, reactive, ref } from 'vue'
 // import { LazyImg, Waterfall } from 'vue-waterfall-plugin-next'
 import { LazyImg, Waterfall } from './lib/index'
 // import 'vue-waterfall-plugin-next/dist/style.css'
-import { getList } from './api'
+import { getBabyList } from './api'
 import loading from '/images/image-loading.png'
 import error from '/images/image-error.png'
 import BScrollBox from './BScrollBox.vue'
@@ -65,7 +65,8 @@ const useList = function () {
   // 加载更多
   function handleLoadMore() {
     return new Promise((resolve, reject) => {
-      getList({
+      getBabyList({
+        dataName: 'baby',
         page: page.value,
         pageSize: 20,
       }).then((res) => {

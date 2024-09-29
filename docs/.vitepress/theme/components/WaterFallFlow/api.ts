@@ -53,15 +53,40 @@ const variants = [
   }
 ]
 
-export const getList = ({ page = 1, pageSize = 20 }) => {
+export const getBabyList = ({ page = 1, pageSize = 20, dataName = 'baby' }) => {
   // const jsonUrl = `${website}/products.json?page=${page}&limit=${pageSize}`
-  const jsonUrl = '/baby.json'; // 修改为本地 JSON 文件的路径
+  const jsonUrl = `/baby.json?page=${page}&limit=${pageSize}`; // 修改为本地 JSON 文件的路径
   const imageBaseUrl = 'https://zx-picture-bed.oss-cn-beijing.aliyuncs.com/';
-  let random = Math.random() > 0.1;
   return fetch(jsonUrl)
     .then(res => res.json())
-    .then(res => res.products).then((res) => {
+    .then(res => res[dataName]).then((res) => {
       return res.map((item: any) => {
+        let random = Math.random() > 0.1;
+        return {
+          id: randomID(),
+          star: false,
+          price: variants[0].price,
+          src: {
+            original: random ? `${imageBaseUrl}${item.src}` : `${imageBaseUrl}images/411526.jpg`,
+            // original: 'https://tq-alg-public.s3.us-west-2.amazonaws.com/kol/Seraphina_1702987997_0.png',
+          },
+          backgroundColor: randomColor(),
+          name: random ? item.title : '不要乱碰爸爸电脑~',
+        }
+      })
+    })
+}
+
+/* 章家龙 - 所用瀑布流 */
+export const getZJLList = ({ page = 1, pageSize = 20, dataName = 'zjl' }) => {
+  // const jsonUrl = `${website}/products.json?page=${page}&limit=${pageSize}`
+  const jsonUrl = `/baby.json?page=${page}&limit=${pageSize}`; // 修改为本地 JSON 文件的路径
+  const imageBaseUrl = 'https://zx-picture-bed.oss-cn-beijing.aliyuncs.com/';
+  return fetch(jsonUrl)
+    .then(res => res.json())
+    .then(res => res[dataName]).then((res) => {
+      return res.map((item: any) => {
+        let random = Math.random() > 0.1;
         return {
           id: randomID(),
           star: false,
