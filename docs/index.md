@@ -17,7 +17,7 @@ hero:
       link: /tag/
     - text: 烟花许愿
       link: /firework/
-    - text: 涨薪申请
+    - text: 涨薪就是一个笑话
       link: /me/money-index
     - text: 测试一下
       link: /test-index
