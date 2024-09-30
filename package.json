@@ -39,6 +39,7 @@
     "canvas-confetti": "^1.9.3",
     "code-inspector-plugin": "^0.15.0",
     "cross-env": "^7.0.3",
+    "feed": "^4.2.2",
     "gh-pages": "^6.1.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.3.0",
@@ -50,8 +51,7 @@
     "tailwindcss": "^3.4.6",
     "vite-plugin-markdown-preview": "^1.1.1",
     "vitepress": "^1.0.1",
-    "vue": "^3.4.21",
-    "feed": "^4.2.2"
+    "vue": "^3.4.21"
   },
   "prettier": "@femm/prettier",
   "lint-staged": {
@@ -77,6 +77,7 @@
     "@vueuse/core": "^11.0.0",
     "dayjs": "^1.11.10",
     "gray-matter": "^4.0.3",
+    "markdown-it-custom-attrs": "^1.0.2",
     "oh-my-live2d": "^0.19.3",
     "pagefind": "^1.0.4",
     "pinia": "^2.1.7",
