@@ -20,7 +20,7 @@ hero:
     - text: 涨薪申请
       link: /me/money-index
     - text: 测试一下
-      link: /test
+      link: /test-index
 features:
   - icon: 📖
     title: 前端物语
