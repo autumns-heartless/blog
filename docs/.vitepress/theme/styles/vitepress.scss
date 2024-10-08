@@ -106,3 +106,39 @@ table {
 .dark::view-transition-old(root) {
   z-index: 9999;
 }
+
+/* 链接卡片 */
+.has-card {
+  text-decoration: none;
+  .link-card-box {
+    margin: 8px auto 16px;
+    padding: 8px 16px;
+    display: block;
+    background: #f5f7fa;
+    border-radius: 4px;
+    border: 1px solid #dbdbdb;
+    cursor: pointer;
+
+    .link-title {
+      margin-bottom: 8px;
+      color: #222226;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 26px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .link-link {
+      color: #409eff;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 14px;
+      line-height: 1;
+      background-size: 14px 14px;
+      background-repeat: no-repeat;
+    }
+  }
+}
