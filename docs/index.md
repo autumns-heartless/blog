@@ -21,6 +21,8 @@ hero:
       link: /me/money-index
     - text: 测试一下
       link: /test-index
+    - text: 装机必备
+      link: /other/pcInstall/
 features:
   - icon: 📖
     title: 前端物语
