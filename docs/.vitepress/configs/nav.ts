@@ -106,7 +106,7 @@ export const nav: DefaultTheme.Config['nav'] = [
       },
       {
         text: '井文超',
-        items: [{ text: '组合式函数', link: '/other/vue3/composables' }],
+        items: [{ text: '组合式函数', link: '/other/vue3/composables' }, { text: 'uniapp问题记录', link: '/other/jwc/app' }],
       },
       {
         text: '章家龙',

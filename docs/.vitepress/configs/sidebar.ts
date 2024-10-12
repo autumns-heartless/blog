@@ -194,6 +194,13 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       items: [{ text: 'vben框架中如何引入Modal', link: '/other/vben/import-modal' }],
     },
   ],
+  '/other/jwc/': [
+    {
+      text: '文超笔录',
+      collapsed: false,
+      items: [{ text: 'app问题记录', link: '/other/jwc/app' }],
+    },
+  ],
   '/other/vue2/componentPackage': [
     {
       text: '📦 组件分封装',
