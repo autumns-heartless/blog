@@ -21,6 +21,8 @@ hero:
       link: /me/money-index
     - text: 测试一下
       link: /test-index
+    - text: 入职须知
+      link: /other/pcInstall/company-index
     - text: 装机必备
       link: /other/pcInstall/pcInstall-index
 features:

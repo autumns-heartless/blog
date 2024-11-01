@@ -1,6 +1,18 @@
+---
+  author: '张鑫'
+  title: 前端同学 - 装机流程
+  date: 2024/11/01
+  words: 1491
+  duration: 12
+  categories:
+    - 装机流程
+  tags:
+    - 装机流程
+---
+
 <BackTop />
 
-<style>
+<style lang="scss" scoped>
   .aside, .aside-container {
     height: 100vh !important;
     /* height: calc(100vh - 114px) !important; */
@@ -13,6 +25,8 @@
 
 <script setup>
 import { WORK_SOFT, OTHER_SOFT, GOOGLE_EXTENSION, VSCODE_EXTENSION } from './data'
+import '@vue-office/excel/lib/index.css'
+import VueOfficeExcel from "@vue-office/excel";
 </script>
 
 # 前端同学 - 装机流程

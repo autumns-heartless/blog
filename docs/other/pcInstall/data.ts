@@ -137,6 +137,21 @@ export const OTHER_SOFT: AppData[] = [
   },
 ]
 
+/* 内部沟通办公 软件 */
+export const INTERNAL_SOFT: AppData[] = [
+  {
+    title: '',
+    items: [
+      {
+        icon: 'http://www.51nwt.com/uploadfile/2016/0808/20160808020402195.png',
+        title: '内网通',
+        desc: '最好用的局域网办公沟通工具',
+        link: 'http://www.51nwt.com/down.htm',
+      },
+    ],
+  },
+]
+
 /* 谷歌拓展 */
 export const GOOGLE_EXTENSION: AppData[] = [
   {
