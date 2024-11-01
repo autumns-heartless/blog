@@ -22,7 +22,7 @@ hero:
     - text: 测试一下
       link: /test-index
     - text: 装机必备
-      link: /other/pcInstall/
+      link: /other/pcInstall/pcInstall-index
 features:
   - icon: 📖
     title: 前端物语
