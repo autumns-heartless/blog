@@ -146,7 +146,7 @@ export const INTERNAL_SOFT: AppData[] = [
         icon: 'http://www.51nwt.com/uploadfile/2016/0808/20160808020402195.png',
         title: '内网通',
         desc: '最好用的局域网办公沟通工具',
-        link: 'http://www.51nwt.com/down.htm',
+        link: 'https://down-load.lanrar.com/file/?BmBWaAs6Dz4HDgU9Cz5cMAY5U2tVZAt+AXJaA1d4UTUBdQUnXXBQW1YzB38AYAEuUDkOO1A6UWYKI1o5VXFQNAYgVmcLPw83BzQFDAs2XDkGYVNhVT0LPgE2Wm9XM1FoATAFdF1mUHdWPQdlAGcBNFA5DjxQO1FqCjtaelV5UCEGO1YzC2YPaQdjBXwLb1xlBnNTZlUzCyYBZFo/VzhRYwE2BWFdY1BnVjEHaABnATZQaw4/UDpRZwo6WmtVa1BlBj5WZQtlD24HZQU1C21cbAY/U2RVPQs6AShaOVdzUTUBJwUnXXNQYVZyBzgAMAE9UDsOPFA7UWIKOlpvVTxQdwZyVmgLOw8+BzcFbgtuXGoGb1NmVT8LOAEzWmRXPVFlAS8FfF0mUGJWbAcmAGkBMVA9DjhQP1FmCjxaaFU9UGQGNVYnCyMPKwcmBW4LblxrBmpTZlU6CzkBMFpqVz5RZQEnBSddaVB0Vj0HYABkATZQJA4/UDpRfQo8WmtVPFB/BjRWMwtiD3UHdwU3CzBcKgYyUwlVaQtiATtabA==',
       },
     ],
   },

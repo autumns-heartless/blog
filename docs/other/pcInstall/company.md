@@ -19,23 +19,60 @@ const VueOfficeExcel = defineAsyncComponent(() => import("@vue-office/excel"));
 import '@vue-office/excel/lib/index.css'
 </script>
 
+<style>
+a {
+  position: relative;
+}
+
+.download-svg {
+  position: absolute;
+  top: 4px;
+  right: 2px;
+}
+</style>
+
 # 入职须知
 
-## 日常办公沟通
+## 👨‍⚖️ 办公沟通
 
-<MNavLinks v-for="{title, items} in INTERNAL_SOFT" :title="title" :items="items"/>
+<MNavLinks v-for="{title, items} in INTERNAL_SOFT" :title="title" :items="items" />
+
+## 💪 述职
+
+### &nbsp;&nbsp;&nbsp;&nbsp; 1 > &nbsp; <b class="text-[red]">5 天述职</b>
+
+<pre>
+
+
+      线下表格，<b class="text-[red]">龚燕</b> 会给你发放(纸质版)，5天之后 <b class="text-[red]">面向朱总</b> 进行述职
+</pre>
+
+### &nbsp;&nbsp;&nbsp;&nbsp; 2 > &nbsp; <b class="text-[red]">月度述职</b>
+
+<a href="/excel/月度述职表.xlsx" download="月度述职表.xlsx" target="view_window">
+  <img src="/images/download.svg" class="download-svg" />
+  <img src="/images/月度述职表.png" class="my-[30px] w-[calc(100%_-_40px)] ml-[40px]" />
+</a>
+
+<VueOfficeExcel src="/excel/月度述职表.xlsx" style="height: 100vh" class="w-[calc(100%_-_40px)] ml-[40px] mt-[20px]" />
 
 ## 📰 日报 (由 **`表格`** 和 **`邮箱`** 组成)
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. 表格如下 (命名格式和内容如下)
 
-<img src="/images/daily.png" class="my-[30px] w-[calc(100%_-_40px)] ml-[40px]" />
+<a href="/excel/工作汇报-xx-20241101.xlsx" download="工作汇报-xx-20241101.xlsx" target="view_window">
+  <img src="/images/download.svg" class="download-svg" />
+  <img src="/images/daily.png" class="my-[30px] w-[calc(100%_-_40px)] ml-[40px]" />
+</a>
 
 <VueOfficeExcel src="/excel/工作汇报-xx-20241101.xlsx" style="height: 100vh" class="w-[calc(100%_-_40px)] ml-[40px]" />
 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. 邮箱如下 (邮箱需找 **`总经办龚艳`** 申请，注意 **`添加附件`**)
 
-<img src="/images/网易灵犀办公.png" class="my-[30px] w-[calc(100%_-_40px)] ml-[40px]" />
+<a href="https://sirius-release.lx.netease.com/api/pub/client/update/download-windows" download="网易灵犀办公.exe" target="view_window">
+  <img src="/images/download.svg" class="download-svg" />
+  <img src="/images/网易灵犀办公.png" class="my-[30px] w-[calc(100%_-_40px)] ml-[40px]" />
+</a>
 
 <img src="/images/daily-template.png" class="my-[30px] w-[calc(100%_-_40px)] ml-[40px]" />
 
@@ -78,7 +115,10 @@ import '@vue-office/excel/lib/index.css'
 
 ## 💰 报销
 
-<img src="/images/报销.png" class="my-[30px] w-[calc(100%_-_40px)] ml-[40px]" />
+<a href="/excel/报销申请单（10月）.xlsx" download="报销申请单（10月）.xlsx" target="view_window">
+  <img src="/images/download.svg" class="download-svg" />
+  <img src="/images/报销.png" class="my-[30px] w-[calc(100%_-_40px)] ml-[40px]" />
+</a>
 
 <VueOfficeExcel src="/excel/报销申请单（10月）.xlsx" style="height: 100vh" class="w-[calc(100%_-_40px)] ml-[40px] my-[30px]" />
 

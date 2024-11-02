@@ -28,6 +28,7 @@ const svg = computed(() => {
 
 <template>
   <a v-if="link" class="m-nav-link" :href="link" target="_blank" rel="noreferrer">
+    <img src="/images/download.svg" class="download-svg" />
     <article class="box">
       <div class="box-header">
         <div v-if="svg" class="icon" v-html="svg"></div>
