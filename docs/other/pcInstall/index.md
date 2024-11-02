@@ -25,8 +25,6 @@
 
 <script setup>
 import { WORK_SOFT, OTHER_SOFT, GOOGLE_EXTENSION, VSCODE_EXTENSION } from './data'
-import '@vue-office/excel/lib/index.css'
-import VueOfficeExcel from "@vue-office/excel";
 </script>
 
 # 前端同学 - 装机流程

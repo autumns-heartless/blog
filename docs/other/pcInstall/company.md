@@ -13,9 +13,10 @@
 <BackTop />
 
 <script setup>
+import { defineAsyncComponent } from "vue";
 import { INTERNAL_SOFT } from './data'
+const VueOfficeExcel = defineAsyncComponent(() => import("@vue-office/excel"));
 import '@vue-office/excel/lib/index.css'
-import VueOfficeExcel from "@vue-office/excel";
 </script>
 
 # 入职须知
