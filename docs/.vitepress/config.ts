@@ -10,7 +10,7 @@ import taskLists from 'markdown-it-task-checkbox'
 /* Markdown 文件预览 */
 import MarkdownPreview from 'vite-plugin-markdown-preview'
 /* 插件 codeInspector */
-import { codeInspectorPlugin } from 'code-inspector-plugin'
+// import { codeInspectorPlugin } from 'code-inspector-plugin'
 /* 插件 pagefind 搜索 */
 import { chineseSearchOptimize, pagefindPlugin } from 'vitepress-plugin-pagefind'
 /* 大图预览 */
@@ -134,7 +134,7 @@ export default defineConfig<ThemeConfig>({
     },
     plugins: [
       MarkdownPreview(),
-      codeInspectorPlugin({ bundler: 'vite' }),
+      // codeInspectorPlugin({ bundler: 'vite' }),
       pagefindPlugin({
         //使用 pagefind搜索插件 https://www.npmjs.com/package/vitepress-plugin-pagefind
         customSearchQuery: chineseSearchOptimize,
