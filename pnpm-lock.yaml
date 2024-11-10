@@ -54,6 +54,9 @@ importers:
       pinia:
         specifier: ^2.1.7
         version: 2.2.2(vue@3.5.8)
+      vitepress-markdown-timeline:
+        specifier: ^1.2.1
+        version: 1.2.1
       vitepress-plugin-pagefind:
         specifier: ^0.4.10
         version: 0.4.10(pagefind@1.1.1)
@@ -2508,6 +2511,9 @@ packages:
         optional: true
       terser:
         optional: true
+
+  vitepress-markdown-timeline@1.2.1:
+    resolution: {integrity: sha512-XPYl/btTcTzW+XF20ITB51L8jPjbS72tSKPcv/CHJgM+3LbBvW8Az/X7RcBTJSXDNOwCY5mGkjA7CXQtuxOKgw==}
 
   vitepress-plugin-pagefind@0.4.10:
     resolution: {integrity: sha512-z+zsB0FPiUPujVNWcCjMjNlXIaDdC7HSvMBVkv7Evm6aC7I/MI6QN6ff8ZuKfe34tNY3S54tLrqvHbD6TjZo5Q==}
@@ -5232,6 +5238,10 @@ snapshots:
       '@types/node': 18.19.50
       fsevents: 2.3.3
       sass: 1.79.3
+
+  vitepress-markdown-timeline@1.2.1:
+    dependencies:
+      dayjs: 1.11.13
 
   vitepress-plugin-pagefind@0.4.10(pagefind@1.1.1):
     dependencies:

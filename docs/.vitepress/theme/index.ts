@@ -1,6 +1,8 @@
 import { h, watch } from 'vue'
 import { useData, EnhanceAppContext } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
+/* 引入时间线样式 */
+import 'vitepress-markdown-timeline/dist/theme/index.css'
 import { createPinia } from 'pinia' //使用状态管理库。用于音乐播放器的状态监听
 const pinia = createPinia()
 
@@ -15,8 +17,8 @@ import Firework from './components/Firework.vue'
 import BabyPulm from './components/BabyPulm.vue'
 import AutoMusic from './components/AutoPlaymusic.vue'
 import BackTop from './components/BackTop.vue'
-import ArticleMetadata from "./components/ArticleMetadata.vue" // 字数阅读时间
-import Tag from "./components/Tag.vue" // 标签分类
+import ArticleMetadata from './components/ArticleMetadata.vue' // 字数阅读时间
+import Tag from './components/Tag.vue' // 标签分类
 import Friends from '../../other/friends/index.vue'
 import BorderHover from './components/BorderHover.vue' // 边框检测鼠标高亮
 import WaterFallFlow from './components/WaterFallFlow/index.vue' // 瀑布流
@@ -158,10 +160,10 @@ if (typeof window !== 'undefined') {
 
 if (typeof document !== 'undefined') {
   // 在客户端代码中访问 document 对象
-  console.log(document.title);
+  console.log(document.title)
 } else {
   // 在服务器端代码中执行其他操作
-  console.log('This is server-side code');
+  console.log('This is server-side code')
 }
 
 // Speed up the rainbow animation on home page

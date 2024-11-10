@@ -15,7 +15,8 @@ import MarkdownPreview from 'vite-plugin-markdown-preview'
 import { chineseSearchOptimize, pagefindPlugin } from 'vitepress-plugin-pagefind'
 /* 大图预览 */
 import mdItCustomAttrs from 'markdown-it-custom-attrs'
-
+/* 引入 时间线 */
+import timeline from 'vitepress-markdown-timeline'
 /* 引入 themeConfig 之 music */
 import { music } from './configs/music'
 /* 引入 themeConfig 之 website */
@@ -47,6 +48,7 @@ export default defineConfig<ThemeConfig>({
       lazyLoading: true,
     },
     config: (md) => {
+      md.use(timeline)
       md.use(taskLists, {
         disabled: true,
         divWrap: false,

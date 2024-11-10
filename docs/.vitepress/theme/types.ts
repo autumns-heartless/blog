@@ -16,6 +16,8 @@ export interface NavLink {
   desc?: string
   /** 站点链接 */
   link: string
+  /* 能够下载 */
+  canDownLoad?: boolean
 }
 
 /* 音乐播放器 */

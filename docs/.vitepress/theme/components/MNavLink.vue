@@ -11,6 +11,7 @@ const props = defineProps<{
   desc?: NavLink['desc']
   badge?: NavLink['badge']
   link: NavLink['link']
+  canDownLoad?: NavLink['canDownLoad']
 }>()
 
 const formatTitle = computed(() => {
@@ -28,8 +29,9 @@ const svg = computed(() => {
 
 <template>
   <a v-if="link" class="m-nav-link" :href="link" target="_blank" rel="noreferrer">
-    <img src="/images/download.svg" class="download-svg" />
     <article class="box">
+      <!-- 下载图标 -->
+      <img src="/images/download.svg" class="download-svg" v-if="props.canDownLoad" />
       <div class="box-header">
         <div v-if="svg" class="icon" v-html="svg"></div>
         <div v-else-if="icon && typeof icon === 'string'" class="icon">

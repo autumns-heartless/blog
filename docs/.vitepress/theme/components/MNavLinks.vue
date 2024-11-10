@@ -22,13 +22,14 @@ const formatTitle = computed(() => {
   </h2>
   <div class="m-nav-links">
     <MNavLink
-      v-for="{ icon, title, desc, link, badge } in items"
+      v-for="{ icon, title, desc, link, badge, canDownLoad } in items"
       :key="link"
       :icon="icon"
       :title="title"
       :desc="desc"
       :link="link"
       :badge="badge"
+      :canDownLoad="canDownLoad"
     />
   </div>
 </template>
