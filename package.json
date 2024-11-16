@@ -84,7 +84,8 @@
     "pinia": "^2.1.7",
     "vitepress-markdown-timeline": "^1.2.1",
     "vitepress-plugin-pagefind": "^0.4.10",
-    "vue3-toastify": "^0.2.1"
+    "vue3-toastify": "^0.2.1",
+    "vue3-video-play": "^1.3.2"
   },
   "volta": {
     "node": "18.20.0",

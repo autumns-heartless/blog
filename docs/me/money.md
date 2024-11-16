@@ -15,7 +15,7 @@
 
 # 工作述职 <small>(建议在 PC 端观看)</small>
 
-<Font />
+<Font content="本次述职以 职级变化 和 所作贡献 为主要出发点" />
 
 ## ⭐️ 职级变化（开发&nbsp;&nbsp;→&nbsp;&nbsp;主管）
 

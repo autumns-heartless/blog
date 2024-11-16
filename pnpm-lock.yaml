@@ -63,6 +63,9 @@ importers:
       vue3-toastify:
         specifier: ^0.2.1
         version: 0.2.3(vue@3.5.8)
+      vue3-video-play:
+        specifier: ^1.3.2
+        version: 1.3.2
     devDependencies:
       '@better-scroll/core':
         specifier: ^2.5.1
@@ -1472,6 +1475,9 @@ packages:
   hexo-pagination@0.1.0:
     resolution: {integrity: sha512-Ji/LYq7xP7cdBdG15CJ4YZZNA/c6Kf64rXj+Jp2bKsC2JTgcBmz+GGkHwpk6aoMHXRP2XraxGcGjXhITr7ooYg==}
 
+  hls.js@1.5.17:
+    resolution: {integrity: sha512-wA66nnYFvQa1o4DO/BFgLNRKnBTVXpNeldGRBJ2Y0SvFtdwvFKCbqa9zhHoZLoxHhZ+jYsj3aIBkWQQCPNOhMw==}
+
   hookable@5.5.3:
     resolution: {integrity: sha512-Yc+BQe8SvoXH1643Qez1zqLRmbA5rCL+sSmk6TVos0LWVfNIB7PGncdlId77WzLGSIB5KaWgTaNTs2lNVEI6VQ==}
 
@@ -2365,6 +2371,10 @@ packages:
   thenify@3.3.1:
     resolution: {integrity: sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw==}
 
+  throttle-debounce@3.0.1:
+    resolution: {integrity: sha512-dTEWWNu6JmeVXY0ZYoPuH5cRIwc0MeGbJwah9KUNYSJwommQpCzTySTpEe8Gs1J23aeWEuAobe4Ag7EHVt/LOg==}
+    engines: {node: '>=10'}
+
   to-fast-properties@2.0.0:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
     engines: {node: '>=4'}
@@ -2554,6 +2564,9 @@ packages:
     peerDependenciesMeta:
       vue:
         optional: true
+
+  vue3-video-play@1.3.2:
+    resolution: {integrity: sha512-eEwCJ0NIkfVQgTj0I3Kf9b1E/04Qne8mQQiE8r77BocblHsZ2T6af3q8l8Zzs/OvjlpQAQvkN/ACVUOJC3RSXg==}
 
   vue@3.5.8:
     resolution: {integrity: sha512-hvuvuCy51nP/1fSRvrrIqTLSvrSyz2Pq+KQ8S8SXCxTWVE0nMaOnSDnSOxV1eYmGfvK7mqiwvd1C59CEEz7dAQ==}
@@ -4062,6 +4075,8 @@ snapshots:
     dependencies:
       object-assign: 4.1.1
 
+  hls.js@1.5.17: {}
+
   hookable@5.5.3: {}
 
   html-void-elements@3.0.0: {}
@@ -5077,6 +5092,8 @@ snapshots:
     dependencies:
       any-promise: 1.3.0
 
+  throttle-debounce@3.0.1: {}
+
   to-fast-properties@2.0.0: {}
 
   to-regex-range@5.0.1:
@@ -5316,6 +5333,14 @@ snapshots:
   vue3-toastify@0.2.3(vue@3.5.8):
     optionalDependencies:
       vue: 3.5.8
+
+  vue3-video-play@1.3.2:
+    dependencies:
+      hls.js: 1.5.17
+      throttle-debounce: 3.0.1
+      vue: 3.5.8
+    transitivePeerDependencies:
+      - typescript
 
   vue@3.5.8:
     dependencies:

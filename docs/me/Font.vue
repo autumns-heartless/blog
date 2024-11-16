@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="text__box one">本次述职以 职级变化 和 所作贡献 为主要出发点</div>
+  <div class="container" v-bind="$attrs">
+    <div class="text__box one">{{ $attrs.content }}</div>
   </div>
 </template>
 
