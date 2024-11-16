@@ -184,6 +184,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'vben框架的使用-示例页面', link: '/other/vben/example-index' },
         { text: 'vben框架的使用', link: '/other/vben/import-modal' },
         { text: 'vben框架多表单的展示', link: '/other/vben/vben-forms' },
+        { text: 'vben框架富文本的改造', link: '/other/vben/rich-text' },
       ],
     },
   ],
@@ -207,10 +208,16 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       collapsed: false,
       items: [
         { text: '（零）之 前言', link: '/other/vue2/componentPackage/componentPackage0' },
-        { text: '（一）之 \$attrs、\$listeners', link: '/other/vue2/componentPackage/componentPackage1' },
+        {
+          text: '（一）之 $attrs、$listeners',
+          link: '/other/vue2/componentPackage/componentPackage1',
+        },
         { text: '（二）之 slot', link: '/other/vue2/componentPackage/componentPackage2' },
         { text: '（三）之 组件传值方式', link: '/other/vue2/componentPackage/componentPackage3' },
-        { text: '（四）之 自定义组件的 v-model', link: '/other/vue2/componentPackage/componentPackage4' },
+        {
+          text: '（四）之 自定义组件的 v-model',
+          link: '/other/vue2/componentPackage/componentPackage4',
+        },
       ],
     },
   ],

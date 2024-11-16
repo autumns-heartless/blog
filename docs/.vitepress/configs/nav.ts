@@ -106,7 +106,10 @@ export const nav: DefaultTheme.Config['nav'] = [
       },
       {
         text: '井文超',
-        items: [{ text: '组合式函数', link: '/other/vue3/composables' }, { text: 'uniapp问题记录', link: '/other/jwc/app' }],
+        items: [
+          { text: '组合式函数', link: '/other/vue3/composables' },
+          { text: 'uniapp问题记录', link: '/other/jwc/app' },
+        ],
       },
       {
         text: '章家龙',
@@ -114,6 +117,7 @@ export const nav: DefaultTheme.Config['nav'] = [
           { text: '安宝', link: '/other/zjl/PhotoWall' },
           { text: 'vben框架中如何引入Modal', link: '/other/vben/import-modal' },
           { text: 'vben框架多表单的展示', link: '/other/vben/vben-forms' },
+          { text: 'vben框架富文本的改造', link: '/other/vben/rich-text' },
         ],
       },
       {
