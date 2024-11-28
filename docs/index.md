@@ -13,6 +13,8 @@ hero:
     - text: 待办清单
       link: /todoList/
       theme: alt
+    - text: 我的简历
+      link: /me/resume
     - text: 我的标签
       link: /tag/
     - text: 烟花许愿
