@@ -13,7 +13,7 @@ import { NAV_DATA } from './data'
 
 # 前端导航
 
-<div class="info custom-block"><p class="custom-block-title">本站其他导航</p><ul><li><a href="/workflow/utils/library">前端开发常用工具库</a> 个人使用过或遇到的类库</li><li><a href="/efficiency/online-tools">在线工具</a> 一些实用的在线工具，免去下载软件的烦恼</li><li><a href="/workflow/openSource/V3Admin">开源网站</a> 一些好的开源网站</li></ul></div>
+<div class="info custom-block"><p class="custom-block-title">本站其他导航</p><ul><li><a href="/workflow/utils/library">前端开发常用工具库</a> 个人使用过或遇到的类库</li><li><a href="/efficiency/online-tools">在线工具</a> 一些实用的在线工具，免去下载软件的烦恼</li><li><a href="/other/openSource/vue-admin-template/index">开源网站</a> 一些好的开源网站</li></ul></div>
 
 <MNavLinks v-for="{title, items} in NAV_DATA" :title="title" :items="items"/>
 

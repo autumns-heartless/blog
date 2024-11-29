@@ -96,10 +96,6 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: 'Git 命令清单', link: '/workflow/git/command' },
       ],
     },
-    {
-      text: '开源网站',
-      items: [{ text: 'v3后台', link: '/workflow/openSource/V3Admin' }],
-    },
   ],
   '/efficiency/': [
     {
