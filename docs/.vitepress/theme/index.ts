@@ -22,6 +22,7 @@ import Tag from './components/Tag.vue' // 标签分类
 import Friends from '../../other/friends/index.vue'
 import BorderHover from './components/BorderHover.vue' // 边框检测鼠标高亮
 import WaterFallFlow from './components/WaterFallFlow/index.vue' // 瀑布流
+import Archive from './components/Archive.vue' // 归档
 
 import './styles/index.scss'
 
@@ -59,6 +60,7 @@ export default {
     app.component('Tag', Tag)
     app.component('BorderHover', BorderHover)
     app.component('WaterFallFlow', WaterFallFlow)
+    app.component('Archive', Archive)
 
     app.use(pinia)
 

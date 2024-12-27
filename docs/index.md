@@ -17,6 +17,8 @@ hero:
       link: /me/resume
     - text: 我的标签
       link: /tag/
+    - text: 归档
+      link: /archiving/
     - text: 烟花许愿
       link: /firework/
     - text: 工作述职
