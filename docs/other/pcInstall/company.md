@@ -16,7 +16,9 @@
 import { defineAsyncComponent } from "vue";
 import { INTERNAL_SOFT } from './data'
 const VueOfficeExcel = defineAsyncComponent(() => import("@vue-office/excel"));
+const VueOfficeDocx = defineAsyncComponent(() => import("@vue-office/docx"));
 import '@vue-office/excel/lib/index.css'
+import '@vue-office/docx/lib/index.css'
 </script>
 
 <style>
@@ -149,3 +151,21 @@ a {
 
         如有异议，请联系 <b class="text-[red]">吴芳</b>。
 </pre>
+
+## 🐔 月度述职评分制绩效考核体系 V2.1
+
+<a href="/excel/月度述职评分制绩效考核体系V2.1.docx" download="月度述职评分制绩效考核体系V2.1.docx" target="view_window">
+  <img src="/images/download.svg" class="download-svg" />
+  <img src="/images/月度述职评分制绩效考核体系V2.1.png" class="my-[30px] w-[calc(100%_-_40px)] ml-[40px]" />
+</a>
+
+<VueOfficeDocx src="/excel/月度述职评分制绩效考核体系V2.1.docx" style="height: 100vh" class="w-[calc(100%_-_40px)] ml-[40px] my-[30px]" />
+
+## 🐔 加班补贴制度 V2.1
+
+<a href="/excel/加班补贴制度V2.1.docx" download="加班补贴制度V2.1.docx" target="view_window">
+  <img src="/images/download.svg" class="download-svg" />
+  <img src="/images/加班补贴制度V2.1.png" class="my-[30px] w-[calc(100%_-_40px)] ml-[40px]" />
+</a>
+
+<VueOfficeDocx src="/excel/加班补贴制度V2.1.docx" style="height: 100vh" class="w-[calc(100%_-_40px)] ml-[40px] my-[30px]" />

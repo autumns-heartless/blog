@@ -1,3 +1,13 @@
-# 归档
+---
+title: 归档
+aside: false
+editLink: false
+lastUpdated: false
+sidebar: false
+prev: false
+next: false
+---
 
-<Archive />
+<ClientOnly>
+  <Archive />
+</ClientOnly>
