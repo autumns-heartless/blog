@@ -19,9 +19,13 @@
       <div class="year">
         <img
           class="chinese-zodiac"
-          @click="goToLink('/archives', 'year', year.replace('年', ''))"
-          :src="'/images/svg/chinese-zodiac/' + getChineseZodiac(year.replace('年', '')) + '.svg'"
-          :title="getChineseZodiacAlias(year.replace('年', ''))"
+          @click="goToLink('/archives', 'year', String(year).replace('年', ''))"
+          :src="
+            '/images/svg/chinese-zodiac/' +
+            getChineseZodiac(String(year).replace('年', '')) +
+            '.svg'
+          "
+          :title="getChineseZodiacAlias(String(year).replace('年', ''))"
           alt="生肖"
         />
         <span>{{ year }}</span>
@@ -49,10 +53,9 @@
                   d="M16.734 12.686 5.42 24l11.314 11.314m14.521-22.628L42.57 24 31.255 35.314M27.2 6.28l-6.251 35.453"
                 ></path>
               </svg>
-
-              <a :href="article.path" class="title" target="_blank">{{ article.title }}</a>
+              <a class="title" @click="handleToNewPage(article.path)">{{ article.title }}</a>
               <br />
-              <ArticleMetadata :article="article" />
+              <ArchiveMetaData :article="article" />
             </span>
           </div>
         </div>
@@ -70,6 +73,7 @@ import {
   getChineseZodiacAlias,
 } from '../utils/archive/archive'
 import { data as articleData } from '../utils/archive/article.data.js'
+import ArchiveMetaData from './ArchiveMetaData.vue'
 
 // 文章原始数据和归档数据
 let $articleData: any
@@ -139,6 +143,12 @@ function initTimeline() {
   }
 }
 initTimeline()
+
+/* 跳转到新页面 */
+function handleToNewPage(url: string) {
+  const path = url.replace('archiving/', '')
+  window.open(path, '_blank')
+}
 </script>
 
 <style scoped>

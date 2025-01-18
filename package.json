@@ -76,6 +76,7 @@
     "@vue-office/excel": "^1.7.11",
     "@vue-office/pdf": "^2.0.2",
     "@vueuse/core": "^11.0.0",
+    "blueimp-md5": "^2.19.0",
     "dayjs": "^1.11.10",
     "gray-matter": "^4.0.3",
     "markdown-it-custom-attrs": "^1.0.2",

@@ -4,8 +4,10 @@ import parseFrontmatter from 'gray-matter'
 export default {
   watch: ['../../../../**/*.md'],
   load(watchedFiles) {
-    const articleFiles = watchedFiles.filter((file) => /\/docs\/20\d{2}\/.*\.md$/.test(file))
-
+    console.log('[ watchedFiles ] 🌸>', watchedFiles)
+    const articleFiles = watchedFiles.filter((file) =>
+      /\/docs\/archiving\/20\d{2}\/.*\.md$/.test(file),
+    )
     return articleFiles.map((articleFile) => {
       const articleContent = fs.readFileSync(articleFile, 'utf-8')
       const { data } = parseFrontmatter(articleContent)

@@ -18,7 +18,7 @@ hero:
     - text: 我的标签
       link: /tag/
     - text: 归档
-      link: /archiving/
+      link: /archiving/archiving
     - text: 烟花许愿
       link: /firework/
     - text: 工作述职
