@@ -19,7 +19,7 @@
       <div class="year">
         <img
           class="chinese-zodiac"
-          @click="goToLink('/archives', 'year', String(year).replace('年', ''))"
+          @click="goToLinkOfYear(String(year).replace('年', ''))"
           :src="
             '/images/svg/chinese-zodiac/' +
             getChineseZodiac(String(year).replace('年', '')) +
@@ -148,6 +148,11 @@ initTimeline()
 function handleToNewPage(url: string) {
   const path = url.replace('archiving/', '')
   window.open(path, '_blank')
+}
+
+/* 跳转到对应年归档 */
+function goToLinkOfYear(year: string) {
+  window.open(`https://qtmyx.netlify.app/archiving?year=${year}`, '_blank')
 }
 </script>
 
