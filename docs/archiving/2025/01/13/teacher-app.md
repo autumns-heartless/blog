@@ -1,5 +1,5 @@
 ---
-title: bug - 学情分析-作业完成：echarts 真机无法展示问题解决
+title: 教师端APP-bug - 学情分析-作业完成：echarts 真机无法展示问题解决
 date: 2025/01/13
 tags:
   - 工作日报
