@@ -39,7 +39,12 @@
           ></path>
         </svg>
       </span>
-      <time class="meta-content" :datetime="date.toISOString()" :title="dayjs().to(dayjs(date))">
+      <time
+        class="meta-content"
+        :style="{ color: isCurrentDay(props.article.date) ? 'red' : '' }"
+        :datetime="date.toISOString()"
+        :title="dayjs().to(dayjs(date))"
+      >
         {{ date.toLocaleString('zh', { year: 'numeric', month: 'numeric', day: 'numeric' }) }}
       </time>
     </div>
@@ -108,12 +113,25 @@ dayjs.locale('zh-cn')
 
 // 定义文章属性
 const props = defineProps({
-  article: Object,
+  article: {
+    type: Object as any,
+  },
   showCategory: {
     type: Boolean,
     default: true,
   },
 })
+
+/* 是否为当天 */
+function isCurrentDay(dateStr: string) {
+  const today = new Date()
+  const inputDate = new Date(dateStr)
+  return (
+    inputDate.getFullYear() === today.getFullYear() &&
+    inputDate.getMonth() === today.getMonth() &&
+    inputDate.getDate() === today.getDate()
+  )
+}
 
 // 初始化文章元数据信息
 const { theme } = useData()

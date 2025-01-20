@@ -53,7 +53,13 @@
                   d="M16.734 12.686 5.42 24l11.314 11.314m14.521-22.628L42.57 24 31.255 35.314M27.2 6.28l-6.251 35.453"
                 ></path>
               </svg>
-              <a class="title" @click="handleToNewPage(article.path)">{{ article.title }}</a>
+              <a
+                class="title"
+                :style="{ color: isCurrentDay(article.date) ? 'red' : '' }"
+                @click="handleToNewPage(article.path)"
+              >
+                {{ article.title }}
+              </a>
               <br />
               <ArchiveMetaData :article="article" />
             </span>
@@ -83,6 +89,17 @@ let archiveData: any
 let $category: any
 let $tag: any
 let $year: any
+
+/* 是否为当天 */
+function isCurrentDay(dateStr: string) {
+  const today = new Date()
+  const inputDate = new Date(dateStr)
+  return (
+    inputDate.getFullYear() === today.getFullYear() &&
+    inputDate.getMonth() === today.getMonth() &&
+    inputDate.getDate() === today.getDate()
+  )
+}
 
 /**
  * 初始化时间轴
