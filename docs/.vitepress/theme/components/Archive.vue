@@ -54,7 +54,7 @@
                 ></path>
               </svg>
               <a
-                class="title"
+                class="title cursor-pointer"
                 :style="{ color: isCurrentDay(article.date) ? 'red' : '' }"
                 @click="handleToNewPage(article.path)"
               >
