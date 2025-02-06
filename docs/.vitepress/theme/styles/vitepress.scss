@@ -8,7 +8,8 @@
 }
 
 @media (min-width: 1440px) {
-  .VPDoc:not(.has-sidebar) .content {
+  .VPDoc:not(.has-sidebar) .content,
+  .VPDoc:not(.has-sidebar) .container {
     max-width: 1440px !important;
   }
 }
