@@ -90,6 +90,7 @@ export const nav: DefaultTheme.Config['nav'] = [
           { text: 'VSCode小技巧', link: '/other/vscode/VSCode-Tips-index' },
           { text: 'VSCode插件分享', link: '/other/vscode/VSCode-PluginSharing-index' },
           { text: 'Vue2 组件封装', link: '/other/vue2/componentPackage/index' },
+          { text: 'Relation Graph 在线示例 - 会员版', link: '/relationgraph/index' },
         ],
       },
       {
