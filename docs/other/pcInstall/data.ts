@@ -13,7 +13,7 @@ export const WORK_SOFT: AppData[] = [
       {
         icon: 'https://emo112.vip/favicon.png',
         title: 'emo',
-        desc: '🪜，需要💰',
+        desc: '梯子，需要💰',
         link: 'https://emo112.vip/#/Download?category=Windows',
       },
       {
@@ -47,10 +47,10 @@ export const WORK_SOFT: AppData[] = [
         link: 'https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html',
       },
       {
-        icon: 'https://hostbuf.net/favicon.ico',
+        icon: 'https://zx-picture-bed.oss-cn-beijing.aliyuncs.com/images/finalshell.png',
         title: 'FinalShell',
         desc: 'SSH工具，能够帮助前端同学连接远程服务器进行打包部署',
-        link: 'https://hostbuf.net/',
+        link: 'https://dows.hjppasghj.top/finalshell_windows_x64.exe',
       },
       {
         icon: 'https://hx.dcloud.net.cn/static/favicon/favicon.png',
@@ -85,6 +85,18 @@ export const OTHER_SOFT: AppData[] = [
   {
     title: '',
     items: [
+      {
+        icon: 'https://res.u-tools.cn/website5/static/assets/favicon.png',
+        title: 'uTools',
+        desc: '新一代效率工具平台',
+        link: 'https://www.u-tools.cn/download/',
+      },
+      {
+        icon: 'https://cdn.prod.website-files.com/643e09c9f19df8579c420d9f/6565a8deeccdfd3068229f45_Logo.jpg',
+        title: 'Listary',
+        desc: '快速查找文件或者启动应用程序',
+        link: 'https://www.listary.net/download-completion?version=stable',
+      },
       {
         icon: 'http://www.potplayercn.com/wp-content/themes/pot/images/favicon.ico',
         title: 'PotPlayer',
