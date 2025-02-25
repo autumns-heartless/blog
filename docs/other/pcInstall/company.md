@@ -49,7 +49,7 @@ a {
       线下表格，<b class="text-[red]">龚燕</b> 会给你发放(纸质版)，5天之后 <b class="text-[red]">面向朱总</b> 进行述职
 </pre>
 
-### &nbsp;&nbsp;&nbsp;&nbsp; 2 > &nbsp; <b class="text-[red]">月度述职</b>
+### &nbsp;&nbsp;&nbsp;&nbsp; 2 > &nbsp; <b class="text-[red]">月度述职</b>（模板可能会更新，以实际收到为准）
 
 <a href="/excel/月度述职表.xlsx" download="月度述职表.xlsx" target="view_window">
   <img src="/images/download.svg" class="download-svg" />
@@ -78,7 +78,11 @@ a {
 
 <img src="/images/daily-template.png" class="my-[30px] w-[calc(100%_-_40px)] ml-[40px]" />
 
+##### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 以下为<b class="text-[red]"> 邮件模板</b>，可参考使用
+
 <pre>
+
+
     领导，您好：
 
       以下是我今天工作内容的简述：
@@ -115,7 +119,7 @@ a {
       感谢您的关注与支持，期待与您共同推动项目的进展。
 </pre>
 
-## 💰 报销
+## 💰 报销（模板可能会有变动，以实际收到的为准）
 
 <a href="/excel/报销申请单（10月）.xlsx" download="报销申请单（10月）.xlsx" target="view_window">
   <img src="/images/download.svg" class="download-svg" />
@@ -141,15 +145,23 @@ a {
 
     5: 如果当月有 <b class="text-[red]">1</b> 次 打卡 <b class="text-[red]">异常</b> (包括缺卡、迟到)，都可 <b class="text-[red]">补卡</b>；
 
-        第 <b class="text-[red]">2</b> 次迟到，扣除 <b class="text-[red]">¥20 + 全勤奖</b>
+        <s>第 <b class="text-[red]">2</b> 次迟到，扣除 <b class="text-[red]">¥20 + 全勤奖</b></s>
 
-        第 <b class="text-[red]">3</b> 次迟到，扣除 <b class="text-[red]">¥40 + 全勤</b>
+        <s>第 <b class="text-[red]">3</b> 次迟到，扣除 <b class="text-[red]">¥40 + 全勤</b></s>
 
-        第 <b class="text-[red]">4</b> 次迟到，扣除 <b class="text-[red]">3天工资 + 全勤</b>
+        <s>第 <b class="text-[red]">4</b> 次迟到，扣除 <b class="text-[red]">3天工资 + 全勤</b></s>
+
+        每个🈷️<b class="text-[red]"> 迟到3次以内并且不超过15分钟</b>，<b class="text-[green]">不影响绩效考核</b>
 
     6: 每个月 5 号之前，吴芳 会将 <b class="text-[red]">上个月考勤</b> 统计好，发至群里，请大家仔细核对。
 
         如有异议，请联系 <b class="text-[red]">吴芳</b>。
+</pre>
+
+## ☀️ 请假
+
+<pre>
+  <b class="text-[red]">如有特殊原因请假可酌情处理</b>
 </pre>
 
 ## 🐔 月度述职评分制绩效考核体系 V2.1
