@@ -217,4 +217,360 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ],
     },
   ],
+  relationgraph: [
+    {
+      text: '概览',
+      link: '/relationgraph/overview',
+    },
+    {
+      text: '节点',
+      collapsed: false,
+      items: [
+        {
+          text: '节点-内容及样式5',
+          link: '/relationgraph/node/models-relationship',
+        },
+      ],
+    },
+    {
+      text: '线条',
+      collapsed: false,
+      items: [
+        {
+          text: '图谱颜色 & 主题',
+          link: '/relationgraph/line/line-checked-style',
+        },
+        {
+          text: '跟随线条的元素(H5 DIV)',
+          link: '/relationgraph/line/div-on-line',
+        },
+        {
+          text: '自定义连线文字位置',
+          link: '/relationgraph/line/line-text-position',
+        },
+        {
+          text: '线条高级用法-曲线上的文字',
+          link: '/relationgraph/line/lineAdv2',
+        },
+        {
+          text: '自定义全新的线条形状',
+          link: '/relationgraph/line/customer-line1',
+        },
+        {
+          text: '线条高级用法-插槽',
+          link: '/relationgraph/line/adv-line-slot2',
+        },
+        {
+          text: '线条高级用法-插槽-圆角折线',
+          link: '/relationgraph/line/adv-line-slot3',
+        },
+      ],
+    },
+    {
+      text: '布局',
+      collapsed: false,
+      items: [
+        {
+          text: 'tree-变化多端的树',
+          link: '/relationgraph/layout/ever-changing-tree',
+        },
+        {
+          text: 'force-节点重量与连线牵引力',
+          link: '/relationgraph/layout/layout-force-options-pro',
+        },
+        {
+          text: 'force-自定义力学布局',
+          link: '/relationgraph/layout/customer-layout-force',
+        },
+        {
+          text: 'folder-组织机构树',
+          link: '/relationgraph/layout/layout-folder2',
+        },
+        {
+          text: '使用Dagre布局算法(位置、线条)',
+          link: '/relationgraph/layout/use-dagre-layout',
+        },
+        {
+          text: '使用Dagre布局算法(仅位置)',
+          link: '/relationgraph/layout/use-dagre-layout-2',
+        },
+        {
+          text: '使用Sigma.js布局算法',
+          link: '/relationgraph/layout/use-sigma-layout',
+        },
+      ],
+    },
+    {
+      text: '使用场景',
+      collapsed: false,
+      items: [
+        {
+          text: '产业链图谱',
+          link: '/relationgraph/usageScenarios/industry-chain',
+        },
+        {
+          text: '投资关系探查',
+          link: '/relationgraph/usageScenarios/investment-penetration',
+        },
+        {
+          text: '展示全部按钮',
+          link: '/relationgraph/usageScenarios/show-more-nodes-by-page',
+        },
+        {
+          text: '展示更多(分页)',
+          link: '/relationgraph/usageScenarios/show-more-nodes-front',
+        },
+        {
+          text: '模型调用关系图',
+          link: '/relationgraph/usageScenarios/models-relationship',
+        },
+        {
+          text: '班级兴趣小组示意图',
+          link: '/relationgraph/usageScenarios/interest-group',
+        },
+        {
+          text: '组织架构图谱',
+          link: '/relationgraph/usageScenarios/scene-org',
+        },
+        {
+          text: '人物关系 & 操作',
+          link: '/relationgraph/usageScenarios/scene-relationship-op',
+        },
+        {
+          text: '最短路径搜索',
+          link: '/relationgraph/usageScenarios/find-min-path',
+        },
+        {
+          text: '小玩意-时钟',
+          link: '/relationgraph/usageScenarios/clock-and-tank',
+        },
+        {
+          text: '小玩意-海葵',
+          link: '/relationgraph/usageScenarios/force-sea-anemone',
+        },
+      ],
+    },
+    {
+      text: '图形编辑套件',
+      collapsed: false,
+      items: [
+        {
+          text: '拖拽创建预设样式的节点',
+          link: '/relationgraph/graphics/drag-to-create-nodes-with-preset-styles',
+        },
+        {
+          text: '节点批量操作',
+          link: '/relationgraph/graphics/batch-operations-on-nodes',
+        },
+        {
+          text: '自定义节点快速操作栏',
+          link: '/relationgraph/graphics/custom-node-quick-actions',
+        },
+        {
+          text: '快速创建线条',
+          link: '/relationgraph/graphics/gee-line-edit',
+        },
+        {
+          text: '界面化选择线条连接点',
+          link: '/relationgraph/graphics/gee-line-edit-2',
+        },
+        {
+          text: '拖动更改连线起点/终点',
+          link: '/relationgraph/graphics/change-line-points',
+        },
+        {
+          text: '更改连线文字/文字位置',
+          link: '/relationgraph/graphics/change-line-text',
+        },
+        {
+          text: '自定义线条操作栏',
+          link: '/relationgraph/graphics/customize-line-toolbar',
+        },
+        {
+          text: '节点对齐参考线',
+          link: '/relationgraph/graphics/gee-node-alignment-guides',
+        },
+        {
+          text: '缩略示意图（鹰眼）',
+          link: '/relationgraph/graphics/gee-thumbnail-diagram',
+        },
+        {
+          text: '节点碰撞检测与位移限制',
+          link: '/relationgraph/graphics/node-dragging',
+        },
+      ],
+    },
+    {
+      text: 'HTML元素连线',
+      collapsed: false,
+      items: [
+        {
+          text: '世界地图',
+          link: '/relationgraph/htmlEleLine/map-world',
+        },
+        {
+          text: '中国地图',
+          link: '/relationgraph/htmlEleLine/map-china',
+        },
+        {
+          text: '模型调用关系图',
+          link: '/relationgraph/htmlEleLine/models-relationship',
+        },
+        {
+          text: '班级兴趣小组示意图',
+          link: '/relationgraph/htmlEleLine/interest-group',
+        },
+        {
+          text: 'HTML元素 & 节点内容',
+          link: '/relationgraph/htmlEleLine/node-and-element-lines',
+        },
+      ],
+    },
+    {
+      text: '数据操作',
+      collapsed: false,
+      items: [
+        {
+          text: '动态追加数据',
+          link: '/relationgraph/dataOperation/adv-dynamic-data',
+        },
+        {
+          text: '动态追加数据2',
+          link: '/relationgraph/dataOperation/expand-forever',
+        },
+        {
+          text: '一种修改数据的新思路',
+          link: '/relationgraph/dataOperation/relayout-after-add-nodes',
+        },
+        {
+          text: '动态加载数据与重新布局',
+          link: '/relationgraph/dataOperation/expand-button',
+        },
+        {
+          text: '界面拖拽添加节点、关系',
+          link: '/relationgraph/dataOperation/object-edit',
+        },
+        {
+          text: '右键菜单创建节点、关系',
+          link: '/relationgraph/dataOperation/create-object-from-menu',
+        },
+      ],
+    },
+    {
+      text: '内置UI组件和插槽',
+      collapsed: false,
+      items: [
+        {
+          text: '自定义工具栏按钮',
+          link: '/relationgraph/slot/toolbar-buttons',
+        },
+        {
+          text: '自定义工具栏图标、英文Tooltips',
+          link: '/relationgraph/slot/toolbar-tooltips',
+        },
+        {
+          text: '展开/收缩 按钮自定义',
+          link: '/relationgraph/slot/expand-holder-slot',
+        },
+        {
+          text: '完全自定义工具栏',
+          link: '/relationgraph/slot/custom-toolbar',
+        },
+      ],
+    },
+    {
+      text: '事件 & 交互 & 控制',
+      collapsed: false,
+      items: [
+        {
+          text: '效果、控制',
+          link: '/relationgraph/things/adv-effect',
+        },
+        {
+          text: '人物关系 & 筛选',
+          link: '/relationgraph/things/scene-relationship',
+        },
+        {
+          text: '搜索节点 & 定位节点',
+          link: '/relationgraph/things/search-and-focus',
+        },
+        {
+          text: '【节点/连线】悬浮框+右键菜单+全屏响应式',
+          link: '/relationgraph/things/visible-stuff-in-fullscreen',
+        },
+        {
+          text: '人物关系 & 操作',
+          link: '/relationgraph/things/scene-relationship-op',
+        },
+        {
+          text: '节点/连线点击效果2',
+          link: '/relationgraph/things/adv-effect2',
+        },
+        {
+          text: '与节点相关的连线',
+          link: '/relationgraph/things/line-hightlight',
+        },
+        {
+          text: '展开/关闭所有',
+          link: '/relationgraph/things/open-all-close-all',
+        },
+        {
+          text: '展开到指定层级',
+          link: '/relationgraph/things/open-by-level',
+        },
+        {
+          text: '聚焦到节点',
+          link: '/relationgraph/things/focus-node-by-id',
+        },
+        {
+          text: '布局切换',
+          link: '/relationgraph/things/before-change-layout',
+        },
+        {
+          text: '框选多个节点',
+          link: '/relationgraph/things/selections',
+        },
+        {
+          text: '禁用拖动、缩放画布；禁用拖动、选中节点',
+          link: '/relationgraph/things/disable-effect',
+        },
+      ],
+    },
+    {
+      text: '样式 & 动画 & 效果',
+      collapsed: false,
+      items: [
+        {
+          text: '图谱颜色 & 主题',
+          link: '/relationgraph/style/line-checked-style',
+        },
+        {
+          text: '中心布局角度偏移',
+          link: '/relationgraph/style/graph-angle-offset',
+        },
+      ],
+    },
+    {
+      text: '截图 & 水印',
+      collapsed: false,
+      items: [
+        {
+          text: '支持生成图片的背景水印',
+          link: '/relationgraph/screenshot/watermark-for-download-image',
+        },
+        {
+          text: '支持生成图片的背景水印2',
+          link: '/relationgraph/screenshot/watermark-for-download-image-2',
+        },
+        {
+          text: '前景水印',
+          link: '/relationgraph/screenshot/foreground-watermark',
+        },
+        {
+          text: '获取图谱图片的Base64数据',
+          link: '/relationgraph/screenshot/graph-image-base64',
+        },
+      ],
+    },
+  ],
 }
