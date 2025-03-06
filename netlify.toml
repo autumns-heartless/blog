@@ -1,5 +1,6 @@
 [build.environment]
   NODE_VERSION = "20"
+  NODE_OPTIONS = "--max-old-space-size=4096"  # 设置为4GB，根据需要调整
 
 [build]
   publish = "dist"
