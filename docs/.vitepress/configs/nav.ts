@@ -91,6 +91,7 @@ export const nav: DefaultTheme.Config['nav'] = [
           { text: 'VSCode插件分享', link: '/other/vscode/VSCode-PluginSharing-index' },
           { text: 'Vue2 组件封装', link: '/other/vue2/componentPackage/index' },
           { text: 'Relation Graph 在线示例 - 会员版', link: '/relationgraph/index' },
+          { text: '后台管理系统模板', link: '/other/openSource/vue-admin-template/index' },
         ],
       },
       {

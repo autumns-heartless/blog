@@ -12,6 +12,6 @@
     - 开源网站
 ---
 
-# 后台管理系统模板
+# [后台管理系统模板](http://vue.easydo.work/)
 
 <iframe src="http://vue.easydo.work/" class="scrollbar mt-4 w-full h-[100vh]"></iframe>
