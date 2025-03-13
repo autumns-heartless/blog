@@ -14,7 +14,7 @@ hero:
       link: /todoList/
       theme: alt
     - text: 我的简历
-      link: /me/resume
+      link: /me/resume/
     - text: 我的标签
       link: /tag/
     - text: 归档
