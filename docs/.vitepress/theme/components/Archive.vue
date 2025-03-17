@@ -139,6 +139,7 @@ function initTimeline() {
   } else {
     $articleData.push(...articleData)
   }
+  console.log('[ $articleData ] 🌸>', $articleData)
 
   // 文章数据归档处理
   // 1.对文章数据进行降序排序
