@@ -27,8 +27,8 @@ hero:
       link: /test-index
     - text: 装机必备
       link: /other/pcInstall/pcInstall-index
-    - text: 入职须知
-      link: /other/pcInstall/company-index
+    - text: 家电选择
+      link: /other/homeApp/index
 features:
   - icon: 📖
     title: 前端物语
