@@ -3,429 +3,516 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>海信Vidda X 2025款 85英寸电视深度解析</title>
+    <title>家电选购指南：洗衣机、冰箱、厨房电器与电视深度对比</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
         body {
             font-family: 'Noto Sans SC', sans-serif;
-            scroll-behavior: smooth;
+            background-color: #f8fafc;
+            color: #334155;
+            line-height: 1.6;
         }
-        .card-shadow {
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .spec-item {
+            border-left: 3px solid #6366f1;
+            padding-left: 12px;
+            margin-bottom: 8px;
+        }
+        .price-tag {
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+        }
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+            margin: 24px 0;
+        }
+        .feature-badge {
+            background-color: #e0e7ff;
+            color: #4f46e5;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .comparison-table th {
+            background-color: #6366f1;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            font-weight: 500;
+        }
+        .comparison-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        .comparison-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        .comparison-table tr:last-child td {
+            border-bottom: none;
         }
         .highlight-box {
-            background: linear-gradient(135deg, rgba(0, 102, 204, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
-            border-left: 4px solid #0066cc;
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border-left: 4px solid #0ea5e9;
+            padding: 16px;
+            border-radius: 0 8px 8px 0;
+            margin: 16px 0;
         }
-        .tech-icon {
-            width: 40px;
-            height: 40px;
-            background-color: #0066cc;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 12px;
+        .section-title {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 24px;
+        }
+        .section-title:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 24px;
+            background: linear-gradient(to bottom, #6366f1, #8b5cf6);
+            border-radius: 3px;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-    <!-- 头部横幅 -->
-    <div class="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-8 px-4 md:px-8">
-        <div class="max-w-6xl mx-auto">
-            <h1 class="text-2xl md:text-4xl font-bold mb-2">海信Vidda X 2025款 85英寸电视</h1>
-            <p class="text-lg md:text-xl opacity-90">Mini LED旗舰画质 · 240Hz高刷游戏体验 · 影院级视听享受</p>
-        </div>
-    </div>
+<body class="py-8 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+    <header class="mb-12 text-center">
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">家电选购指南：洗衣机、冰箱、厨房电器与电视深度对比</h1>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">基于产品核心参数与选购维度的系统性分析 · 2025年6月更新</p>
+    </header>
 
-    <!-- 核心参数卡片 -->
-    <div class="max-w-6xl mx-auto px-4 md:px-8 py-8">
-        <div class="bg-white rounded-xl card-shadow p-6">
-            <h2 class="text-xl font-bold mb-6 text-blue-800 flex items-center">
-                <div class="tech-icon"><i class="fas fa-star"></i></div>
-                旗舰核心参数
-            </h2>
+    <section class="mb-16">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title">洗衣机深度对比</h2>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <!-- 画质 -->
-                <div class="bg-blue-50 p-4 rounded-lg">
-                    <div class="flex items-center mb-2">
-                        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-2">
-                            <i class="fas fa-palette text-blue-600"></i>
-                        </div>
-                        <h3 class="font-semibold">画质表现</h3>
-                    </div>
-                    <ul class="text-sm space-y-1">
-                        <li>• Mini LED 1024分区</li>
-                        <li>• 2000nits峰值亮度</li>
-                        <li>• 95% DCI-P3广色域</li>
-                    </ul>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <!-- 海尔PROL6 -->
+            <div class="card p-6">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-bold text-gray-800">海尔PROL6（EG100PROL6）</h3>
+                    <span class="price-tag">¥4999</span>
                 </div>
+                <p class="text-gray-600 mb-4">小户型嵌入式首选，除菌性能突出</p>
 
-                <!-- 刷新率 -->
-                <div class="bg-blue-50 p-4 rounded-lg">
-                    <div class="flex items-center mb-2">
-                        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-2">
-                            <i class="fas fa-sync-alt text-blue-600"></i>
-                        </div>
-                        <h3 class="font-semibold">刷新率</h3>
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="font-semibold text-gray-700 mb-2">核心参数</h4>
+                        <ul class="space-y-2">
+                            <li class="spec-item"><strong>容量：</strong>10kg</li>
+                            <li class="spec-item"><strong>洗净比：</strong>1.10（行业标杆）</li>
+                            <li class="spec-item"><strong>转速：</strong>1400 RPM（高效脱水）</li>
+                            <li class="spec-item"><strong>电机：</strong>BLDC变频电机（噪音≤50dB）</li>
+                            <li class="spec-item"><strong>排水方式：</strong>上排水（嵌入友好）</li>
+                        </ul>
                     </div>
-                    <ul class="text-sm space-y-1">
-                        <li>• 原生144Hz面板</li>
-                        <li>• 240Hz高刷模式</li>
-                        <li>• 5ms输入延迟</li>
-                    </ul>
-                </div>
 
-                <!-- 音质 -->
-                <div class="bg-blue-50 p-4 rounded-lg">
-                    <div class="flex items-center mb-2">
-                        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-2">
-                            <i class="fas fa-volume-up text-blue-600"></i>
+                    <div>
+                        <h4 class="font-semibold text-gray-700 mb-2">洗涤方式</h4>
+                        <div class="flex flex-wrap">
+                            <span class="feature-badge">巴氏除菌螨（60℃物理除菌）</span>
+                            <span class="feature-badge">15种程序（含羽绒/羊毛专洗）</span>
                         </div>
-                        <h3 class="font-semibold">音质系统</h3>
                     </div>
-                    <ul class="text-sm space-y-1">
-                        <li>• 2.1声道低音炮</li>
-                        <li>• 杜比全景声</li>
-                        <li>• IMAX Enhanced</li>
-                    </ul>
-                </div>
 
-                <!-- 硬件 -->
-                <div class="bg-blue-50 p-4 rounded-lg">
-                    <div class="flex items-center mb-2">
-                        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-2">
-                            <i class="fas fa-microchip text-blue-600"></i>
+                    <div>
+                        <h4 class="font-semibold text-gray-700 mb-2">结构设计</h4>
+                        <div class="flex flex-wrap">
+                            <span class="feature-badge">508mm超薄机身</span>
+                            <span class="feature-badge">525mm大筒径</span>
                         </div>
-                        <h3 class="font-semibold">硬件配置</h3>
                     </div>
-                    <ul class="text-sm space-y-1">
-                        <li>• MT9653旗舰芯片</li>
-                        <li>• 4GB+64GB存储</li>
-                        <li>• WiFi 6+蓝牙5.4</li>
-                    </ul>
-                </div>
-
-                <!-- 护眼 -->
-                <div class="bg-blue-50 p-4 rounded-lg">
-                    <div class="flex items-center mb-2">
-                        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-2">
-                            <i class="fas fa-eye text-blue-600"></i>
-                        </div>
-                        <h3 class="font-semibold">护眼技术</h3>
-                    </div>
-                    <ul class="text-sm space-y-1">
-                        <li>• 莱茵低蓝光认证</li>
-                        <li>• 环境光自适应</li>
-                        <li>• AG抗眩光屏</li>
-                    </ul>
-                </div>
-
-                <!-- 价格 -->
-                <div class="bg-blue-50 p-4 rounded-lg">
-                    <div class="flex items-center mb-2">
-                        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-2">
-                            <i class="fas fa-tag text-blue-600"></i>
-                        </div>
-                        <h3 class="font-semibold">超值价格</h3>
-                    </div>
-                    <ul class="text-sm space-y-1">
-                        <li>• 国补后¥4799</li>
-                        <li>• 3年整机质保</li>
-                        <li>• 10万小时寿命</li>
-                    </ul>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <!-- 关键技术解析 -->
-    <div class="max-w-6xl mx-auto px-4 md:px-8 py-8">
-        <h2 class="text-2xl font-bold mb-8 text-blue-800 border-b pb-2">关键技术深度解析</h2>
-
-        <!-- 画质表现 -->
-        <div class="bg-white rounded-xl card-shadow p-6 mb-8">
-            <div class="flex items-center mb-4">
-                <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mr-3">
-                    <i class="fas fa-palette text-white"></i>
+            <!-- 小乌梅3.0机皇版 -->
+            <div class="card p-6">
+                <div class="flex justify-between items-start mb-4">
+                    <h3 class="text-xl font-bold text-gray-800">小乌梅3.0机皇版（TG12VE10PRO）</h3>
+                    <span class="price-tag">¥3599（优惠后≈¥2269）</span>
                 </div>
-                <h3 class="text-xl font-bold">影院级画质表现</h3>
-            </div>
+                <p class="text-gray-600 mb-4">大容量家庭性价比之王</p>
 
-            <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                    <h4 class="font-semibold text-blue-700 mb-2 flex items-center">
-                        <i class="fas fa-lightbulb mr-2"></i>Mini LED背光技术
-                    </h4>
-                    <p class="text-gray-700 mb-4">1024个独立控光分区，相比传统LED减少55%光晕效应，实现百万级对比度，暗场细节纯净无光晕。</p>
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="font-semibold text-gray-700 mb-2">核心参数</h4>
+                        <ul class="space-y-2">
+                            <li class="spec-item"><strong>容量：</strong>12kg（四款中最大）</li>
+                            <li class="spec-item"><strong>洗净比：</strong>1.21（当前最高）</li>
+                            <li class="spec-item"><strong>转速：</strong>1400 RPM</li>
+                            <li class="spec-item"><strong>电机：</strong>DD直驱变频（运行更静音）</li>
+                            <li class="spec-item"><strong>排水方式：</strong>上排水</li>
+                        </ul>
+                    </div>
 
-                    <h4 class="font-semibold text-blue-700 mb-2 flex items-center">
-                        <i class="fas fa-tint mr-2"></i>广色域与精准调校
-                    </h4>
-                    <p class="text-gray-700 mb-4">覆盖95% DCI-P3色域，△E≈1专业色准，10.7亿色显示能力，配合AI画质引擎实时优化色彩层次。</p>
-                </div>
+                    <div>
+                        <h4 class="font-semibold text-gray-700 mb-2">洗涤方式</h4>
+                        <div class="flex flex-wrap">
+                            <span class="feature-badge">漩瀑水魔方技术（防缠绕）</span>
+                            <span class="feature-badge">超微净泡（减少洗涤剂残留）</span>
+                        </div>
+                    </div>
 
-                <div>
-                    <h4 class="font-semibold text-blue-700 mb-2 flex items-center">
-                        <i class="fas fa-sun mr-2"></i>2000nits峰值亮度
-                    </h4>
-                    <p class="text-gray-700 mb-4">HDR增强模式下局部亮度可达2000nits，确保阳光场景高光不溢出，暗部细节分明。</p>
-
-                    <h4 class="font-semibold text-blue-700 mb-2 flex items-center">
-                        <i class="fas fa-film mr-2"></i>HDR双认证
-                    </h4>
-                    <p class="text-gray-700">杜比视界IQ+IMAX Enhanced双认证，自动匹配环境光调节HDR效果，影院级观影体验。</p>
+                    <div>
+                        <h4 class="font-semibold text-gray-700 mb-2">结构设计</h4>
+                        <div class="flex flex-wrap">
+                            <span class="feature-badge">纯平全嵌设计</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- 游戏性能 -->
-        <div class="bg-white rounded-xl card-shadow p-6 mb-8">
-            <div class="flex items-center mb-4">
-                <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mr-3">
-                    <i class="fas fa-gamepad text-white"></i>
-                </div>
-                <h3 class="text-xl font-bold">电竞级游戏性能</h3>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                    <h4 class="font-semibold text-blue-700 mb-2 flex items-center">
-                        <i class="fas fa-tachometer-alt mr-2"></i>240Hz高刷新率
-                    </h4>
-                    <p class="text-gray-700 mb-4">原生144Hz面板通过HSR技术提升至240Hz，配合VRR可变刷新率和ALLM自动低延迟技术，彻底消除画面拖影与撕裂。</p>
-
-                    <h4 class="font-semibold text-blue-700 mb-2 flex items-center">
-                        <i class="fas fa-plug mr-2"></i>全接口适配
-                    </h4>
-                    <p class="text-gray-700">4个HDMI 2.1接口，完美支持PS5/Xbox等次世代主机4K 120Hz输出，兼容FreeSync Premium认证。</p>
-                </div>
-
-                <div>
-                    <h4 class="font-semibold text-blue-700 mb-2 flex items-center">
-                        <i class="fas fa-bolt mr-2"></i>5ms超低延迟
-                    </h4>
-                    <p class="text-gray-700 mb-4">游戏模式下输入延迟低至5ms，操作响应几乎无感知延迟，竞技游戏制胜关键。</p>
-
-                    <h4 class="font-semibold text-blue-700 mb-2 flex items-center">
-                        <i class="fas fa-headset mr-2"></i>游戏音效优化
-                    </h4>
-                    <p class="text-gray-700">专属游戏音效模式，增强脚步声、枪声等关键音频定位，提升FPS游戏竞技优势。</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 音质体验 -->
-        <div class="bg-white rounded-xl card-shadow p-6 mb-8">
-            <div class="flex items-center mb-4">
-                <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center mr-3">
-                    <i class="fas fa-volume-up text-white"></i>
-                </div>
-                <h3 class="text-xl font-bold">影院级音质体验</h3>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-6">
-                <div>
-                    <h4 class="font-semibold text-blue-700 mb-2 flex items-center">
-                        <i class="fas fa-bass mr-2"></i>2.1声道独立低音炮
-                    </h4>
-                    <p class="text-gray-700 mb-4">25W大功率低音单元，低频下潜至60Hz，震撼低音效果媲美独立Soundbar。</p>
-
-                    <h4 class="font-semibold text-blue-700 mb-2 flex items-center">
-                        <i class="fas fa-certificate mr-2"></i>IMAX Enhanced认证
-                    </h4>
-                    <p class="text-gray-700">优化影院级音效轨迹，精准还原动作电影与游戏场景爆破音效，声场定位准确。</p>
-                </div>
-
-                <div>
-                    <h4 class="font-semibold text-blue-700 mb-2 flex items-center">
-                        <i class="fas fa-surround mr-2"></i>杜比全景声技术
-                    </h4>
-                    <p class="text-gray-700 mb-4">支持杜比全景声(Dolby Atmos)解码，营造三维环绕声场，观影沉浸感提升显著。</p>
-
-                    <h4 class="font-semibold text-blue-700 mb-2 flex items-center">
-                        <i class="fas fa-sliders-h mr-2"></i>智能音效调节
-                    </h4>
-                    <p class="text-gray-700">根据内容类型自动切换音效模式，电影、音乐、新闻、体育等场景各有优化。</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 竞品对比 -->
-    <div class="max-w-6xl mx-auto px-4 md:px-8 py-8">
-        <div class="bg-white rounded-xl card-shadow p-6">
-            <h2 class="text-2xl font-bold mb-6 text-blue-800 border-b pb-2">简要参数说明</h2>
+        <!-- 小乌梅2.0 vs 3.0基础版对比 -->
+        <div class="card p-6 mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-6">小乌梅2.0 vs 3.0基础版对比</h3>
 
             <div class="overflow-x-auto">
-                <table class="w-full text-sm md:text-base">
-                    <thead class="bg-blue-50">
+                <table class="comparison-table">
+                    <thead>
                         <tr>
-                            <th class="text-left py-3 px-4 font-semibold">名称</th>
-                            <th class="text-left py-3 px-4 font-semibold">海信Vidda X 2025款</th>
+                            <th>参数</th>
+                            <th>小乌梅2.0（TG100RVICPRO）</th>
+                            <th>小乌梅3.0基础版（TG10VE40）</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-gray-200">
+                    <tbody>
                         <tr>
-                            <td class="py-3 px-4 font-medium">背光分区数量</td>
-                            <td class="py-3 px-4 text-blue-600 font-semibold">1024分区</td>
-                        </tr>
-                        <tr class="bg-gray-50">
-                            <td class="py-3 px-4 font-medium">峰值亮度</td>
-                            <td class="py-3 px-4 text-blue-600 font-semibold">2000nits</td>
+                            <td><strong>容量</strong></td>
+                            <td>10kg</td>
+                            <td>10kg</td>
                         </tr>
                         <tr>
-                            <td class="py-3 px-4 font-medium">刷新率</td>
-                            <td class="py-3 px-4 text-blue-600 font-semibold">144Hz原生/240Hz模式</td>
-                        </tr>
-                        <tr class="bg-gray-50">
-                            <td class="py-3 px-4 font-medium">音效认证</td>
-                            <td class="py-3 px-4 text-blue-600 font-semibold">杜比全景声+IMAX Enhanced</td>
+                            <td><strong>洗净比</strong></td>
+                            <td>1.08</td>
+                            <td>1.10</td>
                         </tr>
                         <tr>
-                            <td class="py-3 px-4 font-medium">护眼技术</td>
-                            <td class="py-3 px-4 text-blue-600 font-semibold">莱茵认证+抗眩光屏</td>
-                        </tr>
-                        <tr class="bg-gray-50">
-                            <td class="py-3 px-4 font-medium">处理器</td>
-                            <td class="py-3 px-4 text-blue-600 font-semibold">MT9653四核A73</td>
+                            <td><strong>智能投放</strong></td>
+                            <td><i class="fas fa-times text-red-500"></i> 无</td>
+                            <td><i class="fas fa-check text-green-500"></i> 双料智投</td>
                         </tr>
                         <tr>
-                            <td class="py-3 px-4 font-medium">价格</td>
-                            <td class="py-3 px-4 text-blue-600 font-semibold">¥4959.2</td>
+                            <td><strong>除菌技术</strong></td>
+                            <td>银离子除菌</td>
+                            <td>纳米银离子+UV紫外线</td>
+                        </tr>
+                        <tr>
+                            <td><strong>电机</strong></td>
+                            <td>BLDC变频</td>
+                            <td>BLDC变频</td>
+                        </tr>
+                        <tr>
+                            <td><strong>价格</strong></td>
+                            <td>¥2399</td>
+                            <td>¥3299</td>
+                        </tr>
+                        <tr>
+                            <td><strong>推荐场景</strong></td>
+                            <td>预算有限基础需求</td>
+                            <td>功能均衡的升级之选</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="highlight-box mt-4">
+                <p><strong>注：</strong>3.0机皇版与基础版差异在于容量和洗净比（机皇版12kg+1.21洗净比）</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="mb-16">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title">冰箱参数对比</h2>
+
+        <div class="card p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-6">容声526 vs 美的508</h3>
+
+            <div class="overflow-x-auto">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>维度</th>
+                            <th>容声526</th>
+                            <th>美的508</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>面板</strong></td>
+                            <td>钢化玻璃</td>
+                            <td>岩板质感面板</td>
+                        </tr>
+                        <tr>
+                            <td><strong>能效</strong></td>
+                            <td>一级能效</td>
+                            <td>一级能效</td>
+                        </tr>
+                        <tr>
+                            <td><strong>开门方式</strong></td>
+                            <td>十字对开门</td>
+                            <td>法式四门</td>
+                        </tr>
+                        <tr>
+                            <td><strong>变频技术</strong></td>
+                            <td>双变频（风机+压缩机）</td>
+                            <td>双变频</td>
+                        </tr>
+                        <tr>
+                            <td><strong>制冷方式</strong></td>
+                            <td>风冷无霜</td>
+                            <td>风冷无霜</td>
+                        </tr>
+                        <tr>
+                            <td><strong>散热要求</strong></td>
+                            <td>两侧预留≥10cm</td>
+                            <td><strong>底部散热</strong>（两侧仅需≥2cm）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>总容量</strong></td>
+                            <td>526L（冷藏328L+冷冻198L）</td>
+                            <td>508L（冷藏308L+冷冻175L+变温25L）</td>
+                        </tr>
+                        <tr>
+                            <td><strong>循环系统</strong></td>
+                            <td><strong>双系统双循环</strong>（独立控温）</td>
+                            <td>双系统双循环</td>
+                        </tr>
+                        <tr>
+                            <td><strong>核心优势</strong></td>
+                            <td>全空间IDP离子除菌+深冷保鲜</td>
+                            <td>PST+19分钟急速净味</td>
+                        </tr>
+                        <tr>
+                            <td><strong>价格</strong></td>
+                            <td>¥5299</td>
+                            <td>¥5699</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="highlight-box mt-6">
+                <h4 class="font-semibold text-gray-800 mb-2">选购建议</h4>
+                <ul class="list-disc pl-5 space-y-1">
+                    <li><strong>容声526：</strong>适合重视食材除菌与冷冻能力的家庭</li>
+                    <li><strong>美的508：</strong>小厨房嵌入式优选，变温室灵活性高</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="mb-16">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title">厨房电器解析</h2>
+
+        <!-- 烟灶套装 -->
+        <div class="card p-6 mb-8">
+            <h3 class="text-xl font-bold text-gray-800 mb-6">烟灶套装</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 方太L2油烟机 -->
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-lg font-bold text-gray-800">方太L2油烟机（CXW-358-L2）</h4>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="spec-item"><strong>设计：</strong>顶侧双吸（7字型结构）</div>
+                        <div class="spec-item"><strong>吸力：</strong>26m³/min巡航风量</div>
+                        <div class="spec-item"><strong>噪音值：</strong>强档52dB / 最低42dB</div>
+                        <div class="spec-item"><strong>面板：</strong>黑晶钢化玻璃</div>
+                        <div class="spec-item"><strong>电机：</strong>全封闭式双电机</div>
+                        <div class="spec-item"><strong>风压：</strong>最大静压1300Pa（高层抗倒灌）</div>
+                    </div>
+                </div>
+
+                <!-- 方太TH29B燃气灶 -->
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h4 class="text-lg font-bold text-gray-800">方太TH29B燃气灶（JZT-TH29B）</h4>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="spec-item"><strong>火力：</strong>5.0kW（爆炒级）</div>
+                        <div class="spec-item"><strong>热效率：</strong>≥63%（节能）</div>
+                        <div class="spec-item"><strong>点火方式：</strong>脉冲电子点火</div>
+                        <div class="spec-item"><strong>安全设计：</strong>童锁+防爆面板</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-box mt-6">
+                <p><strong>套装价¥6999</strong> · 烟灶联动是核心优势（灶具点火自动开启油烟机）</p>
+            </div>
+        </div>
+
+        <!-- 碗篮拉篮 -->
+        <div class="card p-6">
+            <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold text-gray-800">海蒂诗700柜体304不锈钢碗篮拉篮</h3>
+                <span class="price-tag">¥880/套</span>
+            </div>
+            <p class="text-gray-600 mb-4">德国工艺抽拉顺滑无噪音</p>
+
+            <ul class="space-y-3">
+                <li class="spec-item"><strong>材质：</strong>304食品级不锈钢（耐腐蚀）</li>
+                <li class="spec-item"><strong>承重：</strong>≥50kg（重型导轨设计）</li>
+                <li class="spec-item"><strong>适配柜体：</strong>700mm标准柜（内深≥450mm）</li>
+                <li class="spec-item"><strong>分区设计：</strong>碗碟区+刀具格+筷笼（收纳科学）</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="mb-16">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title">电视参数详解</h2>
+
+        <div class="card p-6">
+            <div class="flex justify-between items-start mb-4">
+                <h3 class="text-xl font-bold text-gray-800">Vidda 发现X 2025款 85英寸</h3>
+                <span class="price-tag">¥5499</span>
+            </div>
+            <p class="text-gray-600 mb-6">2025年质价比标杆，游戏影音全能</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <ul class="space-y-3">
+                        <li class="spec-item"><strong>尺寸：</strong>85英寸（建议观看距离≥3.5米）</li>
+                        <li class="spec-item"><strong>刷新率：</strong>144Hz（游戏/运动画面无拖影）</li>
+                        <li class="spec-item"><strong>内存：</strong>4GB+128GB（行业顶配）</li>
+                        <li class="spec-item"><strong>色域：</strong>95% DCI-P3（影院级色彩）</li>
+                        <li class="spec-item"><strong>分辨率：</strong>3840×2160（真4K UHD）</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-3">
+                        <li class="spec-item"><strong>峰值亮度：</strong>1200nits（HDR效果突出）</li>
+                        <li class="spec-item"><strong>运动补偿：</strong>MEMC Pro 240Hz（动态插帧）</li>
+                        <li class="spec-item"><strong>CPU：</strong>四核A73 1.8GHz（旗舰芯片）</li>
+                        <li class="spec-item"><strong>背光分区：</strong>512分区（Mini-LED精准控光）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="mb-16">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6 section-title">选购决策指南</h2>
+
+        <div class="card p-6 mb-8">
+            <div class="overflow-x-auto">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>品类</th>
+                            <th>性价比首选</th>
+                            <th>高端性能首选</th>
+                            <th>核心决策点</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>洗衣机</strong></td>
+                            <td>小乌梅3.0机皇版</td>
+                            <td>海尔PROL6</td>
+                            <td>容量需求＞嵌入尺寸＞除菌要求</td>
+                        </tr>
+                        <tr>
+                            <td><strong>冰箱</strong></td>
+                            <td>容声526</td>
+                            <td>美的508</td>
+                            <td>散热空间＞循环系统＞变温功能</td>
+                        </tr>
+                        <tr>
+                            <td><strong>烟灶</strong></td>
+                            <td>方太L2+TH29B套装</td>
+                            <td>-</td>
+                            <td>风压＞吸力＞联动便捷性</td>
+                        </tr>
+                        <tr>
+                            <td><strong>电视</strong></td>
+                            <td>Vidda 85英寸</td>
+                            <td>-</td>
+                            <td>分区背光＞色域＞内存</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-    </div>
 
-    <!-- 适用场景 -->
-    <div class="max-w-6xl mx-auto px-4 md:px-8 py-8">
-        <h2 class="text-2xl font-bold mb-8 text-blue-800 border-b pb-2">最佳适用场景推荐</h2>
-
-        <div class="grid md:grid-cols-3 gap-6">
-            <!-- 家庭影院 -->
-            <div class="bg-white rounded-xl card-shadow overflow-hidden">
-                <div class="h-40 bg-gradient-to-r from-blue-900 to-blue-700 flex items-center justify-center">
-                    <i class="fas fa-film text-white text-5xl"></i>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-bold text-lg mb-3 text-blue-800">家庭影院中心</h3>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-                            <span>2000nits亮度+HDR双认证，夜晚观影沉浸感强</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-                            <span>杜比全景声+IMAX Enhanced音效，媲美影院体验</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
-                            <span>广色域+精准调校，色彩还原真实自然</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 游戏娱乐 -->
-            <div class="bg-white rounded-xl card-shadow overflow-hidden">
-                <div class="h-40 bg-gradient-to-r from-purple-900 to-purple-700 flex items-center justify-center">
-                    <i class="fas fa-gamepad text-white text-5xl"></i>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-bold text-lg mb-3 text-purple-800">次世代游戏主机</h3>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
-                            <span>240Hz高刷+5ms延迟，竞技游戏无拖影</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
-                            <span>4个HDMI 2.1接口，完美适配PS5/Xbox</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-purple-500 mt-1 mr-2"></i>
-                            <span>VRR+ALLM技术，消除画面撕裂卡顿</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- 办公学习 -->
-            <div class="bg-white rounded-xl card-shadow overflow-hidden">
-                <div class="h-40 bg-gradient-to-r from-green-900 to-green-700 flex items-center justify-center">
-                    <i class="fas fa-laptop text-white text-5xl"></i>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-bold text-lg mb-3 text-green-800">办公学习助手</h3>
-                    <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                            <span>莱茵低蓝光认证，长时间使用不伤眼</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                            <span>AG抗眩光屏，强光下依然清晰可见</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
-                            <span>64GB大存储，安装教育应用无压力</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <div class="card p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">避坑提示</h3>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>洗衣机嵌入需预留散热缝（顶部/背部≥5cm）</li>
+                <li>冰箱两侧散热空间务必按机型要求预留</li>
+                <li>方太L2需吊顶前安装排烟管（避免二次拆装）</li>
+                <li>85英寸电视墙体承重需≥80kg（特殊墙体需加固）</li>
+            </ul>
         </div>
-    </div>
+    </section>
 
-    <!-- 购买建议 -->
-    <div class="max-w-6xl mx-auto px-4 md:px-8 py-8">
-        <div class="bg-white rounded-xl card-shadow p-6">
-            <h2 class="text-2xl font-bold mb-6 text-blue-800 border-b pb-2">专业选购建议</h2>
+    <footer class="mt-16 pt-8 border-t border-gray-200 text-center text-gray-500 text-sm">
+        <p>数据更新于2025年6月 · 价格受促销波动影响，建议下单前核验电商实时活动</p>
+        <p class="mt-2">网页由问小白生成，仅供参考 · 最后更新时间为2025-06-24，星期二</p>
+        <p class="mt-1">问小白网址：wenxiaobai.com</p>
+    </footer>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="font-bold text-lg mb-3 text-blue-700 flex items-center">
-                        <i class="fas fa-wallet mr-2"></i>预算充足用户
-                    </h3>
-                    <p class="text-gray-700 mb-4">直接选择Vidda X 2025款，1024分区Mini LED和2000nits亮度表现碾压同价位机型，未来3-5年不会过时。</p>
+    <script>
+        // 平滑滚动效果
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-                    <h3 class="font-bold text-lg mb-3 text-blue-700 flex items-center">
-                        <i class="fas fa-percentage mr-2"></i>性价比优先用户
-                    </h3>
-                    <p class="text-gray-700">叠加国家能效补贴后仅需¥4959.2，相比X Mini系列(352分区/1000nits)画质提升显著，是当前最值得入手的Mini LED电视。</p>
-                </div>
-
-                <div>
-                    <h3 class="font-bold text-lg mb-3 text-blue-700 flex items-center">
-                        <i class="fas fa-shield-alt mr-2"></i>售后保障
-                    </h3>
-                    <p class="text-gray-700 mb-4">海信提供3年整机质保服务，Mini LED面板寿命长达10万小时(约11年)，使用无忧。</p>
-
-                    <h3 class="font-bold text-lg mb-3 text-blue-700 flex items-center">
-                        <i class="fas fa-store mr-2"></i>购买渠道建议
-                    </h3>
-                    <p class="text-gray-700">推荐京东自营或海信官方旗舰店购买，享受国家补贴价¥4959.2，支持7天无理由退换。</p>
-                    <a href="https://item.jd.com/100123456789.html" class="inline-block mt-3 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-                        <i class="fas fa-shopping-cart mr-2"></i>前往京东购买
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 页脚 -->
-    <div class="bg-gray-100 py-8 px-4 md:px-8">
-        <div class="max-w-6xl mx-auto text-center text-gray-600 text-sm">
-            <p>网页由问小白生成，仅供参考</p>
-            <p class="mt-1">最后更新时间为2025-05-15，星期四</p>
-            <p class="mt-1">问小白官网：<a href="https://wenxiaobai.com" class="text-blue-600 hover:underline">wenxiaobai.com</a></p>
-        </div>
-    </div>
+        // 卡片悬停效果
+        const cards = document.querySelectorAll('.card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-5px)';
+                card.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.1)';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+                card.style.boxShadow = '';
+            });
+        });
+    </script>
 </body>
 </html>

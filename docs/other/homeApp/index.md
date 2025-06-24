@@ -1,6 +1,9 @@
 ---
   author: '张开朗呀'
   reprinted: false
+  aside: false
+  sidebar: false
+  comment: false
   title: 装修之家电选择
   date: 2025/05/15
   words: 4023
@@ -11,10 +14,10 @@
     - 装修
 ---
 
-# 装修之家电选择(名称、尺寸、画质、刷新率、内存、音质、护眼、峰值亮度)
-
-| 名称                    | 尺寸    | 推荐来源                                      |
-| ----------------------- | ------- | --------------------------------------------- |
-| **`新品雷鸟鹤6 PRO 2`** | 75 英寸 | ![小红书](http://xhslink.com/a/BRfjMqUV0Rycb) |
-| **`我的题库`**          |         |
-| **`我的考试`**          |         |
+<iframe 
+  style="width: 100%; height: 100%; aspect-ratio: 16/9; margin-top: 2em"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+  src="https://www.wenxiaobai.com/share/html/7a8eedd2-2b65-481a-a4a4-e3ec9ff48f41_1750754954138?refer_channel=answer_visualization">
+</iframe>
