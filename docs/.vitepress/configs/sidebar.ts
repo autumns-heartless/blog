@@ -217,6 +217,15 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ],
     },
   ],
+  '/other/deepseek/': [
+    {
+      text: 'DeepSeek',
+      collapsed: false,
+      items: [
+        { text: 'DeepSeek R1 本地部署', link: '/other/deepseek/index' },
+      ],
+    },
+  ],
   relationgraph: [
     {
       text: '概览',
