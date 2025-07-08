@@ -93,6 +93,7 @@ export const nav: DefaultTheme.Config['nav'] = [
           { text: 'Relation Graph 在线示例 - 会员版', link: '/relationgraph/index' },
           { text: '后台管理系统模板', link: '/other/openSource/vue-admin-template/index' },
           { text: 'DeepSeek R1 本地部署', link: '/other/deepseek/index' },
+          { text: 'Vue3 性能优化的 10 个硬核技巧', link: '/other/vue3/po' },
         ],
       },
       {

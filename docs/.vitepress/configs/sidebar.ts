@@ -168,6 +168,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         { text: '组件注册', link: '/other/vue3/component-registration' },
         { text: '透传 Attributes', link: '/other/vue3/fallthrough-attributes' },
         { text: '组合式函数', link: '/other/vue3/composables' },
+        { text: 'Vue3 性能优化的 10 个硬核技巧', link: '/other/vue3/po' },
       ],
     },
   ],
