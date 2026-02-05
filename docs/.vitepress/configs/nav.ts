@@ -1,7 +1,7 @@
 import type { DefaultTheme } from 'vitepress'
 
 export const nav: DefaultTheme.Config['nav'] = [
-  { text: '白酒找我', link: 'https://www.baidu.com' },
+  // { text: '白酒找我', link: 'https://www.baidu.com' },
   { text: '导航网站', link: '/nav/', activeMatch: '^/nav/' },
   // { text: '待办清单', link: '/todoList/', activeMatch: '^/todoList/' },
   {
