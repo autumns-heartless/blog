@@ -1,5 +1,5 @@
 ---
-  author: '张鑫'
+  author: '张开朗呀~'
   title: DeepSeek R1 本地部署
   date: 2025/07/07
   words: 1491

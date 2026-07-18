@@ -4,7 +4,7 @@
   footer: false
   date: 2025/03/10
   title: 性能优化
-  author: '张鑫'
+  author: '张开朗呀~'
   reprinted: false
   words: 1571
   duration: 6
@@ -882,7 +882,7 @@ HTTP/1.1 是最广泛使用的版本，进行了大量改进：
 - **「队头阻塞（Head-of-Line Blocking）」** ：尽管支持管道化，但多个请求仍然会在同一连接中按顺序处理。如果某个请求延迟，后续的请求也会受到影响。
 - **「多个 TCP 连接」**：虽然开启了长连接，但由于 TCP 连接的并发限制，浏览器仍然会为同一个域名创建多个连接，导致开销。
 
-1.1 版本最主要是改进了默认开启长链接为了解决 HTTP1.0 的问题，**「HTTP1.1 默认开启长连接」**，即让同一个 TCP 连接服务于多个请求-响应。
+  1.1 版本最主要是改进了默认开启长链接为了解决 HTTP1.0 的问题，**「HTTP1.1 默认开启长连接」**，即让同一个 TCP 连接服务于多个请求-响应。
 
 ![图片](data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg width='1px' height='1px' viewBox='0 0 1 1' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3E%3C/title%3E%3Cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' fill-opacity='0'%3E%3Cg transform='translate(-249.000000, -126.000000)' fill='%23FFFFFF'%3E%3Crect x='249' y='126' width='1' height='1'%3E%3C/rect%3E%3C/g%3E%3C/g%3E%3C/svg%3E)
 

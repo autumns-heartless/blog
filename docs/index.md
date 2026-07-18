@@ -29,6 +29,8 @@ hero:
       link: /other/pcInstall/pcInstall-index
     - text: 家电选择
       link: /other/homeApp/index
+    - text: Elpis
+      link: /elpis/index
 features:
   - icon: 📖
     title: 前端物语

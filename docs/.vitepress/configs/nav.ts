@@ -75,7 +75,7 @@ export const nav: DefaultTheme.Config['nav'] = [
     text: '其他成员',
     items: [
       {
-        text: '张鑫',
+        text: '张开朗呀~',
         items: [
           { text: '打包部署', link: '/other/deploy/index' },
           { text: 'Code Inspector', link: '/other/codeInspector/index' },

@@ -1,5 +1,5 @@
 ---
-  author: '张鑫'
+  author: '张开朗呀~'
   title: 前端同学 - 装机流程
   date: 2024/11/01
   words: 1491

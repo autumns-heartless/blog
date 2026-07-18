@@ -227,7 +227,7 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
       ],
     },
   ],
-  relationgraph: [
+  'relationgraph': [
     {
       text: '概览',
       link: '/relationgraph/overview',
@@ -582,5 +582,21 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
         },
       ],
     },
+  ],
+  'elpis': [
+    {
+      text: 'Elpis',
+      collapsed: false,
+      items: [
+        {
+          text: '1. 简介',
+          link: '/elpis/index'
+        },
+        {
+          text: '2. elpis-core',
+          link: '/elpis/elpis-core/index'
+        },
+      ]
+    }
   ],
 }
