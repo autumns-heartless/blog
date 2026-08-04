@@ -596,6 +596,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           text: '2. elpis-core',
           link: '/elpis/elpis-core/index'
         },
+        {
+          text: '3. front-build',
+          link: '/elpis/front-build/index'
+        },
       ]
     }
   ],

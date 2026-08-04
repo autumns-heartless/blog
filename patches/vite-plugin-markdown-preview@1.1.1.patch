@@ -18,6 +18,15 @@ index 5c354f7fc1239f8c5ff92d91ef87afd0eca78bdb..e374d9a8144cafb2a7564480aadc468b
      mdastExtensions: [frontmatterFromMarkdown(["yaml", "toml"])]
    });
    const blocks = {};
+@@ -135,7 +137,7 @@ function MarkdownPreview(options = {}) {
+         const demoCode = DemoBlockMap.get(id) || DemoBlockMap.get(blockId);
+         return demoCode;
+       }
+-      if (id.endsWith(".md")) {
++      if (id.endsWith(".md") && fs.existsSync(id)) {
+         const { code, blocks } = remarkDemoBlock(id, fs.readFileSync(id, "utf8"), config);
+         for (const k of Object.keys(blocks)) {
+           const blockKey = `${id}.${k}.vue`;
 diff --git a/package.json b/package.json
 index 31fcc5521e2e41ad0faf49359e173eec3ecb62ee..d123b492b36675a1c83bb277805c471878bcea43 100644
 --- a/package.json

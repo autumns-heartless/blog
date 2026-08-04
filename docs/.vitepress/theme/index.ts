@@ -81,7 +81,7 @@ export default {
       loadOml2d({
         sayHello: false, // 不在控制台打印项目信息
         dockedPosition: 'left', // 桌面位置
-        mobileDisplay: false, // 移动端是否展示
+        mobileDisplay: true, // 移动端是否展示
         // primaryColor: 'red', // 主题色
         tips: {
           messageLine: 3, // 超出 3 行 省略
@@ -124,22 +124,18 @@ export default {
         },
         models: [
           {
-            path: 'https://model.oml2d.com/HK416-1-normal/model.json',
-            position: [-20, 120],
+            path: `${import.meta.env.BASE_URL}live2d/hijiki/assets/hijiki.model.json`,
+            position: [20, 100],
             scale: 0.04,
             motionPreloadStrategy: 'ALL',
             stageStyle: {
-              width: 200,
-              height: 300,
+              width: 300,
+              height: 200,
             },
-          },
-          {
-            path: 'https://model.oml2d.com/HK416-2-destroy/model.json',
-            scale: 0.05,
-            position: [0, 100],
-            stageStyle: {
-              width: 200,
-              height: 300,
+            mobileScale: 0.04,
+            mobileStageStyle: {
+              width: 160,
+              height: 240,
             },
           },
         ],

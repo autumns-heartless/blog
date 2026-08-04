@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Elpis frontend-build 分支学习导读</title>
+  <style>
+    :root { --ink:#172033; --muted:#5a6578; --paper:#f8fafc; --line:#dce3ed; --blue:#1769aa; --blue-soft:#e9f4fc; --green:#18705c; --green-soft:#e8f6f1; --gold:#926c09; --gold-soft:#fff7d6; --red:#9d342e; --red-soft:#fff0ef; --code:#122033; --code-ink:#e5eef8; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.72 "Microsoft YaHei","PingFang SC",system-ui,sans-serif; }
+    .wrap { width:min(1120px, calc(100% - 32px)); margin:auto; }
+    header { background:linear-gradient(135deg,#102b49 0%,#1769aa 58%,#2488bd 100%); color:white; padding:72px 0 58px; }
+    .eyebrow { margin:0 0 12px; font:700 12px/1.2 ui-monospace,Consolas,monospace; letter-spacing:.12em; opacity:.78; }
+    h1 { margin:0; font-size:clamp(31px,5vw,52px); letter-spacing:-.04em; line-height:1.12; }
+    .subtitle { max-width:760px; margin:20px 0 0; font-size:18px; color:#dcecf7; }
+    .meta { display:flex; gap:10px; flex-wrap:wrap; margin-top:28px; }
+    .tag { border:1px solid rgb(255 255 255 / .34); border-radius:999px; padding:4px 10px; font-size:13px; }
+    main { display:grid; grid-template-columns:220px minmax(0, 1fr); gap:42px; padding:44px 0 80px; }
+    nav { position:sticky; top:24px; align-self:start; border-left:2px solid var(--line); padding-left:16px; }
+    nav a { display:block; color:var(--muted); text-decoration:none; padding:4px 0; font-size:14px; }
+    nav a:hover { color:var(--blue); }
+    article { min-width:0; }
+    section { scroll-margin-top:24px; margin-bottom:54px; }
+    h2 { font-size:27px; line-height:1.25; margin:0 0 14px; letter-spacing:-.025em; }
+    h3 { font-size:19px; margin:28px 0 8px; }
+    p { margin:10px 0; }
+    ul, ol { padding-left:1.35em; margin:9px 0; }
+    li { margin:5px 0; }
+    .lede { color:#30435a; font-size:18px; }
+    .callout { border-left:4px solid var(--blue); background:var(--blue-soft); padding:15px 18px; margin:20px 0; border-radius:0 10px 10px 0; }
+    .callout strong { color:#0d4c7d; }
+    .warning { border-left-color:var(--gold); background:var(--gold-soft); }
+    .warning strong { color:#725300; }
+    .risk { border-left-color:var(--red); background:var(--red-soft); }
+    .risk strong { color:#7d201b; }
+    .evidence { display:inline-block; margin-left:6px; color:var(--green); border:1px solid #a9daca; background:var(--green-soft); font:700 11px/1 ui-monospace,Consolas,monospace; padding:4px 6px; border-radius:4px; vertical-align:middle; }
+    .diagram { margin:23px 0; border:1px solid var(--line); border-radius:14px; background:white; padding:12px; box-shadow:0 10px 34px rgb(22 49 82 / .05); overflow:auto; }
+    .diagram svg { display:block; min-width:700px; width:100%; height:auto; }
+    .caption { font-size:13px; color:var(--muted); margin:9px 4px 0; }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px; }
+    .card { background:white; border:1px solid var(--line); border-radius:12px; padding:18px; }
+    .card h3 { margin:0 0 6px; font-size:17px; }
+    .card p { color:var(--muted); font-size:14px; margin:0; }
+    .num { display:inline-grid; place-items:center; width:26px; height:26px; background:var(--blue); color:white; border-radius:50%; font:700 13px ui-monospace,Consolas,monospace; margin-right:7px; }
+    table { border-collapse:collapse; width:100%; background:white; margin:16px 0; font-size:14px; }
+    th, td { border:1px solid var(--line); padding:10px 12px; vertical-align:top; text-align:left; }
+    th { background:#eef5fa; color:#203d58; }
+    code { font:13px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace; background:#edf2f7; padding:2px 5px; border-radius:4px; color:#17405f; }
+    pre { overflow:auto; background:var(--code); color:var(--code-ink); border-radius:11px; padding:17px 19px; font:13px/1.58 ui-monospace,SFMono-Regular,Consolas,monospace; box-shadow:inset 0 1px 0 rgb(255 255 255 / .06); }
+    pre code { background:transparent; padding:0; color:inherit; }
+    .commit { position:relative; padding:0 0 20px 28px; border-left:2px solid #b9d8eb; }
+    .commit:last-child { padding-bottom:0; }
+    .commit::before { content:""; position:absolute; width:12px; height:12px; left:-7px; top:7px; border-radius:50%; background:#1976b9; box-shadow:0 0 0 4px #e8f4fc; }
+    .commit h3 { margin:0 0 5px; }
+    .commit p { color:var(--muted); margin:0; }
+    .path { color:#41607c; font:12px/1.45 ui-monospace,Consolas,monospace; overflow-wrap:anywhere; }
+    .steps { counter-reset:step; display:grid; gap:10px; }
+    .step { counter-increment:step; position:relative; background:white; border:1px solid var(--line); padding:13px 16px 13px 50px; border-radius:9px; }
+    .step::before { content:counter(step); position:absolute; left:15px; top:13px; color:var(--blue); font:bold 17px ui-monospace,Consolas,monospace; }
+    footer { border-top:1px solid var(--line); padding:28px 0 46px; color:var(--muted); font-size:13px; }
+    @media (max-width:800px) { main { grid-template-columns:1fr; gap:24px; } nav { position:static; display:flex; gap:12px; overflow:auto; white-space:nowrap; border-left:0; border-bottom:1px solid var(--line); padding:0 0 12px; } nav a { padding:0; } .grid { grid-template-columns:1fr; } }
+    @media print { body { background:white; } header { padding:32px 0; } main { display:block; padding:28px 0; } nav { display:none; } section { break-inside:avoid; } .diagram { box-shadow:none; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <p class="eyebrow">ELPIS / BRANCH STUDY GUIDE</p>
+      <h1>feature/frontend-build<br>到底构建了什么？</h1>
+      <p class="subtitle">从“能渲染 Koa 页面”走向“可维护的多页 Vue 前端工程”：理解这个分支的关键，不是背 Webpack 配置，而是看清<strong>请求、模板、构建产物和浏览器</strong>如何接力。</p>
+      <div class="meta"><span class="tag">基线：develop</span><span class="tag">范围：6 个提交 / 25 个文件</span><span class="tag">代码状态：feature/frontend-build @ 16420c8</span><span class="tag">面向：前端学习者</span></div>
+    </div>
+  </header>
+  <main class="wrap">
+    <nav aria-label="目录">
+      <a href="#answer">一句话结论</a>
+      <a href="#before-after">改造前后</a>
+      <a href="#architecture">整体运行链路</a>
+      <a href="#commits">6 个提交做了什么</a>
+      <a href="#config">核心配置拆解</a>
+      <a href="#dev">开发与热更新</a>
+      <a href="#production">生产构建</a>
+      <a href="#entry">统一入口与公共能力</a>
+      <a href="#reading">建议阅读顺序</a>
+      <a href="#review">值得继续验证的点</a>
+    </nav>
+    <article>
+      <section id="answer">
+        <h2>一句话结论</h2>
+        <p class="lede">这个分支为 Elpis 补上了一套<strong>后端路由驱动的多页 Vue 构建体系</strong>：文件系统中的每个 <code>entry.&lt;page&gt;.js</code> 是一个页面入口，Webpack 自动发现它们、打包脚本、生成同名 <code>.tpl</code> 模板；Koa 收到 <code>/view/:page</code> 时渲染对应模板；浏览器再加载该页面自己的前端资源。</p>
+        <div class="callout"><strong>最重要的边界：</strong>这不是单页 SPA，也不是 Vue 服务端渲染。页面骨架由 Koa + Nunjucks 输出，Vue 在浏览器中挂载到 <code>#root</code>，属于“后端路由 + 多个客户端 Vue 页面入口”的组合。</div>
+        <div class="grid">
+          <div class="card"><h3>解决的开发问题</h3><p>新增页面时不想手工维护一长串 Webpack entry、模板文件和构建清单。</p></div>
+          <div class="card"><h3>解决的性能问题</h3><p>多个页面不能各自重复携带 npm 依赖和共享业务代码，需要拆出 vendor、common、runtime。</p></div>
+          <div class="card"><h3>解决的协作问题</h3><p>所有 Vue 页面默认接入 Element Plus、Pinia、UnoCSS，入口不再各写各的初始化。</p></div>
+          <div class="card"><h3>解决的反馈问题</h3><p>开发时让 Webpack 常驻监听，并通过 HMR 通道把更新传给浏览器。</p></div>
+        </div>
+      </section>
+
+      <section id="before-after">
+        <h2>先建立问题感：改造前后分别是什么样</h2>
+        <table>
+          <thead><tr><th>维度</th><th>develop 中已有的能力</th><th>feature/frontend-build 增加的能力</th></tr></thead>
+          <tbody>
+            <tr><td>页面访问</td><td>已有 Koa 路由和 Nunjucks 的 <code>ctx.render</code>。</td><td>路由改为渲染 <code>app/public/dist/entry.&lt;page&gt;.tpl</code>，让模板与构建产物对接。</td></tr>
+            <tr><td>页面资源</td><td>旧的 <code>app/public/output</code> 中有手工固定模板。</td><td>从入口文件自动推导页面名、包名和模板名，不再维护固定页面清单。</td></tr>
+            <tr><td>前端工程</td><td>还没有完整的 Vue 3 多页打包链路。</td><td>处理 Vue、JS、CSS/Less、图片、字体，并配置路径别名。</td></tr>
+            <tr><td>运行方式</td><td>启动 Koa 即可返回模板。</td><td>本地开发需要 Koa 与 Webpack 开发服务器并行：一个负责页面 HTML，一个负责实时编译的前端资源。</td></tr>
+          </tbody>
+        </table>
+        <p>因此，这个分支的本质不是“换了个打包工具”，而是为原本偏后端的 Elpis 增加了一层前端应用装配系统。</p>
+      </section>
+
+      <section id="architecture">
+        <h2>整体运行链路：一次访问如何到达 Vue 页面</h2>
+        <p>把下面的流程读懂，后续所有配置都会有明确位置。</p>
+        <div class="diagram">
+          <svg viewBox="0 0 1000 500" role="img" aria-label="Elpis 页面访问和开发构建链路图">
+            <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#1769aa"/></marker><style>.b{fill:#fff;stroke:#a9c7dc;stroke-width:2}.g{fill:#e8f6f1;stroke:#6fbfa7;stroke-width:2}.y{fill:#fff7d6;stroke:#d6ae42;stroke-width:2}.t{font:600 17px 'Microsoft YaHei',sans-serif;fill:#172033}.s{font:14px 'Microsoft YaHei',sans-serif;fill:#40566e}.a{stroke:#1769aa;stroke-width:3;fill:none;marker-end:url(#arrow)}.d{stroke:#94a3b8;stroke-width:2;stroke-dasharray:7 6;fill:none}</style></defs>
+            <text x="36" y="36" class="s">请求时：Koa 提供 HTML；浏览器请求页面资源</text>
+            <rect x="35" y="70" width="165" height="82" rx="12" class="b"/><text x="76" y="105" class="t">浏览器</text><text x="51" y="132" class="s">GET /view/page1</text>
+            <rect x="282" y="70" width="187" height="82" rx="12" class="b"/><text x="323" y="105" class="t">Koa Router</text><text x="300" y="132" class="s">/view/:page</text>
+            <rect x="550" y="70" width="190" height="82" rx="12" class="b"/><text x="591" y="105" class="t">ViewController</text><text x="570" y="132" class="s">ctx.render('dist/...')</text>
+            <rect x="815" y="70" width="150" height="82" rx="12" class="g"/><text x="844" y="105" class="t">Nunjucks</text><text x="833" y="132" class="s">读取 .tpl</text>
+            <path d="M200 111 H282" class="a"/><path d="M469 111 H550" class="a"/><path d="M740 111 H815" class="a"/>
+            <path d="M890 152 V218 H118" class="a"/><text x="370" y="207" class="s">返回已注入 script / link 的 HTML</text>
+            <rect x="35" y="290" width="200" height="86" rx="12" class="y"/><text x="75" y="325" class="t">页面入口</text><text x="53" y="352" class="s">entry.page1.js</text>
+            <rect x="337" y="290" width="190" height="86" rx="12" class="y"/><text x="376" y="325" class="t">Webpack</text><text x="357" y="352" class="s">扫描、编译、分包</text>
+            <rect x="630" y="290" width="190" height="86" rx="12" class="y"/><text x="652" y="325" class="t">HtmlWebpackPlugin</text><text x="655" y="352" class="s">生成 entry.page1.tpl</text>
+            <path d="M235 333 H337" class="a"/><path d="M527 333 H630" class="a"/>
+            <path d="M725 290 V190 H875" class="d"/><text x="738" y="246" class="s">模板落盘，供 Koa 读取</text>
+            <rect x="337" y="419" width="190" height="52" rx="12" class="g"/><text x="368" y="452" class="t">JS/CSS 资源服务</text>
+            <path d="M135 376 V445 H337" class="a"/><text x="146" y="420" class="s">浏览器加载资源</text>
+          </svg>
+          <p class="caption">图 1：运行时与构建时并非两套互不相干的代码。<code>.tpl</code> 是两者的交接物。</p>
+        </div>
+        <div class="steps">
+          <div class="step"><strong>路由匹配：</strong><code>app/router/view.js</code> 把 <code>/view/:page</code> 交给 <code>ViewController.renderPage</code>。</div>
+          <div class="step"><strong>模板渲染：</strong>控制器执行 <code>ctx.render('dist/entry.' + page)</code>，Nunjucks 从 <code>app/public</code> 下读取生成后的 <code>.tpl</code>。</div>
+          <div class="step"><strong>浏览器加载：</strong>模板中由 HtmlWebpackPlugin 注入当前页面对应的 JS/CSS；Vue 的 <code>boot</code> 在 <code>#root</code> 上挂载组件。</div>
+          <div class="step"><strong>为什么模板必须落盘：</strong>开发环境中 Webpack 的 JS 可以留在内存里，但 Koa 是另一个进程，不能读取 Webpack 的内存文件系统；所以 <code>writeToDisk</code> 只把 <code>.tpl</code> 写入磁盘。</div>
+        </div>
+      </section>
+
+      <section id="commits">
+        <h2>按提交理解设计演进</h2>
+        <p>这 6 个提交并不是无关功能的拼盘，它们按“先能构建，再能扩展，再能高效开发”的顺序堆起来。</p>
+        <div class="commit"><h3>1. <code>8506eec</code>：搭建多页 Webpack 的骨架</h3><p>新增 <code>webpack.base.js</code>、Vue/JS/CSS/Less/资源 loaders、别名和模板。关键变化是把 Koa 渲染目标从旧的 <code>output/...</code> 调整为 <code>dist/...</code>：构建输出成为后端可以消费的模板。</p></div>
+        <div class="commit"><h3>2. <code>2fbc04e</code>：从“页面清单”升级为“约定发现”</h3><p>通过 <code>glob</code> 扫描 <code>app/pages/**/entry.*.js</code>，每发现一个入口便新建一个 HtmlWebpackPlugin。这样新增页面遵从文件命名约定即可被构建系统识别。</p></div>
+        <div class="commit"><h3>3. <code>9f8bd7e</code>：为多页面做代码分割</h3><p>将 <code>node_modules</code> 归入 vendor，把被至少两个页面使用的业务模块归入 common，并抽出 webpack runtime。目标是减少重复下载，并让稳定依赖更容易命中浏览器缓存。</p></div>
+        <div class="commit"><h3>4. <code>39e8c0d</code>：分离开发构建与生产构建</h3><p>把共享规则放到 base，开发关注 source map 与快速反馈，生产关注清理、抽取 CSS、压缩与并发构建。这样环境差异集中表达，而不是在一份配置里散落条件判断。</p></div>
+        <div class="commit"><h3>5. <code>4e11e6c</code>：补上 Webpack 开发服务器与 HMR 通道</h3><p>用 Express 托管 <code>webpack-dev-middleware</code> 和 <code>webpack-hot-middleware</code>，并把 HMR client 加入每个页面 entry。文件变化后，compiler 增量构建并经 SSE 通道通知浏览器。</p></div>
+        <div class="commit"><h3>6. <code>16420c8</code>：统一前端应用启动与常用基建</h3><p>新增 <code>boot.js</code>，让每个页面只保留“引入根组件 + boot”的最小入口；同时接入 UnoCSS、Pinia、可选路由、HTTP 包装器和页面生成脚本。</p></div>
+      </section>
+
+      <section id="config">
+        <h2>核心配置拆解：配置项在系统里各负责什么</h2>
+        <h3>1. 自动入口与动态模板</h3>
+        <pre><code>// app/webpack/config/webpack.base.js（逻辑摘录）
+glob.sync('./app/pages/**/entry.*.js').forEach((file) =&gt; {
+  const entryName = path.basename(file, '.js'); // entry.page1
+  pageEntries[entryName] = file;
+  htmlWebpackPluginList.push(new HtmlWebpackPlugin({
+    filename: './app/public/dist/' + entryName + '.tpl',
+    template: './app/view/entry.tpl',
+    chunks: [entryName],
+  }));
+});</code></pre>
+        <p><strong>这段代码把一个命名约定变成自动化：</strong><code>entry.page1.js</code> 同时决定 entry 名、输出模板名和页面资源注入范围。新增 <code>app/pages/order/entry.order.js</code> 后，构建时就会得到 <code>entry.order.tpl</code>；访问 <code>/view/order</code> 时，Koa 的动态路由也能匹配它。</p>
+        <div class="callout"><strong>学习点：</strong>“约定优于配置”不是不写配置，而是把重复、可推导的信息藏进统一命名规则。这里的代价是页面命名必须和路由参数严格一致。</div>
+        <h3>2. 模板到底做了两件什么事</h3>
+        <p><code>app/view/entry.tpl</code> 提供统一 HTML 外壳：包含 <code>#root</code> 挂载点，以及由 Nunjucks 注入的 <code>name</code>、<code>env</code>、<code>options</code>。HtmlWebpackPlugin 再基于每个 entry 将当前页面所需资源标签注入进去。</p>
+        <table><thead><tr><th>谁写入</th><th>写入什么</th><th>发生时机</th></tr></thead><tbody><tr><td>Nunjucks</td><td><code>{{ name }}</code>、<code>{{ env }}</code>、<code>{{ options }}</code></td><td>用户请求页面时</td></tr><tr><td>HtmlWebpackPlugin</td><td>指向入口、vendor、common、runtime 等 bundle 的标签</td><td>Webpack 编译时</td></tr></tbody></table>
+        <h3>3. 为什么要 splitChunks + runtimeChunk</h3>
+        <div class="diagram">
+          <svg viewBox="0 0 1000 285" role="img" aria-label="多页面分包关系图"><style>.x{fill:#fff;stroke:#a9c7dc;stroke-width:2}.v{fill:#e8f6f1;stroke:#6fbfa7;stroke-width:2}.c{fill:#e9f4fc;stroke:#78b6dc;stroke-width:2}.r{fill:#fff7d6;stroke:#d6ae42;stroke-width:2}.tt{font:600 16px 'Microsoft YaHei',sans-serif;fill:#172033}.ss{font:13px 'Microsoft YaHei',sans-serif;fill:#40566e}.l{stroke:#7998b3;stroke-width:2;fill:none}</style><rect x="46" y="48" width="135" height="66" rx="10" class="x"/><text x="73" y="78" class="tt">page1 entry</text><text x="65" y="100" class="ss">页面业务 A</text><rect x="46" y="175" width="135" height="66" rx="10" class="x"/><text x="73" y="205" class="tt">page2 entry</text><text x="65" y="227" class="ss">页面业务 B</text><rect x="331" y="22" width="180" height="58" rx="10" class="v"/><text x="377" y="57" class="tt">vendor chunk</text><rect x="331" y="112" width="180" height="58" rx="10" class="c"/><text x="374" y="147" class="tt">common chunk</text><rect x="331" y="203" width="180" height="58" rx="10" class="r"/><text x="369" y="238" class="tt">runtime chunk</text><path d="M181 80 H331 M181 208 H270 V141 H331 M181 208 H270 V232 H331" class="l"/><path d="M511 51 H633 M511 141 H633 M511 232 H633" class="l"/><rect x="633" y="24" width="304" height="235" rx="14" fill="#f8fafc" stroke="#dce3ed" stroke-width="2"/><text x="683" y="67" class="tt">浏览器缓存视角</text><text x="663" y="105" class="ss">vendor：依赖变动少，可长期复用</text><text x="663" y="143" class="ss">common：多个页面共享，避免重复</text><text x="663" y="181" class="ss">entry：仅下载当前页面业务</text><text x="663" y="219" class="ss">runtime：负责 chunk 加载关系</text></svg>
+          <p class="caption">图 2：页面入口不是“最终只能有一个 JS 文件”。构建把不同变化频率的代码拆开，目的是更少的重复和更好的缓存命中。</p>
+        </div>
+      </section>
+
+      <section id="dev">
+        <h2>开发环境：为什么需要两个进程，以及 HMR 如何工作</h2>
+        <p>在 Windows 下，<code>npm run dev</code> 启动 Koa（默认服务端口由 Elpis Core 决定）；<code>npm run build:dev</code> 先构建 UnoCSS，再用 <code>concurrently</code> 同时启动 UnoCSS watch 与 Webpack 开发服务器（<code>127.0.0.1:9002</code>）。前者负责页面请求与 API，后者负责实时编译资源与 HMR。</p>
+        <div class="diagram"><svg viewBox="0 0 1000 270" role="img" aria-label="开发时 HMR 流程图"><style>.b{fill:#e9f4fc;stroke:#78b6dc;stroke-width:2}.g{fill:#e8f6f1;stroke:#6fbfa7;stroke-width:2}.y{fill:#fff7d6;stroke:#d6ae42;stroke-width:2}.t{font:600 16px 'Microsoft YaHei',sans-serif;fill:#172033}.s{font:13px 'Microsoft YaHei',sans-serif;fill:#40566e}.a{stroke:#1769aa;stroke-width:2.5;fill:none;marker-end:url(#arr)}</style><defs><marker id="arr" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#1769aa"/></marker></defs><rect x="34" y="94" width="150" height="74" rx="12" class="b"/><text x="64" y="126" class="t">修改 .vue / .js</text><text x="63" y="150" class="s">保存文件</text><rect x="270" y="94" width="165" height="74" rx="12" class="b"/><text x="297" y="126" class="t">webpack compiler</text><text x="304" y="150" class="s">增量编译</text><rect x="521" y="34" width="175" height="74" rx="12" class="g"/><text x="548" y="66" class="t">dev middleware</text><text x="543" y="90" class="s">内存中提供资源</text><rect x="521" y="158" width="175" height="74" rx="12" class="y"/><text x="548" y="190" class="t">hot middleware</text><text x="548" y="214" class="s">SSE 更新通道</text><rect x="782" y="94" width="165" height="74" rx="12" class="b"/><text x="820" y="126" class="t">浏览器 HMR client</text><text x="813" y="150" class="s">替换模块或刷新</text><path d="M184 131 H270 M435 131 H480 V71 H521 M435 131 H480 V195 H521 M696 71 H746 V131 H782 M696 195 H746 V131" class="a"/></svg><p class="caption">图 3：HMR 不是 Koa 的能力，而是 Webpack compiler、HMR 客户端与 hot middleware 之间的开发协议。</p></div>
+        <h3>开发服务器中的“内存”和“磁盘”</h3>
+        <p><code>webpack-dev-middleware</code> 默认将编译结果放在内存，速度更快；但本项目显式设置 <code>writeToDisk: filePath =&gt; filePath.endsWith('.tpl')</code>。这不是“把所有构建结果写回去”，而是有意识地只让后端进程必需的模板落盘。</p>
+        <div class="callout"><strong>这是整套设计最关键的胶水：</strong>一个进程中的内存产物，不能自动被另一个进程读取；<code>.tpl</code> 在这里充当后端和前端构建系统的文件边界。</div>
+      </section>
+
+      <section id="production">
+        <h2>生产构建：目标从“反馈快”变为“资源更适合上线”</h2>
+        <p><code>build:prod</code> 先运行 UnoCSS，再执行 <code>app/webpack/prod.js</code>。它复用 base 配置，但改变了资源处理策略。</p>
+        <table><thead><tr><th>生产配置</th><th>为什么这样做</th><th>对应文件</th></tr></thead><tbody><tr><td>CleanWebpackPlugin</td><td>构建前清空旧的 <code>public/dist</code>，避免模板引用陈旧哈希文件。</td><td class="path">app/webpack/config/webpack.prod.js</td></tr><tr><td>MiniCssExtractPlugin</td><td>开发期用 style-loader 注入样式，生产期将 CSS 抽成可缓存资源。</td><td class="path">webpack.prod.js</td></tr><tr><td>CSSMinimizer + Terser</td><td>压缩 CSS 与 JS；Terser 配置会移除 console 输出。</td><td class="path">webpack.prod.js</td></tr><tr><td>HappyPack</td><td>尝试利用多核并行处理 JS/CSS 加载任务以缩短构建时间。</td><td class="path">webpack.prod.js</td></tr><tr><td>content/chunk hash</td><td>文件内容改变后 URL 改变；内容未变时可使用缓存。</td><td class="path">webpack.base.js / webpack.prod.js</td></tr></tbody></table>
+        <div class="warning"><strong>注意：</strong>“生产配置做得更多”不等于每项都必然带来收益。像 HappyPack 与旧版插件的兼容性、缓存收益及构建耗时，应在真实 CI/构建数据中验证，而不是仅凭配置名称断言。</div>
+      </section>
+
+      <section id="entry">
+        <h2>统一入口：如何把每个页面写成最小单元</h2>
+        <pre><code>// app/pages/page1/entry.page1.js
+import boot from '$pages/boot';
+import page1 from './page1.vue';
+
+boot(page1);</code></pre>
+        <p><code>boot.js</code> 集中完成四类初始化：<strong>createApp、Element Plus、Pinia、UnoCSS</strong>，并允许页面按需传入 <code>routes</code> 和第三方 <code>libs</code>。因此页面 entry 只需声明“我要启动哪个根组件”。</p>
+        <div class="grid"><div class="card"><h3>Vue Router</h3><p>只有传入 routes 才创建路由器；使用 hash history，避免后端额外配置 history fallback。</p></div><div class="card"><h3>Pinia</h3><p>用单例 Pinia 作为应用插件。每个独立 Vue 页面会创建自己的 Vue app，但均按同一入口规则接入 store。</p></div><div class="card"><h3>UnoCSS</h3><p>CLI 扫描 <code>app/pages/**/*.{vue,js}</code> 输出 <code>uno.generated.css</code>，由 boot 统一导入。</p></div><div class="card"><h3>页面脚手架</h3><p><code>npm run create:page -- name</code> 创建目录、entry 和最小 Vue 组件，继续强化入口命名约定。</p></div></div>
+        <h3>HTTP 包装器承担了什么</h3>
+        <p><code>app/pages/common/http.js</code> 基于 Axios 抽出 GET/POST/PUT/DELETE 快捷方法，统一传递 query、data、timeout，并将后端的 <code>success / code / message</code> 响应约定映射为 Element Plus 的消息提示。它的价值是让页面组件少重复“组装请求”和“分支提示”的样板代码。</p>
+      </section>
+
+      <section id="reading">
+        <h2>建议你按这个顺序自己走读代码</h2>
+        <p>不要先从 225 行的 <code>webpack.base.js</code> 开始。先沿着一个真实页面走一遍，你会知道每个配置为什么存在。</p>
+        <ol>
+          <li><span class="num">1</span>打开 <code>app/router/view.js</code> 和 <code>app/controller/view.js</code>，确认 <code>/view/page1</code> 如何变成 <code>dist/entry.page1</code>。</li>
+          <li><span class="num">2</span>打开 <code>app/view/entry.tpl</code>，找出 Vue 的 <code>#root</code> 和后端注入数据的位置。</li>
+          <li><span class="num">3</span>打开 <code>app/pages/page1/entry.page1.js</code>、<code>page1.vue</code>、<code>boot.js</code>，理解“模板加载的脚本最终启动了什么”。</li>
+          <li><span class="num">4</span>回到 <code>webpack.base.js</code> 顶部，只看 glob 扫描 entry 与 HtmlWebpackPlugin 循环，建立“入口到模板”的映射。</li>
+          <li><span class="num">5</span>再读 <code>optimization</code>，把它和多个 page entry 的重复依赖问题联系起来。</li>
+          <li><span class="num">6</span>最后读 <code>webpack.dev.js</code> 与 <code>app/webpack/dev.js</code>，区分“webpack 配置”与“启动 webpack 的 Express 服务”。</li>
+        </ol>
+      </section>
+
+      <section id="review">
+        <h2>阅读时应保持的工程判断：已证实与待验证</h2>
+        <p>以下区分非常重要：前半部分是从提交和静态代码中能确认的事实；后半部分需要实际启动才能下结论。</p>
+        <h3>静态代码已证实 <span class="evidence">CODE EVIDENCE</span></h3>
+        <ul><li>分支相对 <code>develop</code> 新增 6 个连续提交，最终加入多页构建、环境拆分、HMR 和统一启动入口。</li><li>Koa 的页面控制器渲染目标已由 <code>output</code> 改为 <code>dist</code>。</li><li>Webpack 会扫描 <code>entry.*.js</code> 并为每个入口生成 <code>app/public/dist/entry.&lt;name&gt;.tpl</code>。</li><li>开发服务器仅将 <code>.tpl</code> 写入磁盘，HMR 通道配置为 <code>/__webpack_hmr</code>。</li></ul>
+        <h3>建议本地验证 <span class="evidence">RUNTIME CHECK</span></h3>
+        <ul><li>同时运行 <code>npm run dev</code> 与 <code>npm run build:dev</code> 后，打开实际 Koa 地址的 <code>/view/page1</code>，确认模板是否加载到 <code>9002</code> 提供的 bundle。</li><li>修改 <code>page1.vue</code>，确认 HMR 是局部替换还是完整刷新，并观察浏览器控制台/网络请求。</li><li>检查开发配置：<code>output.path</code> 仍指向 <code>dist/prod</code>，而 <code>publicPath</code> 指向 <code>/public/dist/dev/</code>；二者是否与实际输出、静态资源 URL 一致，需要运行后确认。</li><li>检查 HMR client query 的 <code>&amp;reload=true</code> 是否按预期被参数解析。仅凭源码无法替代浏览器实测。</li></ul>
+        <div class="risk"><strong>安全审查提示：</strong><code>app/pages/common/http.js</code> 中的请求签名固定值被写进浏览器侧源码，任何打包后的前端资源都可被用户读取。它不能被当作密钥保护；如该值承担真实鉴权作用，应立即轮换，并将机密签名逻辑移到服务端。本文刻意未复述该值。</div>
+      </section>
+
+      <section>
+        <h2>收束：把这套架构记成一句话</h2>
+        <div class="callout"><strong>“后端按 URL 选择模板，Webpack 按入口生成模板和资源，浏览器按模板启动对应的 Vue 页面。”</strong><br>记住这三段职责，你就能从容定位：新页面为何没被打包、模板为何找不到、资源为何 404、HMR 为何失效，以及一段 Webpack 配置究竟在服务哪一环。</div>
+        <p>文档依据当前工作区 <code>feature/frontend-build</code> 相对 <code>develop</code> 的 Git 差异和源代码整理；未启动服务，因此所有运行时结论均明确标为建议验证。</p>
+      </section>
+    </article>
+  </main>
+  <footer><div class="wrap">Elpis frontend-build 学习导读 · 生成日期：2026-08-02 · 面向前端工程学习，不替代实际运行验证。</div></footer>
+</body>
+</html>
