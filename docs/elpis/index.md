@@ -14,6 +14,7 @@ lastUpdated: false
 sidebar: true
 prev: true
 next: true
+annotations: true
 ---
 
 # elpis \| 大前端全栈企业级架构实践

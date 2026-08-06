@@ -14,6 +14,7 @@ import { usePageId } from '../composables'
 
 import MNavVisitor from './MNavVisitor.vue'
 import MDocFooter from './MDocFooter.vue'
+import HypothesisAnnotations from './HypothesisAnnotations.vue'
 
 /* 引入音乐播放器 */
 import Player from './Player.vue'
@@ -110,6 +111,12 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
       <!-- <AnimateTitle /> -->
       <!-- 打字机效果 -->
       <NewFont />
+    </template>
+
+    <template v-if="frontmatter.annotations" #doc-before>
+      <ClientOnly>
+        <HypothesisAnnotations />
+      </ClientOnly>
     </template>
 
     <template v-if="comment && frontmatter.comment !== false" #doc-footer-before>

@@ -14,6 +14,7 @@ lastUpdated: false
 sidebar: true
 prev: true
 next: true
+annotations: true
 ---
 
 # elpis\-core \| 整体架构总览

@@ -14,6 +14,7 @@ lastUpdated: false
 sidebar: true
 prev: true
 next: true
+annotations: true
 ---
 
 <!--@include: ./FrontendBuildStudyGuide.md-->
