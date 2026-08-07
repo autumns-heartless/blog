@@ -35,14 +35,14 @@ flowchart LR
 
 ## 六个问题总览
 
-| 问题                  | 大白话解释                                   | 主要对应配置                             |
-| --------------------- | -------------------------------------------- | ---------------------------------------- |
-| 1. 我要构建什么项目？ | 这是单页、多页，还是后端模板项目？           | `entry`、HtmlWebpackPlugin、构建目标     |
-| 2. 源码从哪里进入？   | Webpack 从哪个文件开始找代码？               | `entry`、动态入口、依赖图、`splitChunks` |
-| 3. 源码怎样转换？     | `.vue`、Less、图片怎样变成浏览器能用的内容？ | `module.rules`、loader、资源模块         |
-| 4. 产物交给谁？       | 打包文件放在哪里，浏览器又从哪里请求？       | `output.path`、`filename`、`publicPath`  |
-| 5. 开发时怎样更舒服？ | 保存后怎样快速更新，报错怎样方便定位？       | development、source map、HMR、开发服务器 |
-| 6. 上线时怎样更可靠？ | 怎样压缩、缓存、发现构建失败和排查线上问题？ | production、hash、压缩、构建检查         |
+| 问题                  | 大白话解释                                   | 主要对应配置                                                                  |
+| --------------------- | -------------------------------------------- | ----------------------------------------------------------------------------- |
+| 1. 我要构建什么项目？ | 这是单页、多页，还是后端模板项目？           | `entry`、HtmlWebpackPlugin、构建目标                                          |
+| 2. 源码从哪里进入？   | Webpack 从哪个文件开始找代码？               | `entry`、动态入口、依赖图、`splitChunks`（[`详解`](./blocks/splitChunks.md)） |
+| 3. 源码怎样转换？     | `.vue`、Less、图片怎样变成浏览器能用的内容？ | `module.rules`、loader、资源模块                                              |
+| 4. 产物交给谁？       | 打包文件放在哪里，浏览器又从哪里请求？       | `output.path`、`filename`、`publicPath`                                       |
+| 5. 开发时怎样更舒服？ | 保存后怎样快速更新，报错怎样方便定位？       | development、source map、[`HMR`](./blocks/hmr.md)、开发服务器                 |
+| 6. 上线时怎样更可靠？ | 怎样压缩、缓存、发现构建失败和排查线上问题？ | production、hash、压缩、构建检查                                              |
 
 下面逐个展开。
 
@@ -591,7 +591,7 @@ entry → loader → output
 
 最后才考虑：
 
-- 多线程 loader。
+- 多线程 loader，例如：[`happypack、thread-loader`](./blocks/happypack-thread.md)。
 - 更复杂的缓存策略。
 - 更细的 `splitChunks.cacheGroups`。
 - CDN 和资源预加载。
