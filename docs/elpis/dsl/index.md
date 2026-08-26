@@ -151,17 +151,7 @@ DSL 全称是 Domain-Specific Language，中文叫“领域专用语言”。
 
 整个过程可以先记成下面这条流水线：
 
-```mermaid
-flowchart TD
-    A[model 行业公共配置] --> C[model/index.js 扫描和合并]
-    B[project 客户差异配置] --> C
-    C --> D[ProjectService 保存最终配置]
-    D --> E[ProjectController 通过 API 返回]
-    E --> F[Dashboard 保存菜单到 Pinia]
-    F --> G[根据 moduleType 选择页面]
-    G --> H[Schema / Sidebar / Iframe / Custom]
-    H --> I[最终页面内容]
-```
+![alt text](image-2.png)
 
 下面按照真实执行顺序展开。
 
@@ -441,14 +431,7 @@ SidebarView 找到当前 sidebar 菜单
 
 接下来，同一份字段配置会被翻译成两份数据：
 
-```mermaid
-flowchart TD
-    A[schemaConfig.schema] --> B[useSchema / buildDtoSchema]
-    B --> C[tableSchema]
-    B --> D[searchSchema]
-    C --> E[SchemaTable]
-    D --> F[SchemaSearchBar]
-```
+![alt text](image-1.png)
 
 ### 9.1 表格字段规则
 
@@ -501,23 +484,7 @@ dateRange     -> 日期范围
 
 假设用户在商品页面选择价格 `999` 并点击搜索：
 
-```mermaid
-sequenceDiagram
-    participant U as 用户
-    participant S as SchemaSearchBar
-    participant V as SchemaView
-    participant T as SchemaTable
-    participant B as BusinessController
-
-    U->>S: 选择条件并点击搜索
-    S->>V: 发出 search 事件和条件对象
-    V->>T: 更新 apiParams
-    T->>T: 监听到参数变化，页码重置为 1
-    T->>B: GET /api/proj/product/list
-    B->>B: 根据条件过滤商品
-    B-->>T: 返回 data 和 metadata.total
-    T-->>U: 更新表格和分页总数
-```
+![alt text](image.png)
 
 这里有两个重要细节：
 
