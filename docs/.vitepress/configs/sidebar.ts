@@ -600,6 +600,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
           text: '3. front-build',
           link: '/elpis/front-build/index'
         },
+        {
+          text: '4. dsl',
+          link: '/elpis/dsl/index'
+        },
       ]
     }
   ],
